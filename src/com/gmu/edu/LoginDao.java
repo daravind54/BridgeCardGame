@@ -16,7 +16,7 @@ public class LoginDao
 		String sql="select password from userdetails where email=?";
 		PreparedStatement preparedStatement=con.prepareStatement(sql);
 		preparedStatement.setString(1, login.getEmail());
-		ResultSet resultSet=preparedStatement.executeQuery(sql);
+		ResultSet resultSet=preparedStatement.executeQuery();
 		
 		String password=null;
 		while(resultSet.next())
