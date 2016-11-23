@@ -4,6 +4,6 @@ public class RegistrationDao
 {
 	public void registerUser(Registration registration)
 	{
-	
+		
 	}
 }
