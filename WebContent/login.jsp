@@ -7,6 +7,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-TODO
+<form action="login" method="post">
+<table>
+<tr>
+<td>Email:</td>
+<td><input type="text" name="email" id="email"></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="text" name="email" id="email"></td>
+</tr>
+<tr>
+<td><input type="submit" name="submit" id="submit"></td>
+</tr>
+</table>
+</form>
 </body>
 </html>
