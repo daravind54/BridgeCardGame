@@ -15,11 +15,16 @@ public class LoginDao
 		String sql="select email,password from userdetails";
 		Statement statement=con.createStatement();
 		ResultSet resultSet=statement.executeQuery(sql);
+		String email=null;
+		String password=null;
 		while(resultSet.next())
 		{
-			String email=resultSet.getString("email");
-			String password=resultSet.getString("password");
+			 email=resultSet.getString("email");
+			 password=resultSet.getString("password");
 		}
-		return sql;
+		if(email.equals(login.getEmail()) && password.equals(login.getPassword()))
+			return "SUCCESS";
+		else
+			return "FAIL";
 	}
 }
