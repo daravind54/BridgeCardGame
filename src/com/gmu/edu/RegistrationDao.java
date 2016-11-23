@@ -18,6 +18,6 @@ public class RegistrationDao
 		preparedStatement.setString(3, registration.getEmail());
 		preparedStatement.setString(4, registration.getPassword());
 		preparedStatement.executeUpdate();
-		System.out.println("Record is inserted into STUDENT table");
+		System.out.println("Record is inserted into Database");
 	}
 }
