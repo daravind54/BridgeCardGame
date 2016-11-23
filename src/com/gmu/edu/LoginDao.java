@@ -13,7 +13,7 @@ public class LoginDao
 	{
 		Class.forName("oracle.jdbc.driver.OracleDriver"); 
 		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@apollo.vse.gmu.edu:1521:ite10g","adasari2","eecooc");
-		String sql="select email,password from userdetails where email=?";
+		String sql="select password from userdetails where email=?";
 		PreparedStatement preparedStatement=con.prepareStatement(sql);
 		preparedStatement.setString(1, login.getEmail());
 		ResultSet resultSet=preparedStatement.executeQuery(sql);
@@ -23,9 +23,9 @@ public class LoginDao
 		{
 			 
 			 password=resultSet.getString("password");
-			 System.out.println(email+""+password);
+			 System.out.println(password);
 		}
-		if(email.equals(login.getEmail()) && password.equals(login.getPassword()))
+		if(password.equals(login.getPassword()))
 			return "SUCCESS";
 		else
 			return "FAIL";
