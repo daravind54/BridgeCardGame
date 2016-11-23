@@ -21,6 +21,7 @@ public class LoginDao
 		{
 			 email=resultSet.getString("email");
 			 password=resultSet.getString("password");
+			 System.out.println(email+""+password);
 		}
 		if(email.equals(login.getEmail()) && password.equals(login.getPassword()))
 			return "SUCCESS";
