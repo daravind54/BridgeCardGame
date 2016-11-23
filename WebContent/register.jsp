@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="submit">
+<form action="register">
 <table>
 <tr><td>Name:</td>
 	<td><input type="text" id="name" name="name"></td>
