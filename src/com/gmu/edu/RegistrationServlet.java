@@ -42,7 +42,8 @@ public class RegistrationServlet extends HttpServlet {
 		registration.setCity(request.getParameter("city"));
 		registration.setEmail(request.getParameter("email"));
 		registration.setPassword(request.getParameter("password"));
-		
+		RegistrationDao registrationDao=new RegistrationDao();
+		registrationDao.registerUser(registration);
 	}
 
 }
