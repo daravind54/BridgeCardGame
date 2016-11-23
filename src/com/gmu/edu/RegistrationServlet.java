@@ -39,9 +39,9 @@ public class RegistrationServlet extends HttpServlet {
 	protected void doPerform(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Registration registration=new Registration();
 		registration.setName(request.getParameter("name"));
-		registration.setName(request.getParameter("city"));
-		registration.setName(request.getParameter("email"));
-		registration.setName(request.getParameter("password"));
+		registration.setCity(request.getParameter("city"));
+		registration.setEmail(request.getParameter("email"));
+		registration.setPassword(request.getParameter("password"));
 	}
 
 }
