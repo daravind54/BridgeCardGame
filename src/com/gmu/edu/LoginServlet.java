@@ -41,6 +41,8 @@ public class LoginServlet extends HttpServlet {
 		Login login=new Login();
 		login.setEmail(request.getParameter("email"));
 		login.setPassword(request.getParameter("password"));
+		
+		
 	}
 
 }
