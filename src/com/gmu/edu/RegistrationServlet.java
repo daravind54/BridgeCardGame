@@ -3,6 +3,7 @@ package com.gmu.edu;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -56,6 +57,10 @@ public class RegistrationServlet extends HttpServlet {
 		registration.setPassword(request.getParameter("password"));
 		RegistrationDao registrationDao=new RegistrationDao();
 		registrationDao.registerUser(registration);
+		
+			RequestDispatcher requestDispatcher=request.getRequestDispatcher("/registered.jsp");
+			requestDispatcher.forward(request, response);
+		
 	}
 
 }
