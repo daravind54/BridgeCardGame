@@ -15,12 +15,13 @@ public class LoginDao
 		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@apollo.vse.gmu.edu:1521:ite10g","adasari2","eecooc");
 		String sql="select email,password from userdetails where email=?";
 		PreparedStatement preparedStatement=con.prepareStatement(sql);
-		ResultSet resultSet=statement.executeQuery(sql);
-		String email=null;
+		preparedStatement.setString(1, login.getEmail());
+		ResultSet resultSet=preparedStatement.executeQuery(sql);
+		
 		String password=null;
 		while(resultSet.next())
 		{
-			 email=resultSet.getString("email");
+			 
 			 password=resultSet.getString("password");
 			 System.out.println(email+""+password);
 		}
