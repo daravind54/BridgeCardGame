@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
 	protected void doPerform(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Login login=new Login();
 		login.setEmail(request.getParameter("email"));
-		login.setEmail(request.getParameter("password"));
+		login.setPassword(request.getParameter("password"));
 	}
 
 }
