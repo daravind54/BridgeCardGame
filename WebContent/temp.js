@@ -1,10 +1,10 @@
 
-var socket = new WebSocket("ws://localhost:443/BridgeCardGame/login/actions");
+var socket = new WebSocket("wss://localhost/BridgeCardGame/actions");
 socket.onmessage = onMessage;
 function onMessage(event) {
 	
 	alert("On message");
-	window.location.href = "game.jsp";
+	window.location.href = "BridgeCardGame/game.jsp";
 }
 
 function formSubmit() {
