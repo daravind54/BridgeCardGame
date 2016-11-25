@@ -23,9 +23,9 @@ public class LoginDao
 		{
 			 
 			 password=resultSet.getString("password");
-			 System.out.println(password);
+			 //System.out.println(password);
 		}
-		System.out.println(login.getPassword());
+		//System.out.println(login.getPassword());
 		if(password.equals(login.getPassword()))
 			return "SUCCESS";
 		else
