@@ -4,7 +4,7 @@ socket.onmessage = onMessage;
 function onMessage(event) {
 	
 	alert("On message");
-	window.location.href = "BridgeCardGame/game.jsp";
+	window.location.href = "game.jsp";
 }
 
 function formSubmit() {
