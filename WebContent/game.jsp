@@ -5,15 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<script src="temp.js"></script>
 </head>
 <body>
-Login successful 
-<br>
-<form id="form1">
-<input type="button"  value="Join Game" onclick=formSubmit()>
-</form>
-<br>
-<a href="">View Stats</a><br>
+todo
 </body>
 </html>
