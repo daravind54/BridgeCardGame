@@ -35,7 +35,7 @@ public class WebSocketSessionHandler
 	 {
 		 	++count;
 	        System.out.println(count);
-	        if(count==1)
+	        if(count>1)
 	        sendToAllConnectedSessions(message);
 	 }
 	 private void sendToAllConnectedSessions(String message) {

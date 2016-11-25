@@ -12,8 +12,11 @@ Login successful
 <br>
 <form id="form1">
 <input type="button"  value="Join Game" onclick=formSubmit()>
+<a href="">View Stats</a><br>
 </form>
 <br>
-<a href="">View Stats</a><br>
+<div id="cards">
+	TODO
+</div>
 </body>
 </html>
