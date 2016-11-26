@@ -29,7 +29,8 @@ public class Deck {
 
 	public void printContents() {
 		for (Card x : deck) {
-			System.out.println(x);
+			System.out.println(x.getRank());
+			System.out.println(x.getSuit());
 		}
 	}
 }
