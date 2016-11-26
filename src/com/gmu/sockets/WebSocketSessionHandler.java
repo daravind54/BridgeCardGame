@@ -80,6 +80,8 @@ public class WebSocketSessionHandler
 	    			hand.add(deck.get(i));
 	    		}
 	    		JsonObject addMessage=sessionDetails.get(session.getId());
+	    		JsonProvider provider = JsonProvider.provider();
+	    		addMessage.put("hand", hand)
 	            sendToSession(session, addMessage);
 	        }
 	    }
