@@ -71,7 +71,7 @@ public class WebSocketSessionHandler
 	    		JsonObject cardDetails;
 	    		JsonObject clientMessage;
 	    		//clientMessage.merge(key, value, remappingFunction)
-	    		clientMessage.putAll(addMessage);
+	    		//clientMessage.putAll(addMessage);
 	    		for (int i = 0; i <= 12; i++) {
 	    			Card card=deck.get(i);
 	    			cardString=card.getSuit()+"-"+card.getRank();
@@ -79,7 +79,8 @@ public class WebSocketSessionHandler
 	    			
 	    			cardDetails = provider.createObjectBuilder()
 	    					.add(cardname, cardString).build();
-	    			clientMessage.putAll(cardDetails);
+	    			//clientMessage.putAll(cardDetails);
+	    			
 	    		}
 	    		System.out.println(clientMessage.toString());
 	            sendToSession(session, clientMessage);
