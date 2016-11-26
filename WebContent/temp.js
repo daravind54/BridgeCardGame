@@ -11,6 +11,18 @@ function onMessage(event) {
     	
         alert("South Player");
     }
+	if (player.playerName === "West") {
+	    	
+	        alert("South Player");
+	}
+	if (player.playerName === "North") {
+		
+	    alert("South Player");
+	}
+	if (player.playerName === "East") {
+		
+	    alert("South Player");
+	}
 	
 }
 
