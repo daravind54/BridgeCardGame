@@ -31,6 +31,7 @@ public class Deck {
 		for (Card x : deck) {
 			System.out.println(x.getRank());
 			System.out.println(x.getSuit());
+			break;
 		}
 	}
 }
