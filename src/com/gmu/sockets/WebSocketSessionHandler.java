@@ -50,7 +50,7 @@ public class WebSocketSessionHandler
 		 	if(count==4)
 		 		playerName="East";
 	        System.out.println(count);
-	        JsonProvider provider = JsonProvider.provider();
+	        
 	         JsonObject playerSessionName = provider.createObjectBuilder()
 	                 .add("sessionId", session.getId())
 	                 .add("playerName", playerName)	                            
@@ -67,11 +67,15 @@ public class WebSocketSessionHandler
 	    		String cardString=null;
 	    		String cardname=null;
 	    		JsonObject addMessage=sessionDetails.get(session.getId());
+	    		JsonProvider provider = JsonProvider.provider();
+	    		JsonObject cardDetails=cardDetails = provider.createObjectBuilder();
 	    		for (int i = 0; i <= 12; i++) {
 	    			Card card=deck.get(i);
 	    			cardString=card.getSuit()+"-"+card.getRank();
 	    			cardname="card"+(i+1);
-	    			addMessage.put(cardname, cardString);
+	    			
+	    			cardDetails = provider.createObjectBuilder()
+	    					.add(cardname, cardString).build();
 	    		}
 	            sendToSession(session, addMessage);
 	        }
