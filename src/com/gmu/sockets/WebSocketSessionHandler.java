@@ -27,7 +27,7 @@ public class WebSocketSessionHandler
 {
 	static int count=0;
 	private final Set<Session> sessions = new HashSet<>();
-	private final Map<String, JsonObject> sessionDetails=new Map<String, JsonObject>();
+	private final Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
 	
 	 public void addSession(Session session) {
 	        sessions.add(session);
@@ -57,7 +57,7 @@ public class WebSocketSessionHandler
 	                 .add("sessionId", session.getId())
 	                 .add("playerName", playerName)	                            
 	                 .build();
-	        Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
+	       
 	        sessionDetails.put(session.getId(), playerSessionName);
 	        if(count>1)
 	        sendToAllConnectedSessions(sessionDetails);
