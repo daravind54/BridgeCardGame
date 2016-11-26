@@ -14,17 +14,17 @@ function onMessage(event) {
     }
 	if (player.playerName === "West") {
 	    	
-	        alert("South Player");
+	        alert("West Player");
 	        document.getElementById("playerName").value = player.playerName;
 	}
 	if (player.playerName === "North") {
 		
-	    alert("South Player");
+	    alert("North Player");
 	    document.getElementById("playerName").value = player.playerName;
 	}
 	if (player.playerName === "East") {
 		
-	    alert("South Player");
+	    alert("East Player");
 	    document.getElementById("playerName").value = player.playerName;
 	}
 	

@@ -22,28 +22,40 @@
 </form>
 <br>
 <div id="cards">
-	You are Player <input type="text" name="playerName" id="playerName" readonly>
+	You are Player <input type="text" name="playerName" id="playerName" readonly><br><br>
 	<table>
 		<tr>
 			<td></td>
 			<td>
-			TODO
+			Clubs:
+			Diamonds:
+			Hearts:
+			Spades:
 			</td>
 			<td></td>
 		</tr>
 		<tr>
 			<td>
-			TODO
+			Clubs:
+			Diamonds:
+			Hearts:
+			Spades:
 			</td>
 			<td></td>
 			<td>
-			TODO
+			Clubs:
+			Diamonds:
+			Hearts:
+			Spades:
 			</td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>
-			TODO
+			Clubs:
+			Diamonds:
+			Hearts:
+			Spades:
 			</td>
 			<td></td>
 		</tr>
