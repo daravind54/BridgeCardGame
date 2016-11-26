@@ -54,13 +54,13 @@ public class WebSocketSessionHandler
 	        if(count>1)
 	        sendToAllConnectedSessions(addMessage);
 	 }
-	 private void sendToAllConnectedSessions(String message) {
+	 private void sendToAllConnectedSessions(JsonObject addMessage) {
 	    	for (Session session : sessions) {
-	            sendToSession(session, message);
+	            sendToSession(session, addMessage);
 	        }
 	    }
 
-	    private void sendToSession(Session session, String message) {
+	    private void sendToSession(Session session, JsonObject addMessage) {
 	    	try {
 	            session.getBasicRemote().sendText("Hello World");
 	            
