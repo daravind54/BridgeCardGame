@@ -15,10 +15,13 @@ import java.util.logging.Logger;
 
 
 
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.json.JsonObject;
 import javax.json.spi.JsonProvider;
 import javax.websocket.Session;
+
+import com.gmu.bridge.Deck;
 
 
 
@@ -28,6 +31,7 @@ public class WebSocketSessionHandler
 	static int count=0;
 	private final Set<Session> sessions = new HashSet<>();
 	private final Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
+	private final Deck deck=new Deck();
 	
 	 public void addSession(Session session) {
 	        sessions.add(session);
@@ -65,6 +69,7 @@ public class WebSocketSessionHandler
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
 	    		//System.out.println(session.getId());
+	    		
 	    		JsonObject addMessage=sessionDetails.get(session.getId());
 	            sendToSession(session, addMessage);
 	        }
