@@ -55,8 +55,8 @@ public class WebSocketSessionHandler
 	                 .add("sessionId", session.getId())
 	                 .add("playerName", playerName)	                            
 	                 .build();
-	        Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>;
-	        sessionDetails.put(session.getId(), playerSessionName);
+	        Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
+	        //sessionDetails.put(session.getId(), playerSessionName);
 	        if(count>1)
 	        sendToAllConnectedSessions(playerSessionName);
 	 }
