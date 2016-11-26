@@ -80,7 +80,7 @@ public class WebSocketSessionHandler
 	    			cardDetails = provider.createObjectBuilder()
 	    					.add(cardname, cardString).build();
 	    			//clientMessage.putAll(cardDetails);
-	    			clientMessage=Utility.mergeProfileSummary(addMessage, cardDetails);
+	    			clientMessage=Utility.mergeProfileSummary(clientMessage, cardDetails);
 	    		}
 	    		clientMessage=Utility.mergeProfileSummary(addMessage, cardDetails);
 	    		System.out.println(clientMessage.toString());
