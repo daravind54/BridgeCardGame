@@ -9,8 +9,10 @@ import java.util.logging.Logger;
 
 
 
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.json.JsonObject;
+import javax.json.spi.JsonProvider;
 import javax.websocket.Session;
 
 
@@ -44,8 +46,13 @@ public class WebSocketSessionHandler
 		 	if(count==4)
 		 		playerName="East";
 	        System.out.println(count);
+	        JsonProvider provider = JsonProvider.provider();
+	         JsonObject addMessage = provider.createObjectBuilder()
+	                 .add("sessionId", session.getId())
+	                 .add("id", playerName)	                            
+	                 .build();
 	        if(count>1)
-	        sendToAllConnectedSessions(message);
+	        sendToAllConnectedSessions(addMessage);
 	 }
 	 private void sendToAllConnectedSessions(String message) {
 	    	for (Session session : sessions) {
