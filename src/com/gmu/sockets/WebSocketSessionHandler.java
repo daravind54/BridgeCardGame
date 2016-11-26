@@ -69,7 +69,7 @@ public class WebSocketSessionHandler
 	    		JsonObject addMessage=sessionDetails.get(session.getId());
 	    		JsonProvider provider = JsonProvider.provider();
 	    		JsonObject cardDetails;
-	    		JsonObject clientMessage = null;
+	    		JsonObject clientMessage;
 	    		clientMessage.putAll(addMessage);
 	    		for (int i = 0; i <= 12; i++) {
 	    			Card card=deck.get(i);
