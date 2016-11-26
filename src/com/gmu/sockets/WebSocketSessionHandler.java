@@ -9,18 +9,6 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
-
-
-
-
-
-
-
-
-
-
-
 import javax.enterprise.context.ApplicationScoped;
 import javax.json.JsonObject;
 import javax.json.spi.JsonProvider;
@@ -76,12 +64,14 @@ public class WebSocketSessionHandler
 	    	for (Session session : sessions) {
 	    		//System.out.println(session.getId());
 	    		List<Card> hand=new ArrayList<Card>();
-	    		for (int i = 0; i <= 12; i++) {
-	    			hand.add(deck.get(i));
-	    		}
+	    		String cardString=null;
+	    		String cardname=null;
 	    		JsonObject addMessage=sessionDetails.get(session.getId());
-	    		JsonProvider provider = JsonProvider.provider();
-	    		addMessage.put("hand", hand)
+	    		for (int i = 0; i <= 12; i++) {
+	    			Card card=deck.get(i);
+	    			cardString=card.getSuit()+"-"+card.getRank();
+	    			cardname="card"+(i+1);
+	    		}
 	            sendToSession(session, addMessage);
 	        }
 	    }
