@@ -23,7 +23,7 @@ public class WebSocketServer {
      public void open(Session session) {
 		 sessionHandler.addSession(session);
 		 
-		 System.out.println("Inside Open");
+		 System.out.println(session);
 	 }
 	
 	 @OnClose
