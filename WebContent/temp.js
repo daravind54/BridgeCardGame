@@ -6,10 +6,10 @@ function onMessage(event) {
 	//alert("On message");
 	//window.location.href = "game.jsp";
 	document.getElementById("cards").style.display = "";
-	var device = JSON.parse(event.data);
-    if (device.action === "add") {
+	var player = JSON.parse(event.data);
+    if (player.playerName === "South") {
     	
-        printDeviceElement(device);
+        alert("South Player");
     }
 	
 }
