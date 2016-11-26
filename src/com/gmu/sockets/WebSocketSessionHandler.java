@@ -57,6 +57,7 @@ public class WebSocketSessionHandler
 	 }
 	 private void sendToAllConnectedSessions(JsonObject addMessage) {
 	    	for (Session session : sessions) {
+	    		System.out.println(session.getId());
 	            sendToSession(session, addMessage);
 	        }
 	    }
