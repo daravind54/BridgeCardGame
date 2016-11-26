@@ -63,7 +63,7 @@ public class WebSocketSessionHandler
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
 	    		//System.out.println(session.getId());
-	    		List<Card> hand=new ArrayList<Card>();
+	    		//List<Card> hand=new ArrayList<Card>();
 	    		String cardString=null;
 	    		String cardname=null;
 	    		JsonObject addMessage=sessionDetails.get(session.getId());
@@ -80,6 +80,7 @@ public class WebSocketSessionHandler
 	    					.add(cardname, cardString).build();
 	    			clientMessage.putAll(cardDetails);
 	    		}
+	    		System.out.println(clientMessage.toString());
 	            sendToSession(session, clientMessage);
 	        }
 	    }
