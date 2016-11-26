@@ -7,7 +7,7 @@ function onMessage(event) {
 	//window.location.href = "game.jsp";
 	document.getElementById("cards").style.display = "";
 	var player = JSON.parse(event.data);
-    if (player.playerName === "West") {
+    if (player.playerName === "South") {
     	
         alert("South Player");
     }
