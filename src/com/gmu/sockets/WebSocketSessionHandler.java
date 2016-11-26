@@ -31,7 +31,7 @@ public class WebSocketSessionHandler
 	        sessions.remove(session);
 	    }
 	 
-	 public void addUser(String message, Session session)
+	 public void addUserToGame(String message, Session session)
 	 {
 		 	++count;
 	        System.out.println(count);

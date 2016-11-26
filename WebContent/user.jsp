@@ -8,15 +8,40 @@
 <script src="temp.js"></script>
 </head>
 <body>
-Login successful 
+
 <br>
 <form id="form1">
+Login successful 
 <input type="button"  value="Join Game" onclick=formSubmit()>
 <a href="">View Stats</a><br>
 </form>
 <br>
 <div id="cards">
-	TODO
+	<table>
+		<tr>
+			<td></td>
+			<td>
+			
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td></td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+			
+			</td>
+			<td></td>
+		</tr>
+	</table>
 </div>
 </body>
 </html>

@@ -38,6 +38,6 @@ public class WebSocketServer {
 	 @OnMessage
      public void handleMessage(String message, Session session) {
 		 System.out.println(message);
-		 sessionHandler.addUser(message,session);
+		 sessionHandler.addUserToGame(message,session);
 	 }
 }
