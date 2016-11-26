@@ -3,10 +3,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 
 
 
@@ -74,6 +76,7 @@ public class WebSocketSessionHandler
 	    	for (Session session : sessions) {
 	    		//System.out.println(session.getId());
 	    		List<Card> hand=new ArrayList<Card>();
+	    		System.out.println(deck.printContents());
 	    		JsonObject addMessage=sessionDetails.get(session.getId());
 	            sendToSession(session, addMessage);
 	        }
