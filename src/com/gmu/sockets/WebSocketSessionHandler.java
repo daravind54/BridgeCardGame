@@ -51,7 +51,8 @@ public class WebSocketSessionHandler
 	                 .add("sessionId", session.getId())
 	                 .add("playerName", playerName)	                            
 	                 .build();
-	        if(count==1)
+	         System.out.println(playerSessionName);
+	        if(count>1)
 	        sendToAllConnectedSessions(playerSessionName);
 	 }
 	 private void sendToAllConnectedSessions(JsonObject addMessage) {
