@@ -83,7 +83,7 @@ public class WebSocketSessionHandler
 	    			clientMessage=Utility.mergeProfileSummary(clientMessage, cardDetails);
 	    		}
 	    		//clientMessage=Utility.mergeProfileSummary(addMessage, cardDetails);
-	    		System.out.println(clientMessage.toString());
+	    		
 	            sendToSession(session, clientMessage);
 	        }
 	    }
