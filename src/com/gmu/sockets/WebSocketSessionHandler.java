@@ -88,10 +88,10 @@ public class WebSocketSessionHandler
 	        }
 	    }
 
-	    private void sendToSession(Session session, JsonObject addMessage) {
+	    private void sendToSession(Session session, JsonObject clientMessage) {
 	    	try {
-	    		System.out.println(addMessage.toString());
-	            session.getBasicRemote().sendText(addMessage.toString());
+	    		System.out.println(clientMessage.toString());
+	            session.getBasicRemote().sendText(clientMessage.toString());
 	            
 	        } catch (IOException ex) {
 	            sessions.remove(session);
