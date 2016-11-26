@@ -68,8 +68,8 @@ public class WebSocketSessionHandler
 	    		String cardname=null;
 	    		JsonObject addMessage=sessionDetails.get(session.getId());
 	    		JsonProvider provider = JsonProvider.provider();
-	    		JsonObject cardDetails;
-	    		JsonObject clientMessage;
+	    		JsonObject cardDetails=null;
+	    		JsonObject clientMessage=null;
 	    		//clientMessage.merge(key, value, remappingFunction)
 	    		//clientMessage.putAll(addMessage);
 	    		for (int i = 0; i <= 12; i++) {
@@ -82,6 +82,7 @@ public class WebSocketSessionHandler
 	    			//clientMessage.putAll(cardDetails);
 	    			
 	    		}
+	    		JsonObject clientMessage=Utility.mergeProfileSummary(addMessage, cardDetails);
 	    		System.out.println(clientMessage.toString());
 	            sendToSession(session, clientMessage);
 	        }
