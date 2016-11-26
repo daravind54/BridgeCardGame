@@ -1,8 +1,12 @@
 package com.gmu.sockets;
 
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonObjectBuilder;
+
 public class Utility 
 {
-	private JsonObject mergeProfileSummary(JsonObject oldJsonObject, JsonObject newJsonObject) {
+	public static JsonObject mergeProfileSummary(JsonObject oldJsonObject, JsonObject newJsonObject) {
         JsonObjectBuilder jsonObjectBuilder =Json.createObjectBuilder();
  
         for (String key : oldJsonObject.keySet()){
