@@ -77,7 +77,7 @@ public class WebSocketSessionHandler
 	    			
 	    			cardDetails = provider.createObjectBuilder()
 	    					.add(cardname, cardString).build();
-	    			
+	    			clientMessage.putAll(cardDetails);
 	    		}
 	            sendToSession(session, addMessage);
 	        }
