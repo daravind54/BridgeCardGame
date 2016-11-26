@@ -34,6 +34,7 @@ public class WebSocketSessionHandler
 	 public void addUserToGame(String message, Session session)
 	 {
 		 	++count;
+		 	if(count==1)
 	        System.out.println(count);
 	        if(count>1)
 	        sendToAllConnectedSessions(message);

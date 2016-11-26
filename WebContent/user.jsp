@@ -8,10 +8,15 @@
 <script src="temp.js"></script>
 </head>
 <body>
-
-<br>
+<div id="welcome">
+	<h1>Login successful</h1>
+</div>
+<div id="username">
+	<h3>Welcome, <%= session.getAttribute("username") %></h3>
+</div>
 <form id="form1">
-Login successful 
+
+
 <input type="button"  value="Join Game" onclick=formSubmit()>
 <a href="">View Stats</a><br>
 </form>

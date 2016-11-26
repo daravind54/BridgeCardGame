@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class LoginServlet
@@ -59,6 +60,8 @@ public class LoginServlet extends HttpServlet {
 		String status=loginDao.loginUser(login);
 		if(status.equals("SUCCESS"))
 		{
+			HttpSession session=request.getSession();
+			session.setAttribute("username", login.getEmail());
 			RequestDispatcher requestDispatcher=request.getRequestDispatcher("/user.jsp");
 			requestDispatcher.forward(request, response);
 		}
