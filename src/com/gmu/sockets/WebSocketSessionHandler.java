@@ -58,11 +58,11 @@ public class WebSocketSessionHandler
 	        Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
 	        sessionDetails.put(session.getId(), playerSessionName);
 	        if(count>1)
-	        sendToAllConnectedSessions(playerSessionName);
+	        sendToAllConnectedSessions(playerSessionName,sessionDetails);
 	 }
 	 private void sendToAllConnectedSessions(JsonObject addMessage) {
 	    	for (Session session : sessions) {
-	    		System.out.println(session.getId());
+	    		//System.out.println(session.getId());
 	            sendToSession(session, addMessage);
 	        }
 	    }
