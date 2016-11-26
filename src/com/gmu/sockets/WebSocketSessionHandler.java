@@ -1,5 +1,6 @@
 package com.gmu.sockets;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -16,11 +17,14 @@ import java.util.logging.Logger;
 
 
 
+
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.json.JsonObject;
 import javax.json.spi.JsonProvider;
 import javax.websocket.Session;
 
+import com.gmu.bridge.Card;
 import com.gmu.bridge.Deck;
 
 
@@ -69,7 +73,7 @@ public class WebSocketSessionHandler
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
 	    		//System.out.println(session.getId());
-	    		
+	    		List<Card> hand=new ArrayList<Card>();
 	    		JsonObject addMessage=sessionDetails.get(session.getId());
 	            sendToSession(session, addMessage);
 	        }

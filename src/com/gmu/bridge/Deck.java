@@ -23,7 +23,7 @@ public class Deck {
 		Collections.shuffle(deck);
 	}
 
-	/*public Card get(int index) {
+	public Card get(int index) {
 		return deck.get(index);
 	}
 
@@ -31,5 +31,5 @@ public class Deck {
 		for (Card x : deck) {
 			System.out.println(x);
 		}
-	}*/
+	}
 }
