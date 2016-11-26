@@ -6,6 +6,11 @@ function onMessage(event) {
 	//alert("On message");
 	//window.location.href = "game.jsp";
 	document.getElementById("cards").style.display = "";
+	var device = JSON.parse(event.data);
+    if (device.action === "add") {
+    	
+        printDeviceElement(device);
+    }
 	
 }
 

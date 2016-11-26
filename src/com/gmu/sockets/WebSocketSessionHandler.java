@@ -49,7 +49,7 @@ public class WebSocketSessionHandler
 	        JsonProvider provider = JsonProvider.provider();
 	         JsonObject playerSessionName = provider.createObjectBuilder()
 	                 .add("sessionId", session.getId())
-	                 .add("id", playerName)	                            
+	                 .add("playerName", playerName)	                            
 	                 .build();
 	        if(count>1)
 	        sendToAllConnectedSessions(playerSessionName);
