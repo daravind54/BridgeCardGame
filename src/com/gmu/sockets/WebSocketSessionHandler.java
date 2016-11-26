@@ -51,7 +51,7 @@ public class WebSocketSessionHandler
 	                 .add("sessionId", session.getId())
 	                 .add("playerName", playerName)	                            
 	                 .build();
-	         System.out.println(playerSessionName);
+	         
 	        if(count>1)
 	        sendToAllConnectedSessions(playerSessionName);
 	 }
