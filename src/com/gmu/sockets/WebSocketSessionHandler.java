@@ -35,6 +35,7 @@ public class WebSocketSessionHandler
 	 {
 		 	++count;
 		 	if(count==1)
+		 		
 	        System.out.println(count);
 	        if(count>1)
 	        sendToAllConnectedSessions(message);
@@ -48,6 +49,7 @@ public class WebSocketSessionHandler
 	    private void sendToSession(Session session, String message) {
 	    	try {
 	            session.getBasicRemote().sendText("Hello World");
+	            
 	        } catch (IOException ex) {
 	            sessions.remove(session);
 	            Logger.getLogger(WebSocketSessionHandler.class.getName()).log(Level.ALL, null, ex);
