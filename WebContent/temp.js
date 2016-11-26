@@ -6,6 +6,7 @@ function onMessage(event) {
 	//alert("On message");
 	//window.location.href = "game.jsp";
 	document.getElementById("cards").style.display = "";
+	
 }
 
 function formSubmit() {
@@ -14,6 +15,7 @@ function formSubmit() {
 }
 function hideForm() {
     document.getElementById("form1").style.display = "none";
+    document.getElementById("welcome").style.display = "none";
 }
 function init() {
     hideDiv();

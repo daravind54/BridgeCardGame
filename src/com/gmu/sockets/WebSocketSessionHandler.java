@@ -34,8 +34,15 @@ public class WebSocketSessionHandler
 	 public void addUserToGame(String message, Session session)
 	 {
 		 	++count;
+		 	String playerName=null;
 		 	if(count==1)
-		 		
+		 		playerName="South";
+		 	if(count==2)
+		 		playerName="West";
+		 	if(count==3)
+		 		playerName="North";
+		 	if(count==4)
+		 		playerName="East";
 	        System.out.println(count);
 	        if(count>1)
 	        sendToAllConnectedSessions(message);
