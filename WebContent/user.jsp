@@ -22,6 +22,7 @@
 </form>
 <br>
 <div id="cards">
+	You are Player <input type="text" name="playerName" id="playerName" readonly>
 	<table>
 		<tr>
 			<td></td>

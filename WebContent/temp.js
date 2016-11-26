@@ -10,18 +10,22 @@ function onMessage(event) {
     if (player.playerName === "South") {
     	
         alert("South Player");
+        document.getElementById("playerName").value = player.playerName;
     }
 	if (player.playerName === "West") {
 	    	
 	        alert("South Player");
+	        document.getElementById("playerName").value = player.playerName;
 	}
 	if (player.playerName === "North") {
 		
 	    alert("South Player");
+	    document.getElementById("playerName").value = player.playerName;
 	}
 	if (player.playerName === "East") {
 		
 	    alert("South Player");
+	    document.getElementById("playerName").value = player.playerName;
 	}
 	
 }
