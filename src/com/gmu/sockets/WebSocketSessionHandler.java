@@ -1,9 +1,13 @@
 package com.gmu.sockets;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+
 
 
 
@@ -51,7 +55,8 @@ public class WebSocketSessionHandler
 	                 .add("sessionId", session.getId())
 	                 .add("playerName", playerName)	                            
 	                 .build();
-	         
+	        Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>;
+	        sessionDetails.put(session.getId(), playerSessionName)
 	        if(count>1)
 	        sendToAllConnectedSessions(playerSessionName);
 	 }
