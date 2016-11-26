@@ -47,12 +47,12 @@ public class WebSocketSessionHandler
 		 		playerName="East";
 	        System.out.println(count);
 	        JsonProvider provider = JsonProvider.provider();
-	         JsonObject addMessage = provider.createObjectBuilder()
+	         JsonObject playerSessionName = provider.createObjectBuilder()
 	                 .add("sessionId", session.getId())
 	                 .add("id", playerName)	                            
 	                 .build();
 	        if(count>1)
-	        sendToAllConnectedSessions(addMessage);
+	        sendToAllConnectedSessions(playerSessionName);
 	 }
 	 private void sendToAllConnectedSessions(JsonObject addMessage) {
 	    	for (Session session : sessions) {
