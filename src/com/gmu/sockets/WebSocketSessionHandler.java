@@ -71,6 +71,7 @@ public class WebSocketSessionHandler
 	    			Card card=deck.get(i);
 	    			cardString=card.getSuit()+"-"+card.getRank();
 	    			cardname="card"+(i+1);
+	    			addMessage.put(cardname, cardString);
 	    		}
 	            sendToSession(session, addMessage);
 	        }
