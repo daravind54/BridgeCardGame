@@ -62,7 +62,7 @@ public class WebSocketSessionHandler
 
 	    private void sendToSession(Session session, JsonObject addMessage) {
 	    	try {
-	            session.getBasicRemote().sendText("Hello World");
+	            session.getBasicRemote().sendText(addMessage);
 	            
 	        } catch (IOException ex) {
 	            sessions.remove(session);
