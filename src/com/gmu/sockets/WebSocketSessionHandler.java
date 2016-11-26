@@ -76,7 +76,7 @@ public class WebSocketSessionHandler
 	    	for (Session session : sessions) {
 	    		//System.out.println(session.getId());
 	    		List<Card> hand=new ArrayList<Card>();
-	    		System.out.println(deck.printContents());
+	    		deck.printContents();
 	    		JsonObject addMessage=sessionDetails.get(session.getId());
 	            sendToSession(session, addMessage);
 	        }
