@@ -50,7 +50,7 @@ public class WebSocketSessionHandler
 		 	if(count==4)
 		 		playerName="East";
 	        System.out.println(count);
-	        
+	        JsonProvider provider = JsonProvider.provider();
 	         JsonObject playerSessionName = provider.createObjectBuilder()
 	                 .add("sessionId", session.getId())
 	                 .add("playerName", playerName)	                            
