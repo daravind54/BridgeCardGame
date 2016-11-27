@@ -22,7 +22,8 @@
 </form>
 <br>
 <div id="cards">
-	You are Player <input type="text" name="playerName" id="playerName" readonly><br><br>
+	You are Player <input type="text" name="playerName" id="playerName" readonly>
+	In <input type="text" id="gameType" name="gameType"><br><br>
 	<table>
 		<tr>
 			<td></td>

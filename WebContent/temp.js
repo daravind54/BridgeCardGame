@@ -7,9 +7,10 @@ function onMessage(event) {
 	//window.location.href = "game.jsp";
 	document.getElementById("cards").style.display = "";
 	var player = JSON.parse(event.data);
+	document.getElementById("gameType").value = player.gameType;
     if (player.playerName === "South") {
     	
-        alert("South Player");
+        //alert("South Player");
         
         document.getElementById("playerName").value = player.playerName;
         var temp="card";
@@ -55,7 +56,7 @@ function onMessage(event) {
     }
 	if (player.playerName === "West") {
 	    	
-	        alert("West Player");
+	        //alert("West Player");
 	        document.getElementById("playerName").value = player.playerName;
 	        var temp="card";
 	        var clubs=" ";
@@ -100,7 +101,7 @@ function onMessage(event) {
 	}
 	if (player.playerName === "North") {
 		
-	    alert("North Player");
+	   //alert("North Player");
 	    document.getElementById("playerName").value = player.playerName;
 	    var temp="card";
         var clubs=" ";
@@ -145,7 +146,7 @@ function onMessage(event) {
 	}
 	if (player.playerName === "East") {
 		
-	    alert("East Player");
+	    //alert("East Player");
 	    document.getElementById("playerName").value = player.playerName;
 	    var temp="card";
         var clubs=" ";

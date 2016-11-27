@@ -51,7 +51,8 @@ public class WebSocketSessionHandler
 	        JsonProvider provider = JsonProvider.provider();
 	         JsonObject playerSessionName = provider.createObjectBuilder()
 	                 .add("sessionId", session.getId())
-	                 .add("playerName", playerName)	                            
+	                 .add("playerName", playerName)	 
+	                 .add("gameType","Bidding Phase")
 	                 .build();
 	       
 	        sessionDetails.put(session.getId(), playerSessionName);
