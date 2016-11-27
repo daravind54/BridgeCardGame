@@ -24,6 +24,7 @@ public class WebSocketSessionHandler
 	private final Set<Session> sessions = new HashSet<>();
 	private final Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
 	private final Deck deck=new Deck();
+	private final Map<String, Integer> bid=new HashMap<String, Integer>();
 	
 	 public void addSession(Session session) {
 	        sessions.add(session);
@@ -63,6 +64,7 @@ public class WebSocketSessionHandler
 	 public void bid(String message, Session session)
 	 {
 		 System.out.println(session.getId());
+		 
 	 }
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
