@@ -244,8 +244,8 @@ function formSubmit() {
 	socket.send("Hello");
 }
 function formSubmit1() {
-	hideForm();
-	document.getElementById("waiting").style.display = "";
+	//hideForm();
+	//document.getElementById("waiting").style.display = "";
 	socket.send("Hello");
 }
 function hideForm() {
