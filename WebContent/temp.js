@@ -9,14 +9,7 @@ function onMessage(event) {
 	document.getElementById("cards").style.display = "";
 	var player = JSON.parse(event.data);
 	document.getElementById("gameType").value = player.gameType;
-	if(player.gameType=="Bidding Phase")
-	{
-		document.getElementById("SubmitCard").style.display = "";
-	}
-	if(player.gameType=="Game Phase")
-	{
-		document.getElementById("SubmitBid").style.display = "";
-	}
+	
     if (player.playerName === "South") {
     	
         //alert("South Player");
@@ -62,6 +55,16 @@ function onMessage(event) {
         document.getElementById("Sdiamonds").value=diamonds;
         document.getElementById("Shearts").value=hearts;
         document.getElementById("Sspades").value=spades;
+        if(player.gameType=="Bidding Phase")
+    	{
+    		document.getElementById("SSubmitCard").style.display = "none";
+    		document.getElementById("SubmitBid").style.display = "";
+    	}
+    	if(player.gameType=="Game Phase")
+    	{
+    		document.getElementById("SSubmitBid").style.display = "none";
+    		document.getElementById("SSubmitCard").style.display = "";
+    	}
     }
 	if (player.playerName === "West") {
 	    	
@@ -107,6 +110,16 @@ function onMessage(event) {
 	        document.getElementById("Wdiamonds").value=diamonds;
 	        document.getElementById("Whearts").value=hearts;
 	        document.getElementById("Wspades").value=spades;
+	        if(player.gameType=="Bidding Phase")
+	    	{
+	    		document.getElementById("WSubmitCard").style.display = "none";
+	    		document.getElementById("WSubmitBid").style.display = "";
+	    	}
+	    	if(player.gameType=="Game Phase")
+	    	{
+	    		document.getElementById("WSubmitBid").style.display = "none";
+	    		document.getElementById("WSubmitCard").style.display = "";
+	    	}
 	}
 	if (player.playerName === "North") {
 		
@@ -152,6 +165,16 @@ function onMessage(event) {
         document.getElementById("Ndiamonds").value=diamonds;
         document.getElementById("Nhearts").value=hearts;
         document.getElementById("Nspades").value=spades;
+        if(player.gameType=="Bidding Phase")
+    	{
+    		document.getElementById("NSubmitCard").style.display = "none";
+    		document.getElementById("NSubmitBid").style.display = "";
+    	}
+    	if(player.gameType=="Game Phase")
+    	{
+    		document.getElementById("NSubmitBid").style.display = "none";
+    		document.getElementById("NSubmitCard").style.display = "";
+    	}
 	}
 	if (player.playerName === "East") {
 		
@@ -197,6 +220,16 @@ function onMessage(event) {
         document.getElementById("Ediamonds").value=diamonds;
         document.getElementById("Ehearts").value=hearts;
         document.getElementById("Espades").value=spades;
+        if(player.gameType=="Bidding Phase")
+    	{
+    		document.getElementById("ESubmitCard").style.display = "none";
+    		document.getElementById("ESubmitBid").style.display = "";
+    	}
+    	if(player.gameType=="Game Phase")
+    	{
+    		document.getElementById("ESubmitBid").style.display = "none";
+    		document.getElementById("ESubmitCard").style.display = "";
+    	}
 	}
 	
 }
@@ -216,4 +249,12 @@ function init() {
 function hideDiv() {
     document.getElementById("cards").style.display = "none";
     document.getElementById("waiting").style.display = "none";
+    document.getElementById("SSubmitBid").style.display = "none";
+    document.getElementById("SSubmitCard").style.display = "none";
+    document.getElementById("WSubmitBid").style.display = "none";
+    document.getElementById("WSubmitCard").style.display = "none";
+    document.getElementById("NSubmitBid").style.display = "none";
+    document.getElementById("NSubmitCard").style.display = "none";
+    document.getElementById("ESubmitBid").style.display = "none";
+    document.getElementById("ESubmitCard").style.display = "none";
 }

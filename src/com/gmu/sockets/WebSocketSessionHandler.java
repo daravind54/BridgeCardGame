@@ -56,7 +56,7 @@ public class WebSocketSessionHandler
 	                 .build();
 	       
 	        sessionDetails.put(session.getId(), playerSessionName);
-	        if(count>=1)
+	        if(count==4)
 	        sendToAllConnectedSessions(sessionDetails);
 	 }
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {

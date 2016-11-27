@@ -34,8 +34,8 @@
 				<td>
 					<form id="userInput">
 						<input type="text" id="Ninput" name="Ninput">
-						<input type="button"  id="SubmitBid" value="SubmitBid" onclick=formSubmit()>
-						<input type="button"  id="SubmitCard" value="SubmitCard" onclick=formSubmit()>
+						<input type="button"  id="NSubmitBid" value="SubmitBid" onclick=formSubmit()>
+						<input type="button"  id="NSubmitCard" value="SubmitCard" onclick=formSubmit()>
 					</form>
 				</td>
 				<td></td>
@@ -55,7 +55,13 @@
 			<td></td>
 		</tr>
 		<tr>
-			<td>West</td>
+			<td>
+				<form id="userInput">
+						<input type="text" id="Winput" name="Ninput">
+						<input type="button"  id="WSubmitBid" value="SubmitBid" onclick=formSubmit()>
+						<input type="button"  id="WSubmitCard" value="SubmitCard" onclick=formSubmit()>
+					</form>
+			</td>
 			<td id="West">
 			Clubs:<input type="text" id="Wclubs" name="Wclubs" readonly>
 			<br>
@@ -75,7 +81,13 @@
 			<br>
 			Spades:<input type="text" id="Espades" name="Espades" readonly>
 			</td>
-			<td>East</td>
+			<td>
+				<form id="userInput">
+						<input type="text" id="Einput" name="Ninput">
+						<input type="button"  id="ESubmitBid" value="SubmitBid" onclick=formSubmit()>
+						<input type="button"  id="ESubmitCard" value="SubmitCard" onclick=formSubmit()>
+				</form>
+			</td>
 		</tr>
 		<tr>
 			<td></td>
@@ -94,7 +106,13 @@
 		<tr>
 			<td></td>
 			<td></td>
-			<td>South</td>
+			<td>
+				<form id="userInput">
+						<input type="text" id="Sinput" name="Ninput">
+						<input type="button"  id="SSubmitBid" value="SubmitBid" onclick=formSubmit()>
+						<input type="button"  id="SSubmitCard" value="SubmitCard" onclick=formSubmit()>
+					</form>
+			</td>
 			<td></td>
 		</tr>
 	</table>
