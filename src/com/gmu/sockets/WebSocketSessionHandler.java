@@ -62,7 +62,7 @@ public class WebSocketSessionHandler
 	 
 	 public void bid(String message, Session session)
 	 {
-		 
+		 System.out.println(session.getId());
 	 }
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
