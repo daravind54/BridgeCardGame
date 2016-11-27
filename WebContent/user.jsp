@@ -26,36 +26,48 @@
 	<table>
 		<tr>
 			<td></td>
-			<td>
-			Clubs:
-			Diamonds:
-			Hearts:
-			Spades:
+			<td id="North">
+			Clubs:<input type="text" id="Nclubs" name="Nclubs" readonly>
+			<br>
+			Diamonds:<input type="text" id="Ndiamonds" name="Ndiamonds" readonly>
+			<br>
+			Hearts:<input type="text" id="Nhearts" name="Nhearts" readonly>
+			<br>
+			Spades:<input type="text" id="Nspades" name="Nspades" readonly>
 			</td>
 			<td></td>
 		</tr>
 		<tr>
-			<td>
-			Clubs:
-			Diamonds:
-			Hearts:
-			Spades:
+			<td id="West">
+			Clubs:<input type="text" id="Wclubs" name="Wclubs" readonly>
+			<br>
+			Diamonds:<input type="text" id="Wdiamonds" name="Wdiamonds" readonly>
+			<br>
+			Hearts:<input type="text" id="Whearts" name="Whearts" readonly>
+			<br>
+			Spades:<input type="text" id="Wspades" name="Wspades" readonly>
 			</td>
 			<td></td>
-			<td>
-			Clubs:
-			Diamonds:
-			Hearts:
-			Spades:
+			<td id="East">
+			Clubs:<input type="text" id="Eclubs" name="Eclubs" readonly>
+			<br>
+			Diamonds:<input type="text" id="Ediamonds" name="Ediamonds" readonly>
+			<br>
+			Hearts:<input type="text" id="Ehearts" name="Ehearts" readonly>
+			<br>
+			Spades:<input type="text" id="Espades" name="Espades" readonly>
 			</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td>
-			Clubs:
-			Diamonds:
-			Hearts:
-			Spades:
+			<td id="South">
+			Clubs:<input type="text" id="Sclubs" name="Sclubs" readonly>
+			<br>
+			Diamonds:<input type="text" id="Sdiamonds" name="Sdiamonds" readonly>
+			<br>
+			Hearts:<input type="text" id="Shearts" name="Shearts" readonly>
+			<br>
+			Spades:<input type="text" id="Sspades" name="Sspades" readonly>
 			</td>
 			<td></td>
 		</tr>
