@@ -44,7 +44,7 @@ public class WebSocketServer {
 		 JsonReader reader = Json.createReader(new StringReader(message));
 		 JsonObject jsonMessage = reader.readObject();
 		 System.out.println(jsonMessage);
-		 if(message.equals("initialization"))
+		 if(jsonMessage.getString("action").equals("initialization"))
 			 sessionHandler.addUserToGame(message,session);
 		 if(message.contains("bidding"))
 			 sessionHandler.bid(message, session);
