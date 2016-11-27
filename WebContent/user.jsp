@@ -21,11 +21,27 @@
 <a href="">View Stats</a><br>
 </form>
 <br>
+<div id="waiting">
+	<h2>Waiting for other players to join...</h2>
+</div>
 <div id="cards">
 	You are Player <input type="text" name="playerName" id="playerName" readonly>
 	In <input type="text" id="gameType" name="gameType"><br><br>
 	<table>
 		<tr>
+				<td></td>
+				<td></td>
+				<td>
+					<form id="userInput">
+						<input type="text" id="Ninput" name="Ninput">
+						<input type="button"  id="SubmitBid" value="SubmitBid" onclick=formSubmit()>
+						<input type="button"  id="SubmitCard" value="SubmitCard" onclick=formSubmit()>
+					</form>
+				</td>
+				<td></td>
+		</tr>
+		<tr>
+			<td></td>
 			<td></td>
 			<td id="North">
 			Clubs:<input type="text" id="Nclubs" name="Nclubs" readonly>
@@ -39,6 +55,7 @@
 			<td></td>
 		</tr>
 		<tr>
+			<td>West</td>
 			<td id="West">
 			Clubs:<input type="text" id="Wclubs" name="Wclubs" readonly>
 			<br>
@@ -58,8 +75,10 @@
 			<br>
 			Spades:<input type="text" id="Espades" name="Espades" readonly>
 			</td>
+			<td>East</td>
 		</tr>
 		<tr>
+			<td></td>
 			<td></td>
 			<td id="South">
 			Clubs:<input type="text" id="Sclubs" name="Sclubs" readonly>
@@ -70,6 +89,12 @@
 			<br>
 			Spades:<input type="text" id="Sspades" name="Sspades" readonly>
 			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>South</td>
 			<td></td>
 		</tr>
 	</table>

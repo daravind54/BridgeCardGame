@@ -5,9 +5,18 @@ function onMessage(event) {
 	
 	//alert("On message");
 	//window.location.href = "game.jsp";
+	document.getElementById("waiting").style.display = "none";
 	document.getElementById("cards").style.display = "";
 	var player = JSON.parse(event.data);
 	document.getElementById("gameType").value = player.gameType;
+	if(player.gameType=="Bidding Phase")
+	{
+		document.getElementById("SubmitCard").style.display = "";
+	}
+	if(player.gameType=="Game Phase")
+	{
+		document.getElementById("SubmitBid").style.display = "";
+	}
     if (player.playerName === "South") {
     	
         //alert("South Player");
@@ -194,6 +203,7 @@ function onMessage(event) {
 
 function formSubmit() {
 	hideForm();
+	document.getElementById("waiting").style.display = "";
 	socket.send("Hello");
 }
 function hideForm() {
@@ -205,4 +215,5 @@ function init() {
 }
 function hideDiv() {
     document.getElementById("cards").style.display = "none";
+    document.getElementById("waiting").style.display = "none";
 }
