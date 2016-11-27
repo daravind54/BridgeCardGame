@@ -59,6 +59,11 @@ public class WebSocketSessionHandler
 	        if(count>=1)
 	        sendToAllConnectedSessions(sessionDetails);
 	 }
+	 
+	 public void bid(String message, Session session)
+	 {
+		 
+	 }
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
 	    		//System.out.println(session.getId());

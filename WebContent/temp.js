@@ -241,12 +241,12 @@ function onMessage(event) {
 function formSubmit() {
 	hideForm();
 	document.getElementById("waiting").style.display = "";
-	socket.send("Hello");
+	socket.send("initialization");
 }
 function formSubmit1() {
 	//hideForm();
 	//document.getElementById("waiting").style.display = "";
-	socket.send("Hello");
+	socket.send("bidding");
 }
 function hideForm() {
     document.getElementById("form1").style.display = "none";
