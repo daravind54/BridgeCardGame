@@ -38,6 +38,7 @@ public class WebSocketServer {
 	 @OnMessage
      public void handleMessage(String message, Session session) {
 		 System.out.println(message);
+		 if(message.equals("initialization"))
 		 sessionHandler.addUserToGame(message,session);
 	 }
 }
