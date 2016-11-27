@@ -55,10 +55,11 @@ function onMessage(event) {
         document.getElementById("Sdiamonds").value=diamonds;
         document.getElementById("Shearts").value=hearts;
         document.getElementById("Sspades").value=spades;
+        document.getElementById("Sinput").style.display = "";
         if(player.gameType=="Bidding Phase")
     	{
     		document.getElementById("SSubmitCard").style.display = "none";
-    		document.getElementById("SubmitBid").style.display = "";
+    		document.getElementById("SSubmitBid").style.display = "";
     	}
     	if(player.gameType=="Game Phase")
     	{
@@ -110,6 +111,7 @@ function onMessage(event) {
 	        document.getElementById("Wdiamonds").value=diamonds;
 	        document.getElementById("Whearts").value=hearts;
 	        document.getElementById("Wspades").value=spades;
+	        document.getElementById("Winput").style.display = "";
 	        if(player.gameType=="Bidding Phase")
 	    	{
 	    		document.getElementById("WSubmitCard").style.display = "none";
@@ -165,6 +167,7 @@ function onMessage(event) {
         document.getElementById("Ndiamonds").value=diamonds;
         document.getElementById("Nhearts").value=hearts;
         document.getElementById("Nspades").value=spades;
+        document.getElementById("Ninput").style.display = "";
         if(player.gameType=="Bidding Phase")
     	{
     		document.getElementById("NSubmitCard").style.display = "none";
@@ -220,6 +223,7 @@ function onMessage(event) {
         document.getElementById("Ediamonds").value=diamonds;
         document.getElementById("Ehearts").value=hearts;
         document.getElementById("Espades").value=spades;
+        document.getElementById("Einput").style.display = "";
         if(player.gameType=="Bidding Phase")
     	{
     		document.getElementById("ESubmitCard").style.display = "none";
@@ -235,6 +239,11 @@ function onMessage(event) {
 }
 
 function formSubmit() {
+	hideForm();
+	document.getElementById("waiting").style.display = "";
+	socket.send("Hello");
+}
+function formSubmit1() {
 	hideForm();
 	document.getElementById("waiting").style.display = "";
 	socket.send("Hello");
@@ -257,4 +266,9 @@ function hideDiv() {
     document.getElementById("NSubmitCard").style.display = "none";
     document.getElementById("ESubmitBid").style.display = "none";
     document.getElementById("ESubmitCard").style.display = "none";
+    
+    document.getElementById("Ninput").style.display = "none";
+    document.getElementById("Einput").style.display = "none";
+    document.getElementById("Winput").style.display = "none";
+    document.getElementById("Sinput").style.display = "none";
 }
