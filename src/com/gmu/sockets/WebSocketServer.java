@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.json.Json;
+import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
@@ -41,8 +42,8 @@ public class WebSocketServer {
 	 @OnMessage
      public void handleMessage(String message, Session session) {
 		 JsonReader reader = Json.createReader(new StringReader(message));
-		 
-		 System.out.println(message);
+		 JsonObject jsonMessage = reader.readObject();
+		 System.out.println(jsonMessage);
 		 if(message.equals("initialization"))
 			 sessionHandler.addUserToGame(message,session);
 		 if(message.contains("bidding"))
