@@ -43,6 +43,7 @@ public class WebSocketServer {
      public void handleMessage(String message, Session session) {
 		 JsonReader reader = Json.createReader(new StringReader(message));
 		 JsonObject jsonMessage = reader.readObject();
+		 reader.close();
 		 System.out.println(jsonMessage);
 		 if(jsonMessage.getString("action").equals("initialization"))
 			 sessionHandler.addUserToGame(message,session);
