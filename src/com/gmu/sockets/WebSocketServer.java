@@ -40,7 +40,7 @@ public class WebSocketServer {
 		 System.out.println(message);
 		 if(message.equals("initialization"))
 			 sessionHandler.addUserToGame(message,session);
-		 if(message.equals("bidding"))
+		 if(message.contains("bidding"))
 			 sessionHandler.bid(message, session);
 	 }
 }

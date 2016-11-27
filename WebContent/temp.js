@@ -243,10 +243,17 @@ function formSubmit() {
 	document.getElementById("waiting").style.display = "";
 	socket.send("initialization");
 }
-function formSubmit1() {
+function formSubmitBid1() {
 	//hideForm();
 	//document.getElementById("waiting").style.display = "";
-	socket.send("bidding");
+	var username="South";
+	var bidvalue=document.getElementById("Sinput").value;
+	var DeviceAction = {
+	        action: "bidding",
+	        playerName: username,
+	        bidValue: bidvalue,
+	        };
+	socket.send("DeviceAction");
 }
 function hideForm() {
     document.getElementById("form1").style.display = "none";

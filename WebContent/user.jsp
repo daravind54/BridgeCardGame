@@ -109,7 +109,7 @@
 			<td>
 				<form id="userInput">
 						<input type="text" id="Sinput" name="Sinput">
-						<input type="button"  id="SSubmitBid" value="SubmitBid" onclick=formSubmit1()>
+						<input type="button"  id="SSubmitBid" value="SubmitBid" onclick=formSubmitBid1()>
 						<input type="button"  id="SSubmitCard" value="SubmitCard" onclick=formSubmit()>
 					</form>
 			</td>
