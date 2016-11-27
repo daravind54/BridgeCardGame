@@ -1,9 +1,12 @@
 package com.gmu.sockets;
+import java.io.StringReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.json.Json;
+import javax.json.JsonReader;
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
 import javax.websocket.OnMessage;
@@ -37,6 +40,8 @@ public class WebSocketServer {
 	 }
 	 @OnMessage
      public void handleMessage(String message, Session session) {
+		 JsonReader reader = Json.createReader(new StringReader(message));
+		 
 		 System.out.println(message);
 		 if(message.equals("initialization"))
 			 sessionHandler.addUserToGame(message,session);

@@ -241,7 +241,10 @@ function onMessage(event) {
 function formSubmit() {
 	hideForm();
 	document.getElementById("waiting").style.display = "";
-	socket.send("initialization");
+	var DeviceAction = {
+	        action: "initialization"
+	        };
+	socket.send(DeviceAction);
 }
 function formSubmitBid1() {
 	//hideForm();
@@ -253,7 +256,7 @@ function formSubmitBid1() {
 	        playerName: username,
 	        bidValue: bidvalue,
 	        };
-	socket.send("DeviceAction");
+	socket.send(DeviceAction);
 }
 function hideForm() {
     document.getElementById("form1").style.display = "none";
