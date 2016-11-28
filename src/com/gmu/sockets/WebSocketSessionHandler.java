@@ -21,6 +21,7 @@ import com.gmu.bridge.Deck;
 public class WebSocketSessionHandler 
 {
 	static int count=0;
+	static int passCount=0;
 	private final Set<Session> sessions = new HashSet<>();
 	private final Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
 	private final Deck deck=new Deck();
@@ -129,10 +130,13 @@ public class WebSocketSessionHandler
 		 
 			
 	 }
-	 
+	 public String compareBid()
+	 {
+		 
+	 }
 	 public void bid(JsonObject jsonMessage, Session session)
 	 {
-		 int passCount=0;
+		 
 		  String temp=jsonMessage.getString("bidValue");
 		  if("pass".equals(temp))
 			  passCount++;
@@ -144,6 +148,10 @@ public class WebSocketSessionHandler
 			  String suit=suitRank[1];
 			  int bidValue=calcBidValue(suitToInt.get(suit), suitToInt.get(rank));
 			  bid.put(jsonMessage.getString("playername"), bidValue);
+		  }
+		  if(passCount==3)
+		  {
+			  compareBid();
 		  }
 	 }
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
