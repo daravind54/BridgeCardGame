@@ -180,8 +180,9 @@ public class WebSocketSessionHandler
 		  if(passCount==3)
 		  {
 			  winner=compareBid();
+			  System.out.println(winner);
 		  }
-		  System.out.println(winner);
+		  
 	 }
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
