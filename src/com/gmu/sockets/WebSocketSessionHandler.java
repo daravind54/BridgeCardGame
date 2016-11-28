@@ -172,7 +172,7 @@ public class WebSocketSessionHandler
 			  String[] suitRank=temp.split(" ");
 			  String rank=suitRank[0];
 			  String suit=suitRank[1];
-			  System.out.println(rank+" "+suit);
+			  System.out.println(suit+" "+rank);
 			  System.out.println(suitToInt.get(suit) +" "+bidRankToInt.get(rank));
 			  int bidValue=calcBidValue(suitToInt.get(suit), bidRankToInt.get(rank));
 			  bid.put(jsonMessage.getString("playerName"), bidValue);
