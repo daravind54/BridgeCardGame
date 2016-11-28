@@ -9,6 +9,7 @@ function onMessage(event) {
 	document.getElementById("cards").style.display = "";
 	var player = JSON.parse(event.data);
 	document.getElementById("gameType").value = player.gameType;
+	document.getElementById("turn").value = player.turn;
 	
     if (player.playerName === "South") {
     	

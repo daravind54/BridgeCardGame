@@ -25,8 +25,10 @@
 	<h2>Waiting for other players to join...</h2>
 </div>
 <div id="cards">
-	You are Player <input type="text" name="playerName" id="playerName" readonly>
-	In <input type="text" id="gameType" name="gameType"><br><br>
+	You are Player <input type="text" name="playerName" id="playerName" readonly><br>
+	In <input type="text" id="gameType" name="gameType" readonly><br>
+	Its <input type="text" id="turn" name="turn" readonly> turn
+	<br><br>
 	<table>
 		<tr>
 				<td></td>

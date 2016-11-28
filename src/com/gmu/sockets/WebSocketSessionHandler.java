@@ -132,10 +132,11 @@ public class WebSocketSessionHandler
 	                 .add("sessionId", session.getId())
 	                 .add("playerName", playerName)	 
 	                 .add("gameType","Bidding Phase")
+	                 .add("turn", "South's")
 	                 .build();
 	       
 	        sessionDetails.put(session.getId(), playerSessionName);
-	        if(count==4)
+	        if(count>=1)
 	        sendCardsToAllConnectedSessions(sessionDetails);
 	 }
 	 public int calcBidValue(int suit,int rank)
