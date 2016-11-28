@@ -113,7 +113,7 @@ public class WebSocketSessionHandler
 	                 .build();
 	       
 	        sessionDetails.put(session.getId(), playerSessionName);
-	        if(count>=1)
+	        if(count==4)
 	        sendToAllConnectedSessions(sessionDetails);
 	 }
 	 public int calcBidValue(int suit,int rank)
