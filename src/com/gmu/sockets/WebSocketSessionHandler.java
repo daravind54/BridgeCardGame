@@ -26,7 +26,8 @@ public class WebSocketSessionHandler
 	private final Set<Session> sessions = new HashSet<>();
 	private final Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
 	private final Deck deck=new Deck();
-	private final Map<String, Integer> bid=new HashMap<String, Integer>();
+	private final Map<String, Integer> bidRank=new HashMap<String, Integer>();
+	private final Map<String, String> actualbid=new HashMap<String, String>();
 	private static Map<String, Integer> suitToInt = new HashMap<String, Integer>();
 	static {
 		suitToInt.put("S", 0);
@@ -136,7 +137,7 @@ public class WebSocketSessionHandler
 	                 .build();
 	       
 	        sessionDetails.put(session.getId(), playerSessionName);
-	        if(count>=1)
+	        if(count==4)
 	        sendCardsToAllConnectedSessions(sessionDetails);
 	 }
 	 public int calcBidValue(int suit,int rank)
@@ -157,7 +158,7 @@ public class WebSocketSessionHandler
 	 }
 	 public String compareBid()
 	 {
-		 TreeMap<String, Integer> tempTree=new TreeMap<String, Integer>(bid);
+		 TreeMap<String, Integer> tempTree=new TreeMap<String, Integer>(bidRank);
 		 
 		 return tempTree.lastKey();
 	 }
@@ -174,6 +175,7 @@ public class WebSocketSessionHandler
 			 nextPlayer="South";
 		 String winner=null;
 		  String temp=jsonMessage.getString("bidValue");
+		  actualbid.put(jsonMessage.getString("playerName"), temp);
 		  if(temp.equals("pass")||temp.equals("PASS"))
 			  passCount++;
 		  else
@@ -184,17 +186,43 @@ public class WebSocketSessionHandler
 			  String suit=suitRank[1];
 			  System.out.println(suit+" "+rank);
 			  System.out.println(suitToInt.get(suit) +" "+bidRankToInt.get(rank));
-			  int bidValue=calcBidValue(suitToInt.get(suit), bidRankToInt.get(rank));
-			  bid.put(jsonMessage.getString("playerName"), bidValue);
+			  Integer bidValue=calcBidValue(suitToInt.get(suit), bidRankToInt.get(rank));
+			  
+			  bidRank.put(jsonMessage.getString("playerName"), bidValue);
 		  }
 		  JsonProvider provider = JsonProvider.provider();
   		JsonObject data=provider.createObjectBuilder()
 				.add("nextPlayer", nextPlayer)
 				.build();
+  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data);
 		  if(passCount==3)
 		  {
+			  String duplicate=null;
+			  String trump;
+			  int tricksToWin;
+			  String winnerBid;
 			  winner=compareBid();
+			  if(winner.equals("North"))
+				  duplicate="South";
+			  if(winner.equals("South"))
+				  duplicate="North";
+			  if(winner.equals("East"))
+				  duplicate="West";
+			  if(winner.equals("West"))
+				  duplicate="East";
+			  winnerBid=actualbid.get(winner);
+			  String[] temp1=winnerBid.split(" ");
+			  tricksToWin=6 + Integer.parseInt(temp1[0]);
+			  trump=temp1[1];
+			  JsonProvider provider1 = JsonProvider.provider();
+		  		JsonObject data1=provider.createObjectBuilder()
+						.add("winner", winner)
+						.add("tricksToWin", tricksToWin)
+						.add("trump", trump)
+						.build();
+		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
 			  System.out.println(winner);
+			  System.out.println(jsonMessage.toString());
 		  }
 		  
 	 }
