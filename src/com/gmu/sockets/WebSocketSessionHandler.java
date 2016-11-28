@@ -164,7 +164,7 @@ public class WebSocketSessionHandler
 	 {
 		 String winner=null;
 		  String temp=jsonMessage.getString("bidValue");
-		  if("PASS".equals(temp))
+		  if("pass".equals(temp))
 			  passCount++;
 		  else
 		  {  
