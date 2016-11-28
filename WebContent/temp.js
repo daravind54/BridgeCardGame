@@ -246,11 +246,47 @@ function formSubmit() {
 	        };
 	socket.send(JSON.stringify(DeviceAction));
 }
-function formSubmitBid1() {
+function formSubmitBidS() {
 	//hideForm();
 	//document.getElementById("waiting").style.display = "";
 	var username="South";
 	var bidvalue=document.getElementById("Sinput").value;
+	var DeviceAction = {
+	        action: "bidding",
+	        playerName: username,
+	        bidValue: bidvalue,
+	        };
+	socket.send(JSON.stringify(DeviceAction));
+}
+function formSubmitBidN() {
+	//hideForm();
+	//document.getElementById("waiting").style.display = "";
+	var username="North";
+	var bidvalue=document.getElementById("Ninput").value;
+	var DeviceAction = {
+	        action: "bidding",
+	        playerName: username,
+	        bidValue: bidvalue,
+	        };
+	socket.send(JSON.stringify(DeviceAction));
+}
+function formSubmitBidE() {
+	//hideForm();
+	//document.getElementById("waiting").style.display = "";
+	var username="East";
+	var bidvalue=document.getElementById("Einput").value;
+	var DeviceAction = {
+	        action: "bidding",
+	        playerName: username,
+	        bidValue: bidvalue,
+	        };
+	socket.send(JSON.stringify(DeviceAction));
+}
+function formSubmitBidW() {
+	//hideForm();
+	//document.getElementById("waiting").style.display = "";
+	var username="West";
+	var bidvalue=document.getElementById("Winput").value;
 	var DeviceAction = {
 	        action: "bidding",
 	        playerName: username,

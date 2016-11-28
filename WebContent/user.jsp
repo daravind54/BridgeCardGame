@@ -34,7 +34,7 @@
 				<td>
 					<form id="userInput">
 						<input type="text" id="Ninput" name="Ninput">
-						<input type="button"  id="NSubmitBid" value="SubmitBid" onclick=formSubmit()>
+						<input type="button"  id="NSubmitBid" value="SubmitBid" onclick=formSubmitBidN()>
 						<input type="button"  id="NSubmitCard" value="SubmitCard" onclick=formSubmit()>
 					</form>
 				</td>
@@ -58,7 +58,7 @@
 			<td>
 				<form id="userInput">
 						<input type="text" id="Winput" name="Winput">
-						<input type="button"  id="WSubmitBid" value="SubmitBid" onclick=formSubmit()>
+						<input type="button"  id="WSubmitBid" value="SubmitBid" onclick=formSubmitBidW()>
 						<input type="button"  id="WSubmitCard" value="SubmitCard" onclick=formSubmit()>
 					</form>
 			</td>
@@ -84,7 +84,7 @@
 			<td>
 				<form id="userInput">
 						<input type="text" id="Einput" name="Einput">
-						<input type="button"  id="ESubmitBid" value="SubmitBid" onclick=formSubmit()>
+						<input type="button"  id="ESubmitBid" value="SubmitBid" onclick=formSubmitBidE()>
 						<input type="button"  id="ESubmitCard" value="SubmitCard" onclick=formSubmit()>
 				</form>
 			</td>
@@ -109,7 +109,7 @@
 			<td>
 				<form id="userInput">
 						<input type="text" id="Sinput" name="Sinput">
-						<input type="button"  id="SSubmitBid" value="SubmitBid" onclick=formSubmitBid1()>
+						<input type="button"  id="SSubmitBid" value="SubmitBid" onclick=formSubmitBidS()>
 						<input type="button"  id="SSubmitCard" value="SubmitCard" onclick=formSubmit()>
 					</form>
 			</td>
