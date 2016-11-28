@@ -127,6 +127,7 @@ public class WebSocketSessionHandler
 		 {
 			value = (4 - suit) + 100 * rank;
 		 }
+		 System.out.println(value);
 		 return value;	
 		 
 			
