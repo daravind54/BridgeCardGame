@@ -34,14 +34,14 @@ public class WebSocketSessionHandler
 		suitToInt.put("P", 4);
 		suitToInt.put("N", 5);
 	}
-	private static Map<String, Integer> suitToString = new HashMap<String, Integer>();
+	private static Map<Integer,String> suitToString = new HashMap<Integer,String>();
 	static {
-		suitToInt.put(0,"S");
-		suitToInt.put(1,"H");
-		suitToInt.put(2,"H");
-		suitToInt.put(3,"C");
-		suitToInt.put(4,"P");
-		suitToInt.put(5,"N");
+		suitToString.put(0,"S");
+		suitToString.put(1,"H");
+		suitToString.put(2,"H");
+		suitToString.put(3,"C");
+		suitToString.put(4,"P");
+		suitToString.put(5,"N");
 	}
 	
 	private static Map<String, Integer> rankToInt = new HashMap<String, Integer>();
@@ -61,6 +61,24 @@ public class WebSocketSessionHandler
 		rankToInt.put("King", 13);
 		rankToInt.put("Ace", 14);
 		rankToInt.put("Pass", 0);
+	}
+	private static Map<Integer,String> rankToString = new HashMap<Integer,String>();
+	static {
+		rankToString.put(14,"1");
+		rankToString.put(2,"2");
+		rankToString.put(3,"3");
+		rankToString.put(4,"4");
+		rankToString.put(5,"5");
+		rankToString.put(6,"6");
+		rankToString.put(7,"7");
+		rankToString.put(8,"8");
+		rankToString.put(9,"9");
+		rankToString.put(10,"10");
+		rankToString.put(11,"Jack");
+		rankToString.put(12,"Queen");
+		rankToString.put(13,"King");
+		rankToString.put(14,"Ace");
+		rankToString.put(0,"Pass");
 	}
 	 public void addSession(Session session) {
 	        sessions.add(session);
@@ -116,7 +134,7 @@ public class WebSocketSessionHandler
 	    		for (int i = 0; i <= 12; i++) {
 	    			Card card=deck.get(i);
 	    			suitToInt.
-	    			cardString=card.getSuit()+"-"+card.getRank();
+	    			cardString=suitToString.get(card.getSuit())+"-"+suitToString.get(card.getRank());
 	    			cardname="card"+(i+1);
 	    			
 	    			cardDetails = provider.createObjectBuilder()
