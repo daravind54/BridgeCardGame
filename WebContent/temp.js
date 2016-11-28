@@ -1,6 +1,7 @@
 window.onload = init;
 var socket = new WebSocket("wss://localhost/BridgeCardGame/actions");
 socket.onmessage = onMessage;
+var southData,northData,eastData,westData;
 function onMessage(event) {
 	
 	//alert("On message");
@@ -8,13 +9,14 @@ function onMessage(event) {
 	document.getElementById("waiting").style.display = "none";
 	document.getElementById("cards").style.display = "";
 	var player = JSON.parse(event.data);
+	player.turn="South's";
 	document.getElementById("gameType").value = player.gameType;
 	document.getElementById("turn").value = player.turn;
 	
     if (player.playerName === "South") {
     	
         //alert("South Player");
-        
+        southData=player;
         document.getElementById("playerName").value = player.playerName;
         var temp="card";
         var clubs=" ";
@@ -71,6 +73,7 @@ function onMessage(event) {
 	if (player.playerName === "West") {
 	    	
 	        //alert("West Player");
+			westData=player;
 	        document.getElementById("playerName").value = player.playerName;
 	        var temp="card";
 	        var clubs=" ";
@@ -127,6 +130,7 @@ function onMessage(event) {
 	if (player.playerName === "North") {
 		
 	   //alert("North Player");
+		northData=player;
 	    document.getElementById("playerName").value = player.playerName;
 	    var temp="card";
         var clubs=" ";
@@ -183,6 +187,7 @@ function onMessage(event) {
 	if (player.playerName === "East") {
 		
 	    //alert("East Player");
+		eastData=player;
 	    document.getElementById("playerName").value = player.playerName;
 	    var temp="card";
         var clubs=" ";
@@ -257,7 +262,10 @@ function formSubmitBidS() {
 	        playerName: username,
 	        bidValue: bidvalue,
 	        };
-	socket.send(JSON.stringify(DeviceAction));
+	southData.action="bidding";
+	
+	southData.bidValue=bidvalue;
+	socket.send(JSON.stringify(southData));
 }
 function formSubmitBidN() {
 	//hideForm();
@@ -269,7 +277,10 @@ function formSubmitBidN() {
 	        playerName: username,
 	        bidValue: bidvalue,
 	        };
-	socket.send(JSON.stringify(DeviceAction));
+	northData.action="bidding";
+	
+	northData.bidValue=bidvalue;
+	socket.send(JSON.stringify(northData));
 }
 function formSubmitBidE() {
 	//hideForm();
@@ -281,7 +292,10 @@ function formSubmitBidE() {
 	        playerName: username,
 	        bidValue: bidvalue,
 	        };
-	socket.send(JSON.stringify(DeviceAction));
+	eastData.action="bidding";
+	
+	eastData.bidValue=bidvalue;
+	socket.send(JSON.stringify(eastData));
 }
 function formSubmitBidW() {
 	//hideForm();
@@ -293,6 +307,9 @@ function formSubmitBidW() {
 	        playerName: username,
 	        bidValue: bidvalue,
 	        };
+	westData.action="bidding";
+	
+	westData.bidValue=bidvalue;
 	socket.send(JSON.stringify(DeviceAction));
 }
 function hideForm() {

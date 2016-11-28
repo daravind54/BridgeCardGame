@@ -163,6 +163,15 @@ public class WebSocketSessionHandler
 	 }
 	 public void bid(JsonObject jsonMessage, Session session)
 	 {
+		 String nextPlayer=null;
+		 if(jsonMessage.getString("playerName").equals("South"))
+			 nextPlayer="West";
+		 if(jsonMessage.getString("playerName").equals("West"))
+			 nextPlayer="North";
+		 if(jsonMessage.getString("playerName").equals("North"))
+			 nextPlayer="East";
+		 if(jsonMessage.getString("playerName").equals("East"))
+			 nextPlayer="South";
 		 String winner=null;
 		  String temp=jsonMessage.getString("bidValue");
 		  if(temp.equals("pass")||temp.equals("PASS"))
@@ -178,6 +187,10 @@ public class WebSocketSessionHandler
 			  int bidValue=calcBidValue(suitToInt.get(suit), bidRankToInt.get(rank));
 			  bid.put(jsonMessage.getString("playerName"), bidValue);
 		  }
+		  JsonProvider provider = JsonProvider.provider();
+  		JsonObject data=provider.createObjectBuilder()
+				.add("nextPlayer", nextPlayer)
+				.build();
 		  if(passCount==3)
 		  {
 			  winner=compareBid();
