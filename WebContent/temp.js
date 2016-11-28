@@ -244,7 +244,7 @@ function formSubmit() {
 	var DeviceAction = {
 	        action: "initialization"
 	        };
-	socket.send(DeviceAction);
+	socket.send(JSON.stringify(DeviceAction));
 }
 function formSubmitBid1() {
 	//hideForm();
@@ -256,7 +256,7 @@ function formSubmitBid1() {
 	        playerName: username,
 	        bidValue: bidvalue,
 	        };
-	socket.send(DeviceAction);
+	socket.send(JSON.stringify(DeviceAction));
 }
 function hideForm() {
     document.getElementById("form1").style.display = "none";

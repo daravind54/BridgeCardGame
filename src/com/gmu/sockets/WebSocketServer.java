@@ -41,14 +41,13 @@ public class WebSocketServer {
 	 }
 	 @OnMessage
      public void handleMessage(String message, Session session) {
-		 try
-		 {JsonReader reader = Json.createReader(new StringReader(message));
-		 JsonObject jsonMessage = reader.readObject();
-		 reader.close();
-		 System.out.println(jsonMessage);
-		 if(jsonMessage.getString("action").equals("initialization"))
-			 sessionHandler.addUserToGame(message,session);
-		 if(jsonMessage.getString("action").equals("bidding"))
-			 sessionHandler.bid(message, session);
+		 try (JsonReader reader = Json.createReader(new StringReader(message))) {
+		         JsonObject jsonMessage = reader.readObject();
+			 System.out.println(jsonMessage);
+			 if(jsonMessage.getString("action").equals("initialization"))
+				 sessionHandler.addUserToGame(message,session);
+			 if(jsonMessage.getString("action").equals("bidding"))
+				 sessionHandler.bid(message, session);
+		 }
 	 }
 }
