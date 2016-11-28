@@ -132,7 +132,10 @@ public class WebSocketSessionHandler
 	 
 	 public void bid(JsonObject jsonMessage, Session session)
 	 {
+		 int passCount=0;
 		  String temp=jsonMessage.getString("bidValue");
+		  if("pass".equals(temp))
+			  passCount++;
 		  String[] suitRank=temp.split(" ");
 		  String rank=suitRank[0];
 		  String suit=suitRank[1];
