@@ -137,7 +137,7 @@ public class WebSocketSessionHandler
 	                 .build();
 	       
 	        sessionDetails.put(session.getId(), playerSessionName);
-	        if(count>=1)
+	        if(count==4)
 	        sendCardsToAllConnectedSessions(sessionDetails);
 	 }
 	 public int calcBidValue(int suit,int rank)
@@ -176,6 +176,7 @@ public class WebSocketSessionHandler
 		 String winner=null;
 		  String temp=jsonMessage.getString("bidValue");
 		  actualbid.put(jsonMessage.getString("playerName"), temp);
+		  System.out.println(actualbid.toString());
 		  if(temp.equals("pass")||temp.equals("PASS"))
 			  passCount++;
 		  else
@@ -195,6 +196,7 @@ public class WebSocketSessionHandler
 				.add("nextPlayer", nextPlayer)
 				.build();
   		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data);
+  		System.out.println(jsonMessage.toString());
 		  if(passCount==3)
 		  {
 			  String duplicate=null;
@@ -215,7 +217,7 @@ public class WebSocketSessionHandler
 			  tricksToWin=6 + Integer.parseInt(temp1[0]);
 			  trump=temp1[1];
 			  JsonProvider provider1 = JsonProvider.provider();
-		  		JsonObject data1=provider.createObjectBuilder()
+		  		JsonObject data1=provider1.createObjectBuilder()
 						.add("winner", winner)
 						.add("tricksToWin", tricksToWin)
 						.add("trump", trump)
