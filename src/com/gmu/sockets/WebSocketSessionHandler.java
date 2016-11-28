@@ -82,6 +82,42 @@ public class WebSocketSessionHandler
 		rankToString.put(14,"Ace");
 		rankToString.put(0,"Pass");
 	}
+	private static Map<String, Integer> bidRankToInt = new HashMap<String, Integer>();
+	static {
+		rankToInt.put("1", 14);
+		rankToInt.put("2", 2);
+		rankToInt.put("3", 3);
+		rankToInt.put("4", 4);
+		rankToInt.put("5", 5);
+		rankToInt.put("6", 6);
+		rankToInt.put("7", 7);
+		rankToInt.put("8", 8);
+		rankToInt.put("9", 9);
+		rankToInt.put("10", 10);
+		rankToInt.put("Jack", 11);
+		rankToInt.put("Queen", 12);
+		rankToInt.put("King", 13);
+		rankToInt.put("Ace", 14);
+		rankToInt.put("Pass", 0);
+	}
+	private static Map<Integer,String> bidRankToString = new HashMap<Integer,String>();
+	static {
+		rankToString.put(14,"1");
+		rankToString.put(2,"2");
+		rankToString.put(3,"3");
+		rankToString.put(4,"4");
+		rankToString.put(5,"5");
+		rankToString.put(6,"6");
+		rankToString.put(7,"7");
+		rankToString.put(8,"8");
+		rankToString.put(9,"9");
+		rankToString.put(10,"10");
+		rankToString.put(11,"Jack");
+		rankToString.put(12,"Queen");
+		rankToString.put(13,"King");
+		rankToString.put(14,"Ace");
+		rankToString.put(0,"Pass");
+	}
 	 public void addSession(Session session) {
 	        sessions.add(session);
 	        
