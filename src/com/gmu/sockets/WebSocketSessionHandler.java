@@ -116,14 +116,17 @@ public class WebSocketSessionHandler
 	 }
 	 public int calcBidValue(int suit,int rank)
 	 {
-		 if (suit == 5) {
-				thisValue = 5 + 100 * rank;
-			}
-			else {
-				thisValue = (4 - suit) + 100 * rank;
-			}
-
-
+		 int value=0;
+		 if (suit == 5) 
+		 {
+			 value = 5 + 100 * rank;
+		 }
+		 else
+		 {
+			value = (4 - suit) + 100 * rank;
+		 }
+		 return value;	
+		 
 			
 	 }
 	 
