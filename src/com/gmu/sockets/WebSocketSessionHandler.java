@@ -34,6 +34,25 @@ public class WebSocketSessionHandler
 		suitToInt.put("P", 4);
 		suitToInt.put("N", 5);
 	}
+	
+	private static Map<String, Integer> rankToInt = new HashMap<String, Integer>();
+	static {
+		rankToInt.put("1", 14);
+		rankToInt.put("2", 2);
+		rankToInt.put("3", 3);
+		rankToInt.put("4", 4);
+		rankToInt.put("5", 5);
+		rankToInt.put("6", 6);
+		rankToInt.put("7", 7);
+		rankToInt.put("8", 8);
+		rankToInt.put("9", 9);
+		rankToInt.put("10", 10);
+		rankToInt.put("Jack", 11);
+		rankToInt.put("Queen", 12);
+		rankToInt.put("King", 13);
+		rankToInt.put("Ace", 14);
+		rankToInt.put("Pass", 0);
+	}
 	 public void addSession(Session session) {
 	        sessions.add(session);
 	        
