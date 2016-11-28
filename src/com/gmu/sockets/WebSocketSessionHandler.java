@@ -186,6 +186,9 @@ public class WebSocketSessionHandler
 	 }
 	 private void sendBidToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
+	    		
+	    	}
+	 }
 	 private void sendCardsToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
 	    		//System.out.println(session.getId());
