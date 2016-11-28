@@ -138,6 +138,7 @@ public class WebSocketSessionHandler
 			  passCount++;
 		  else
 		  {  
+			  passCount=0;
 			  String[] suitRank=temp.split(" ");
 			  String rank=suitRank[0];
 			  String suit=suitRank[1];
