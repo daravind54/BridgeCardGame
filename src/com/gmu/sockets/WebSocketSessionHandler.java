@@ -136,7 +136,7 @@ public class WebSocketSessionHandler
 	 }
 	 public void bid(JsonObject jsonMessage, Session session)
 	 {
-		 
+		 String winner=null;
 		  String temp=jsonMessage.getString("bidValue");
 		  if("pass".equals(temp))
 			  passCount++;
