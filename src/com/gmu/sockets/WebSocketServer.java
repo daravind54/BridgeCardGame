@@ -47,7 +47,7 @@ public class WebSocketServer {
 			 if(jsonMessage.getString("action").equals("initialization"))
 				 sessionHandler.addUserToGame(jsonMessage,session);
 			 if(jsonMessage.getString("action").equals("bidding"))
-				 sessionHandler.bid(message, session);
+				 sessionHandler.bid(jsonMessage, session);
 		 }
 	 }
 }
