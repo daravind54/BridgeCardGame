@@ -151,7 +151,7 @@ public class WebSocketSessionHandler
 		  }
 		  if(passCount==3)
 		  {
-			  compareBid();
+			  winner=compareBid();
 		  }
 	 }
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
