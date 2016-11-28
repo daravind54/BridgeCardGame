@@ -30,19 +30,19 @@ function onMessage(event) {
         		//alert(cardData);
         		var cardDataArray=cardData.split("-");
         		//alert(cardDataArray[0]);
-        		if(cardDataArray[0]=="3")
+        		if(cardDataArray[0]=="C")
         		{
         			clubs+=cardDataArray[1]+" ";
         		}
-        		if(cardDataArray[0]=="2")
+        		if(cardDataArray[0]=="D")
         		{
         			diamonds+=cardDataArray[1]+" ";
         		}
-        		if(cardDataArray[0]=="1")
+        		if(cardDataArray[0]=="H")
         		{
         			hearts+=cardDataArray[1]+" ";
         		}
-        		if(cardDataArray[0]=="0")
+        		if(cardDataArray[0]=="S")
         		{
         			spades+=cardDataArray[1]+" ";
         		}
@@ -86,19 +86,19 @@ function onMessage(event) {
 	        		//alert(cardData);
 	        		var cardDataArray=cardData.split("-");
 	        		//alert(cardDataArray[0]);
-	        		if(cardDataArray[0]=="3")
+	        		if(cardDataArray[0]=="C")
 	        		{
 	        			clubs+=cardDataArray[1]+" ";
 	        		}
-	        		if(cardDataArray[0]=="2")
+	        		if(cardDataArray[0]=="D")
 	        		{
 	        			diamonds+=cardDataArray[1]+" ";
 	        		}
-	        		if(cardDataArray[0]=="1")
+	        		if(cardDataArray[0]=="H")
 	        		{
 	        			hearts+=cardDataArray[1]+" ";
 	        		}
-	        		if(cardDataArray[0]=="0")
+	        		if(cardDataArray[0]=="S")
 	        		{
 	        			spades+=cardDataArray[1]+" ";
 	        		}
@@ -142,19 +142,19 @@ function onMessage(event) {
         		//alert(cardData);
         		var cardDataArray=cardData.split("-");
         		//alert(cardDataArray[0]);
-        		if(cardDataArray[0]=="3")
+        		if(cardDataArray[0]=="C")
         		{
         			clubs+=cardDataArray[1]+" ";
         		}
-        		if(cardDataArray[0]=="2")
+        		if(cardDataArray[0]=="D")
         		{
         			diamonds+=cardDataArray[1]+" ";
         		}
-        		if(cardDataArray[0]=="1")
+        		if(cardDataArray[0]=="H")
         		{
         			hearts+=cardDataArray[1]+" ";
         		}
-        		if(cardDataArray[0]=="0")
+        		if(cardDataArray[0]=="S")
         		{
         			spades+=cardDataArray[1]+" ";
         		}
@@ -198,19 +198,19 @@ function onMessage(event) {
         		//alert(cardData);
         		var cardDataArray=cardData.split("-");
         		//alert(cardDataArray[0]);
-        		if(cardDataArray[0]=="3")
+        		if(cardDataArray[0]=="C")
         		{
         			clubs+=cardDataArray[1]+" ";
         		}
-        		if(cardDataArray[0]=="2")
+        		if(cardDataArray[0]=="D")
         		{
         			diamonds+=cardDataArray[1]+" ";
         		}
-        		if(cardDataArray[0]=="1")
+        		if(cardDataArray[0]=="H")
         		{
         			hearts+=cardDataArray[1]+" ";
         		}
-        		if(cardDataArray[0]=="0")
+        		if(cardDataArray[0]=="S")
         		{
         			spades+=cardDataArray[1]+" ";
         		}
