@@ -133,9 +133,10 @@ public class WebSocketSessionHandler
 	 public void bid(JsonObject jsonMessage, Session session)
 	 {
 		  String temp=jsonMessage.getString("bidValue");
-		  String suitRank=temp.split(" ");
+		  String[] suitRank=temp.split(" ");
 		  String rank=suitRank[0];
 		  String suit=suitRank[1];
+		  int bidValue=calcBidValue(suitToInt.get(suit), suitToInt.get(rank));
 	 }
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
