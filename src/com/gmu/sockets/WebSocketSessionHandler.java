@@ -34,6 +34,15 @@ public class WebSocketSessionHandler
 		suitToInt.put("P", 4);
 		suitToInt.put("N", 5);
 	}
+	private static Map<String, Integer> suitToString = new HashMap<String, Integer>();
+	static {
+		suitToInt.put(0,"S");
+		suitToInt.put(1,"H");
+		suitToInt.put(2,"H");
+		suitToInt.put(3,"C");
+		suitToInt.put(4,"P");
+		suitToInt.put(5,"N");
+	}
 	
 	private static Map<String, Integer> rankToInt = new HashMap<String, Integer>();
 	static {
@@ -106,6 +115,7 @@ public class WebSocketSessionHandler
 	    		//clientMessage.putAll(addMessage);
 	    		for (int i = 0; i <= 12; i++) {
 	    			Card card=deck.get(i);
+	    			suitToInt.
 	    			cardString=card.getSuit()+"-"+card.getRank();
 	    			cardname="card"+(i+1);
 	    			
