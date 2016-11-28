@@ -25,7 +25,15 @@ public class WebSocketSessionHandler
 	private final Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
 	private final Deck deck=new Deck();
 	private final Map<String, Integer> bid=new HashMap<String, Integer>();
-	
+	private static Map<String, Integer> suitToInt = new HashMap<String, Integer>();
+	static {
+		suitToInt.put("Spades", 0);
+		suitToInt.put("Hearts", 1);
+		suitToInt.put("Diamonds", 2);
+		suitToInt.put("Clubs", 3);
+		suitToInt.put("Pass", 4);
+		suitToInt.put("No Trump", 5);
+	}
 	 public void addSession(Session session) {
 	        sessions.add(session);
 	        
