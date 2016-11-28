@@ -136,11 +136,14 @@ public class WebSocketSessionHandler
 		  String temp=jsonMessage.getString("bidValue");
 		  if("pass".equals(temp))
 			  passCount++;
-		  String[] suitRank=temp.split(" ");
-		  String rank=suitRank[0];
-		  String suit=suitRank[1];
-		  int bidValue=calcBidValue(suitToInt.get(suit), suitToInt.get(rank));
-		  bid.put(jsonMessage.getString("playername"), bidValue);
+		  else
+		  {  
+			  String[] suitRank=temp.split(" ");
+			  String rank=suitRank[0];
+			  String suit=suitRank[1];
+			  int bidValue=calcBidValue(suitToInt.get(suit), suitToInt.get(rank));
+			  bid.put(jsonMessage.getString("playername"), bidValue);
+		  }
 	 }
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
