@@ -63,8 +63,7 @@ public class WebSocketSessionHandler
 	 
 	 public void bid(JsonObject jsonMessage, Session session)
 	 {
-		 
-		 
+		  
 	 }
 	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
