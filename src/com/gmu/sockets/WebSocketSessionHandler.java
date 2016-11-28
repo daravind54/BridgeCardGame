@@ -114,6 +114,18 @@ public class WebSocketSessionHandler
 	        if(count>=1)
 	        sendToAllConnectedSessions(sessionDetails);
 	 }
+	 public int calcBidValue(int suit,int rank)
+	 {
+		 if (suit == 5) {
+				thisValue = 5 + 100 * rank;
+			}
+			else {
+				thisValue = (4 - suit) + 100 * rank;
+			}
+
+
+			
+	 }
 	 
 	 public void bid(JsonObject jsonMessage, Session session)
 	 {
