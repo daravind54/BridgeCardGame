@@ -134,7 +134,7 @@ public class WebSocketSessionHandler
 	    		for (int i = 0; i <= 12; i++) {
 	    			Card card=deck.get(i);
 	    			suitToInt.
-	    			cardString=suitToString.get(card.getSuit())+"-"+suitToString.get(card.getRank());
+	    			cardString=suitToString.get(card.getSuit())+"-"+rankToString.get(card.getRank());
 	    			cardname="card"+(i+1);
 	    			
 	    			cardDetails = provider.createObjectBuilder()
