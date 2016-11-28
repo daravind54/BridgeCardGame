@@ -84,24 +84,24 @@ public class WebSocketSessionHandler
 	}
 	private static Map<String, Integer> bidRankToInt = new HashMap<String, Integer>();
 	static {
-		rankToInt.put("1", 1);
-		rankToInt.put("2", 2);
-		rankToInt.put("3", 3);
-		rankToInt.put("4", 4);
-		rankToInt.put("5", 5);
-		rankToInt.put("6", 6);
-		rankToInt.put("7", 7);
+		bidRankToInt.put("1", 1);
+		bidRankToInt.put("2", 2);
+		bidRankToInt.put("3", 3);
+		bidRankToInt.put("4", 4);
+		bidRankToInt.put("5", 5);
+		bidRankToInt.put("6", 6);
+		bidRankToInt.put("7", 7);
 		
 	}
 	private static Map<Integer,String> bidRankToString = new HashMap<Integer,String>();
 	static {
-		rankToString.put(1,"1");
-		rankToString.put(2,"2");
-		rankToString.put(3,"3");
-		rankToString.put(4,"4");
-		rankToString.put(5,"5");
-		rankToString.put(6,"6");
-		rankToString.put(7,"7");
+		bidRankToString.put(1,"1");
+		bidRankToString.put(2,"2");
+		bidRankToString.put(3,"3");
+		bidRankToString.put(4,"4");
+		bidRankToString.put(5,"5");
+		bidRankToString.put(6,"6");
+		bidRankToString.put(7,"7");
 		
 	}
 	 public void addSession(Session session) {
@@ -136,7 +136,7 @@ public class WebSocketSessionHandler
 	       
 	        sessionDetails.put(session.getId(), playerSessionName);
 	        if(count==4)
-	        sendToAllConnectedSessions(sessionDetails);
+	        sendCardsToAllConnectedSessions(sessionDetails);
 	 }
 	 public int calcBidValue(int suit,int rank)
 	 {
@@ -184,7 +184,7 @@ public class WebSocketSessionHandler
 		  }
 		  
 	 }
-	 private void sendToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
+	 private void sendCardsToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
 	    		//System.out.println(session.getId());
 	    		//List<Card> hand=new ArrayList<Card>();
