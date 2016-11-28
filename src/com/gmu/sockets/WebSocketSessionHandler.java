@@ -153,7 +153,7 @@ public class WebSocketSessionHandler
 			  System.out.println(rank+" "+suit);
 			  System.out.println(suitToInt.get(suit) +" "+rankToInt.get(rank));
 			  int bidValue=calcBidValue(suitToInt.get(suit), rankToInt.get(rank));
-			  bid.put(jsonMessage.getString("playername"), bidValue);
+			  bid.put(jsonMessage.getString("playerName"), bidValue);
 		  }
 		  if(passCount==3)
 		  {
