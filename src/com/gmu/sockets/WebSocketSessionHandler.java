@@ -36,7 +36,7 @@ public class WebSocketSessionHandler
 	        sessions.remove(session);
 	    }
 	 
-	 public void addUserToGame(String message, Session session)
+	 public void addUserToGame(JsonObject jsonMessage, Session session)
 	 {
 		 	++count;
 		 	String playerName=null;
@@ -61,7 +61,7 @@ public class WebSocketSessionHandler
 	        sendToAllConnectedSessions(sessionDetails);
 	 }
 	 
-	 public void bid(String message, Session session)
+	 public void bid(JsonObject jsonMessage, Session session)
 	 {
 		 
 		 
