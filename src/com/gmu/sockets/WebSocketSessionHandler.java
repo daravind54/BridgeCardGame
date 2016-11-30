@@ -259,6 +259,7 @@ public class WebSocketSessionHandler
 	    			//clientMessage.putAll(cardDetails);
 	    			clientMessage=Utility.mergeProfileSummary(clientMessage, cardDetails);
 	    		}
+	    		k=k+13;
 	    		
 	    		//clientMessage=Utility.mergeProfileSummary(addMessage, cardDetails);
 	    		//j=j+14;
