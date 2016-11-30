@@ -260,8 +260,9 @@ public class WebSocketSessionHandler
 	    			//clientMessage.putAll(cardDetails);
 	    			clientMessage=Utility.mergeProfileSummary(clientMessage, cardDetails);
 	    		}
+	    		j=
 	    		//clientMessage=Utility.mergeProfileSummary(addMessage, cardDetails);
-	    		
+	    		j=j+14;
 	            sendToSession(session, clientMessage);
 	        }
 	    }
