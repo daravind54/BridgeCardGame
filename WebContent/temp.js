@@ -9,7 +9,7 @@ function onMessage(event) {
 	document.getElementById("waiting").style.display = "none";
 	document.getElementById("cards").style.display = "";
 	var player = JSON.parse(event.data);
-	player.turn="South's";
+	
 	document.getElementById("gameType").value = player.gameType;
 	document.getElementById("turn").value = player.turn;
 	

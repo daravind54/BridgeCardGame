@@ -29,6 +29,7 @@ public class WebSocketSessionHandler
 	private final Map<String, Integer> bidRank=new HashMap<String, Integer>();
 	private final Map<String, String> actualbid=new HashMap<String, String>();
 	private static Map<String, Integer> suitToInt = new HashMap<String, Integer>();
+	private static Map<Session, JsonObject> clientData=new HashMap<Session, JsonObject>();
 	static {
 		suitToInt.put("S", 0);
 		suitToInt.put("H", 1);
@@ -226,10 +227,11 @@ public class WebSocketSessionHandler
 		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
 			  System.out.println(winner);
 			  System.out.println(jsonMessage.toString());
+			  sendBidToAllConnectedSessions(jsonMessage);
 		  }
 		  
 	 }
-	 private void sendBidToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
+	 private void sendBidToAllConnectedSessions(JsonObject clientMessage) {
 	    	for (Session session : sessions) {
 	    		
 	    	}
