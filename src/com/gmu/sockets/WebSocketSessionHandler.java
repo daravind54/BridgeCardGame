@@ -250,7 +250,7 @@ public class WebSocketSessionHandler
 	    		//clientMessage.merge(key, value, remappingFunction)
 	    		//clientMessage.putAll(addMessage);
 	    		for (int i=0;i <= 12; i++) {
-	    			Card card=deck.get(i);
+	    			Card card=deck.get(i+k);
 	    			cardString=suitToString.get(card.getSuit())+"-"+rankToString.get(card.getRank());
 	    			cardname="card"+(i+1);
 	    			
