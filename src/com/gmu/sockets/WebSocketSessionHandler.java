@@ -235,7 +235,7 @@ public class WebSocketSessionHandler
 	    	}
 	 }
 	 private void sendCardsToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
-		 	
+		 	int k=0;
 	    	for (Session session : sessions) {
 	    		
 	    		//System.out.println(session.getId());
