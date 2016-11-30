@@ -235,8 +235,7 @@ public class WebSocketSessionHandler
 	    	}
 	 }
 	 private void sendCardsToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
-		 	int i=0;	
-		 	int j=12;
+		 	
 	    	for (Session session : sessions) {
 	    		
 	    		//System.out.println(session.getId());
@@ -250,7 +249,7 @@ public class WebSocketSessionHandler
 	    		JsonObject clientMessage=addMessage;
 	    		//clientMessage.merge(key, value, remappingFunction)
 	    		//clientMessage.putAll(addMessage);
-	    		for (;i <= j; i++) {
+	    		for (int i=0;i <= 12; i++) {
 	    			Card card=deck.get(i);
 	    			cardString=suitToString.get(card.getSuit())+"-"+rankToString.get(card.getRank());
 	    			cardname="card"+(i+1);
@@ -262,7 +261,7 @@ public class WebSocketSessionHandler
 	    		}
 	    		
 	    		//clientMessage=Utility.mergeProfileSummary(addMessage, cardDetails);
-	    		j=j+14;
+	    		//j=j+14;
 	            sendToSession(session, clientMessage);
 	        }
 	    }
