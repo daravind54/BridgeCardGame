@@ -272,6 +272,7 @@ public class WebSocketSessionHandler
 	    private void sendToSession(Session session, JsonObject clientMessage) {
 	    	try {
 	    		System.out.println(clientMessage.toString());
+	    		clientData.put(session, clientMessage);
 	            session.getBasicRemote().sendText(clientMessage.toString());
 	            
 	        } catch (IOException ex) {
