@@ -25,7 +25,7 @@ public class WebSocketSessionHandler
 	static int passCount=0;
 	private final Set<Session> sessions = new HashSet<>();
 	private final Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
-	private final Deck deck=new Deck();
+	private final Deck deck=null;
 	private final Map<String, Integer> bidRank=new HashMap<String, Integer>();
 	private final Map<String, String> actualbid=new HashMap<String, String>();
 	private static Map<String, Integer> suitToInt = new HashMap<String, Integer>();
@@ -166,13 +166,13 @@ public class WebSocketSessionHandler
 	 {
 		 String nextPlayer=null;
 		 if(jsonMessage.getString("playerName").equals("South"))
-			 nextPlayer="West";
+			 nextPlayer="West's";
 		 if(jsonMessage.getString("playerName").equals("West"))
-			 nextPlayer="North";
+			 nextPlayer="North's";
 		 if(jsonMessage.getString("playerName").equals("North"))
-			 nextPlayer="East";
+			 nextPlayer="East's";
 		 if(jsonMessage.getString("playerName").equals("East"))
-			 nextPlayer="South";
+			 nextPlayer="South's";
 		 String winner=null;
 		  String temp=jsonMessage.getString("bidValue");
 		  actualbid.put(jsonMessage.getString("playerName"), temp);
@@ -221,6 +221,7 @@ public class WebSocketSessionHandler
 						.add("winner", winner)
 						.add("tricksToWin", tricksToWin)
 						.add("trump", trump)
+						.add("turn", nextPlayer)
 						.build();
 		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
 			  System.out.println(winner);
@@ -237,6 +238,7 @@ public class WebSocketSessionHandler
 	    	for (Session session : sessions) {
 	    		//System.out.println(session.getId());
 	    		//List<Card> hand=new ArrayList<Card>();
+	    		deck=new Deck();
 	    		String cardString=null;
 	    		String cardname=null;
 	    		JsonObject addMessage=sessionDetails.get(session.getId());

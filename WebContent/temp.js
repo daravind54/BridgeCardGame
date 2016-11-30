@@ -310,7 +310,7 @@ function formSubmitBidW() {
 	westData.action="bidding";
 	
 	westData.bidValue=bidvalue;
-	socket.send(JSON.stringify(DeviceAction));
+	socket.send(JSON.stringify(westData));
 }
 function hideForm() {
     document.getElementById("form1").style.display = "none";
