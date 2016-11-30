@@ -25,7 +25,7 @@ public class WebSocketSessionHandler
 	static int passCount=0;
 	private final Set<Session> sessions = new HashSet<>();
 	private final Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
-	private final Deck deck=null;
+	private final Deck deck=new Deck();
 	private final Map<String, Integer> bidRank=new HashMap<String, Integer>();
 	private final Map<String, String> actualbid=new HashMap<String, String>();
 	private static Map<String, Integer> suitToInt = new HashMap<String, Integer>();
@@ -236,9 +236,10 @@ public class WebSocketSessionHandler
 	 }
 	 private void sendCardsToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
 	    	for (Session session : sessions) {
+	    		int i=0,j=12;
 	    		//System.out.println(session.getId());
 	    		//List<Card> hand=new ArrayList<Card>();
-	    		deck=new Deck();
+	    		
 	    		String cardString=null;
 	    		String cardname=null;
 	    		JsonObject addMessage=sessionDetails.get(session.getId());
@@ -247,7 +248,7 @@ public class WebSocketSessionHandler
 	    		JsonObject clientMessage=addMessage;
 	    		//clientMessage.merge(key, value, remappingFunction)
 	    		//clientMessage.putAll(addMessage);
-	    		for (int i = 0; i <= 12; i++) {
+	    		for (i = 0; i <= 12; i++) {
 	    			Card card=deck.get(i);
 	    			cardString=suitToString.get(card.getSuit())+"-"+rankToString.get(card.getRank());
 	    			cardname="card"+(i+1);
