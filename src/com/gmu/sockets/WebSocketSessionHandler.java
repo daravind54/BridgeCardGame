@@ -179,7 +179,9 @@ public class WebSocketSessionHandler
 		  actualbid.put(jsonMessage.getString("playerName"), temp);
 		  System.out.println(actualbid.toString());
 		  if(temp.equals("pass")||temp.equals("PASS"))
+		  {
 			  passCount++;
+		  }
 		  else
 		  {  
 			  passCount=0;
@@ -194,7 +196,7 @@ public class WebSocketSessionHandler
 		  }
 		  JsonProvider provider = JsonProvider.provider();
   		JsonObject data=provider.createObjectBuilder()
-				.add("nextPlayer", nextPlayer)
+				.add("turn", nextPlayer)
 				.build();
   		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data);
   		System.out.println(jsonMessage.toString());
@@ -206,13 +208,25 @@ public class WebSocketSessionHandler
 			  String winnerBid;
 			  winner=compareBid();
 			  if(winner.equals("North"))
+			  {
 				  duplicate="South";
+				  nextPlayer="East's";
+			  }
 			  if(winner.equals("South"))
+			  {
 				  duplicate="North";
+				  nextPlayer="West's";
+			  }
 			  if(winner.equals("East"))
+			  {
 				  duplicate="West";
+				  nextPlayer="South's";
+			  }
 			  if(winner.equals("West"))
+			  {
 				  duplicate="East";
+				  nextPlayer="North's";
+			  }
 			  winnerBid=actualbid.get(winner);
 			  String[] temp1=winnerBid.split(" ");
 			  tricksToWin=6 + Integer.parseInt(temp1[0]);
@@ -233,7 +247,7 @@ public class WebSocketSessionHandler
 	 }
 	 private void sendBidToAllConnectedSessions(JsonObject clientMessage) {
 	    	for (Session session : sessions) {
-	    		
+	    		sendToSession(session, clientMessage);
 	    	}
 	 }
 	 private void sendCardsToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
