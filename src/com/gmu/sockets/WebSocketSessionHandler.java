@@ -165,6 +165,7 @@ public class WebSocketSessionHandler
 	 }
 	 public void bid(JsonObject jsonMessage, Session session)
 	 {
+		 //System.out.println(sessions.toString());
 		 String nextPlayer=null;
 		 if(jsonMessage.getString("playerName").equals("South"))
 			 nextPlayer="West's";
@@ -249,12 +250,13 @@ public class WebSocketSessionHandler
 	 }
 	 private void sendBidToAllConnectedSessions(JsonObject clientMessage, String nextPlayer) {
 	    	for (Session session : sessions) {
+	    		clientMessage=clientData.get(session);
 	    		JsonProvider provider1 = JsonProvider.provider();
 		  		JsonObject data1=provider1.createObjectBuilder()
 						.add("turn", nextPlayer)
 						.build();
 		  		clientMessage=Utility.mergeProfileSummary(clientMessage, data1);
-		  		clientData.put(session, jsonMessage);
+		  		clientData.put(session, clientMessage);
 	    		sendToSession(session, clientData.get(session));
 	    	}
 	 }
