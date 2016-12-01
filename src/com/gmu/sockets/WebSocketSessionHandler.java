@@ -167,6 +167,7 @@ public class WebSocketSessionHandler
 	 {
 		 //System.out.println(sessions.toString());
 		 String nextPlayer=null;
+		 Integer bidValue=null;
 		 if(jsonMessage.getString("playerName").equals("South"))
 			 nextPlayer="West's";
 		 if(jsonMessage.getString("playerName").equals("West"))
@@ -191,7 +192,7 @@ public class WebSocketSessionHandler
 			  String suit=suitRank[1];
 			  System.out.println(suit+" "+rank);
 			  System.out.println(suitToInt.get(suit) +" "+bidRankToInt.get(rank));
-			  Integer bidValue=calcBidValue(suitToInt.get(suit), bidRankToInt.get(rank));
+			  bidValue=calcBidValue(suitToInt.get(suit), bidRankToInt.get(rank));
 			  
 			  bidRank.put(jsonMessage.getString("playerName"), bidValue);
 		  }
@@ -245,15 +246,17 @@ public class WebSocketSessionHandler
 			  
 		  }
 		  clientData.put(session, jsonMessage);
-		  sendBidToAllConnectedSessions(jsonMessage, nextPlayer);
+		  String playerBidName=jsonMessage.getString("playerName")+"Bid";
+		  sendBidToAllConnectedSessions(jsonMessage, nextPlayer,bidValue);
 		  
 	 }
-	 private void sendBidToAllConnectedSessions(JsonObject clientMessage, String nextPlayer) {
+	 private void sendBidToAllConnectedSessions(JsonObject clientMessage, String nextPlayer, Integer bidValue) {
 	    	for (Session session : sessions) {
 	    		clientMessage=clientData.get(session);
 	    		JsonProvider provider1 = JsonProvider.provider();
 		  		JsonObject data1=provider1.createObjectBuilder()
 						.add("turn", nextPlayer)
+						.add
 						.build();
 		  		clientMessage=Utility.mergeProfileSummary(clientMessage, data1);
 		  		clientData.put(session, clientMessage);
