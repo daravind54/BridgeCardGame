@@ -253,7 +253,8 @@ public class WebSocketSessionHandler
 		  		JsonObject data1=provider1.createObjectBuilder()
 						.add("turn", nextPlayer)
 						.build();
-		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
+		  		clientMessage=Utility.mergeProfileSummary(clientMessage, data1);
+		  		clientData.put(session, jsonMessage);
 	    		sendToSession(session, clientData.get(session));
 	    	}
 	 }
