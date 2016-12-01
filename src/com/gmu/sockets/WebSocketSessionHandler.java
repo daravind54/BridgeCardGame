@@ -244,7 +244,7 @@ public class WebSocketSessionHandler
 			  
 		  }
 		  clientData.put(session, jsonMessage);
-		  sendBidToAllConnectedSessions(jsonMessage);
+		  sendBidToAllConnectedSessions(jsonMessage, nextPlayer);
 		  
 	 }
 	 private void sendBidToAllConnectedSessions(JsonObject clientMessage) {
