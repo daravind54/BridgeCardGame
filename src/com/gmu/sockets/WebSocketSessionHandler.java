@@ -249,6 +249,11 @@ public class WebSocketSessionHandler
 	 }
 	 private void sendBidToAllConnectedSessions(JsonObject clientMessage, String nextPlayer) {
 	    	for (Session session : sessions) {
+	    		JsonProvider provider1 = JsonProvider.provider();
+		  		JsonObject data1=provider1.createObjectBuilder()
+						.add("turn", nextPlayer)
+						.build();
+		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
 	    		sendToSession(session, clientData.get(session));
 	    	}
 	 }
