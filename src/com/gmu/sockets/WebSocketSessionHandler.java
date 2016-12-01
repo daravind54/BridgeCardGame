@@ -249,7 +249,7 @@ public class WebSocketSessionHandler
 	 }
 	 private void sendBidToAllConnectedSessions(JsonObject clientMessage) {
 	    	for (Session session : sessions) {
-	    		sendToSession(session, clientMessage);
+	    		sendToSession(session, clientData.get(session));
 	    	}
 	 }
 	 private void sendCardsToAllConnectedSessions(Map<String, JsonObject> sessionDetails) {
