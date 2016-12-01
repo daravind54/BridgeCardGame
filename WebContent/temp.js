@@ -2,6 +2,10 @@ window.onload = init;
 var socket = new WebSocket("wss://localhost/BridgeCardGame/actions");
 socket.onmessage = onMessage;
 var southData,northData,eastData,westData;
+var sbid=null;
+var nbid=null;
+var ebid=null;
+var wbid=null;
 function onMessage(event) {
 	
 	//alert("On message");
@@ -9,15 +13,18 @@ function onMessage(event) {
 	document.getElementById("waiting").style.display = "none";
 	document.getElementById("cards").style.display = "";
 	var player = JSON.parse(event.data);
-	
+	alert(sbid);
 	document.getElementById("gameType").value = player.gameType;
 	document.getElementById("turn").value = player.turn;
 	
-    if (player.playerName === "South") {
+	
+    if (player.playerName == "South") {
     	
         //alert("South Player");
         southData=player;
         document.getElementById("playerName").value = player.playerName;
+        
+        
         var temp="card";
         var clubs=" ";
 		var diamonds=" ";
@@ -63,14 +70,36 @@ function onMessage(event) {
     	{
     		document.getElementById("SSubmitCard").style.display = "none";
     		document.getElementById("SSubmitBid").style.display = "";
+    		
+    		sbid=player.bidValue;
     	}
+        if(sbid!=null)
+        {
+        	document.getElementById("playedValueS").style.display = "";
+            document.getElementById("playedValueS").value =sbid;
+        }
+        if(ebid!=null)
+        {
+        	document.getElementById("playedValueE").style.display = "";
+            document.getElementById("playedValueE").value =ebid;
+        }
+        if(wbid!=null)
+        {
+        	document.getElementById("playedValueW").style.display = "";
+            document.getElementById("playedValueW").value =wbid;
+        }
+        if(nbid!=null)
+        {
+        	document.getElementById("playedValueN").style.display = "";
+            document.getElementById("playedValueN").value =nbid;
+        }
     	if(player.gameType=="Game Phase")
     	{
     		document.getElementById("SSubmitBid").style.display = "none";
     		document.getElementById("SSubmitCard").style.display = "";
     	}
     }
-	if (player.playerName === "West") {
+	if (player.playerName == "West") {
 	    	
 	        //alert("West Player");
 			westData=player;
@@ -120,14 +149,35 @@ function onMessage(event) {
 	    	{
 	    		document.getElementById("WSubmitCard").style.display = "none";
 	    		document.getElementById("WSubmitBid").style.display = "";
+	    		wbid=player.bidValue;
 	    	}
+	        if(sbid!=null)
+	        {
+	        	document.getElementById("playedValueS").style.display = "";
+	            document.getElementById("playedValueS").value =sbid;
+	        }
+	        if(ebid!=null)
+	        {
+	        	document.getElementById("playedValueE").style.display = "";
+	            document.getElementById("playedValueE").value =ebid;
+	        }
+	        if(wbid!=null)
+	        {
+	        	document.getElementById("playedValueW").style.display = "";
+	            document.getElementById("playedValueW").value =wbid;
+	        }
+	        if(nbid!=null)
+	        {
+	        	document.getElementById("playedValueN").style.display = "";
+	            document.getElementById("playedValueN").value =nbid;
+	        }
 	    	if(player.gameType=="Game Phase")
 	    	{
 	    		document.getElementById("WSubmitBid").style.display = "none";
 	    		document.getElementById("WSubmitCard").style.display = "";
 	    	}
 	}
-	if (player.playerName === "North") {
+	if (player.playerName == "North") {
 		
 	   //alert("North Player");
 		northData=player;
@@ -177,14 +227,35 @@ function onMessage(event) {
     	{
     		document.getElementById("NSubmitCard").style.display = "none";
     		document.getElementById("NSubmitBid").style.display = "";
+    		nbid=player.bidValue;
     	}
+        if(sbid!=null)
+        {
+        	document.getElementById("playedValueS").style.display = "";
+            document.getElementById("playedValueS").value =sbid;
+        }
+        if(ebid!=null)
+        {
+        	document.getElementById("playedValueE").style.display = "";
+            document.getElementById("playedValueE").value =ebid;
+        }
+        if(wbid!=null)
+        {
+        	document.getElementById("playedValueW").style.display = "";
+            document.getElementById("playedValueW").value =wbid;
+        }
+        if(nbid!=null)
+        {
+        	document.getElementById("playedValueN").style.display = "";
+            document.getElementById("playedValueN").value =nbid;
+        }
     	if(player.gameType=="Game Phase")
     	{
     		document.getElementById("NSubmitBid").style.display = "none";
     		document.getElementById("NSubmitCard").style.display = "";
     	}
 	}
-	if (player.playerName === "East") {
+	if (player.playerName == "East") {
 		
 	    //alert("East Player");
 		eastData=player;
@@ -234,7 +305,28 @@ function onMessage(event) {
     	{
     		document.getElementById("ESubmitCard").style.display = "none";
     		document.getElementById("ESubmitBid").style.display = "";
+    		ebid=player.bidValue;
     	}
+        if(sbid!=null)
+        {
+        	document.getElementById("playedValueS").style.display = "";
+            document.getElementById("playedValueS").value =sbid;
+        }
+        if(ebid!=null)
+        {
+        	document.getElementById("playedValueE").style.display = "";
+            document.getElementById("playedValueE").value =ebid;
+        }
+        if(wbid!=null)
+        {
+        	document.getElementById("playedValueW").style.display = "";
+            document.getElementById("playedValueW").value =wbid;
+        }
+        if(nbid!=null)
+        {
+        	document.getElementById("playedValueN").style.display = "";
+            document.getElementById("playedValueN").value =nbid;
+        }
     	if(player.gameType=="Game Phase")
     	{
     		document.getElementById("ESubmitBid").style.display = "none";
@@ -257,6 +349,8 @@ function formSubmitBidS() {
 	//document.getElementById("waiting").style.display = "";
 	var username="South";
 	var bidvalue=document.getElementById("Sinput").value;
+	document.getElementById("playedValueS").style.display = "";
+	//document.getElementById("playedValueS").value =bidvalue;
 	var DeviceAction = {
 	        action: "bidding",
 	        playerName: username,
@@ -272,6 +366,8 @@ function formSubmitBidN() {
 	//document.getElementById("waiting").style.display = "";
 	var username="North";
 	var bidvalue=document.getElementById("Ninput").value;
+	document.getElementById("playedValueN").style.display = "";
+	document.getElementById("playedValueN").value =bidvalue;
 	var DeviceAction = {
 	        action: "bidding",
 	        playerName: username,
@@ -287,6 +383,8 @@ function formSubmitBidE() {
 	//document.getElementById("waiting").style.display = "";
 	var username="East";
 	var bidvalue=document.getElementById("Einput").value;
+	document.getElementById("playedValueE").style.display = "";
+	document.getElementById("playedValueE").value =bidvalue;
 	var DeviceAction = {
 	        action: "bidding",
 	        playerName: username,
@@ -302,6 +400,8 @@ function formSubmitBidW() {
 	//document.getElementById("waiting").style.display = "";
 	var username="West";
 	var bidvalue=document.getElementById("Winput").value;
+	document.getElementById("playedValueW").style.display = "";
+	document.getElementById("playedValueW").value =bidvalue;
 	var DeviceAction = {
 	        action: "bidding",
 	        playerName: username,
@@ -335,4 +435,8 @@ function hideDiv() {
     document.getElementById("Einput").style.display = "none";
     document.getElementById("Winput").style.display = "none";
     document.getElementById("Sinput").style.display = "none";
+    document.getElementById("playedValueN").style.display = "none";
+    document.getElementById("playedValueS").style.display = "none";
+    document.getElementById("playedValueE").style.display = "none";
+    document.getElementById("playedValueW").style.display = "none";
 }

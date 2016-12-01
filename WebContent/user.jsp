@@ -38,7 +38,8 @@
 						<input type="text" id="Ninput" name="Ninput">
 						<input type="button"  id="NSubmitBid" value="SubmitBid" onclick=formSubmitBidN()>
 						<input type="button"  id="NSubmitCard" value="SubmitCard" onclick=formSubmit()>
-					</form>
+					</form><br>
+					<input type="text" id="playedValueN" name="playedValueN" readonly>
 				</td>
 				<td></td>
 		</tr>
@@ -62,7 +63,9 @@
 						<input type="text" id="Winput" name="Winput">
 						<input type="button"  id="WSubmitBid" value="SubmitBid" onclick=formSubmitBidW()>
 						<input type="button"  id="WSubmitCard" value="SubmitCard" onclick=formSubmit()>
-					</form>
+						
+					</form><br>
+					<input type="text" id="playedValueW" name="playedValueN" readonly>
 			</td>
 			<td id="West">
 			Clubs:<input type="text" id="Wclubs" name="Wclubs" readonly>
@@ -88,7 +91,9 @@
 						<input type="text" id="Einput" name="Einput">
 						<input type="button"  id="ESubmitBid" value="SubmitBid" onclick=formSubmitBidE()>
 						<input type="button"  id="ESubmitCard" value="SubmitCard" onclick=formSubmit()>
-				</form>
+						
+				</form><br>
+				<input type="text" id="playedValueE" name="playedValueN" readonly>
 			</td>
 		</tr>
 		<tr>
@@ -113,7 +118,9 @@
 						<input type="text" id="Sinput" name="Sinput">
 						<input type="button"  id="SSubmitBid" value="SubmitBid" onclick=formSubmitBidS()>
 						<input type="button"  id="SSubmitCard" value="SubmitCard" onclick=formSubmit()>
-					</form>
+						
+					</form><br>
+					<input type="text" id="playedValueS" name="playedValueN" readonly>
 			</td>
 			<td></td>
 		</tr>
