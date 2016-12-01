@@ -241,8 +241,9 @@ public class WebSocketSessionHandler
 		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
 			  System.out.println(winner);
 			  System.out.println(jsonMessage.toString());
-			  sendBidToAllConnectedSessions(jsonMessage);
+			  
 		  }
+		  sendBidToAllConnectedSessions(jsonMessage);
 		  
 	 }
 	 private void sendBidToAllConnectedSessions(JsonObject clientMessage) {
