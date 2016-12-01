@@ -247,17 +247,17 @@ public class WebSocketSessionHandler
 		  }
 		  clientData.put(session, jsonMessage);
 		  String playerBidName=jsonMessage.getString("playerName")+"Bid";
-		  sendBidToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, bidValue);
+		  sendBidToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, temp);
 		  
 	 }
-	 private void sendBidToAllConnectedSessions(JsonObject clientMessage, String nextPlayer, Integer bidValue) {
+	 private void sendBidToAllConnectedSessions(JsonObject clientMessage, String nextPlayer, String playerBidName, String temp) {
 	    	for (Session session : sessions) {
 	    		clientMessage=clientData.get(session);
 	    		
 	    		JsonProvider provider1 = JsonProvider.provider();
 		  		JsonObject data1=provider1.createObjectBuilder()
 						.add("turn", nextPlayer)
-						.add(playerBidName,bidValue)
+						.add(playerBidName,temp)
 						.build();
 		  		clientMessage=Utility.mergeProfileSummary(clientMessage, data1);
 		  		clientData.put(session, clientMessage);

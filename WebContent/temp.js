@@ -13,7 +13,7 @@ function onMessage(event) {
 	document.getElementById("waiting").style.display = "none";
 	document.getElementById("cards").style.display = "";
 	var player = JSON.parse(event.data);
-	alert(sbid);
+	//alert(sbid);
 	document.getElementById("gameType").value = player.gameType;
 	document.getElementById("turn").value = player.turn;
 	
