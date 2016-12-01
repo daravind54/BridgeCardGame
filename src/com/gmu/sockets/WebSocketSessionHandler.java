@@ -243,6 +243,7 @@ public class WebSocketSessionHandler
 			  System.out.println(jsonMessage.toString());
 			  
 		  }
+		  clientData.put(session, jsonMessage);
 		  sendBidToAllConnectedSessions(jsonMessage);
 		  
 	 }
