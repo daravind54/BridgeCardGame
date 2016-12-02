@@ -238,7 +238,7 @@ public class WebSocketSessionHandler
 		  else
 		  {
 			  clientData.put(session, jsonMessage);
-			  String playerBidName=jsonMessage.getString("playerName")+"Bid";
+			  String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 			  sendBidToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, temp);
 		  }
 		  
@@ -254,7 +254,7 @@ public class WebSocketSessionHandler
 						.add("trump", trump)
 						.add("turn", nextPlayer)
 						.add("dummyPlayer",dummy)
-						.add("action", game)
+						.add("gameType", "Game Phase")
 						.build();
 		  		clientMessage=Utility.mergeProfileSummary(clientMessage, data1);
 		  		clientData.put(session, clientMessage);
