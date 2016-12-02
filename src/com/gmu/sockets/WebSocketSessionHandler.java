@@ -241,14 +241,18 @@ public class WebSocketSessionHandler
 						.add("turn", nextPlayer)
 						.add("dummyPlayer",dummy)
 						.build();
+		  		
 		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
 			  System.out.println(winner);
 			  System.out.println(jsonMessage.toString());
 			  
 		  }
-		  clientData.put(session, jsonMessage);
-		  String playerBidName=jsonMessage.getString("playerName")+"Bid";
-		  sendBidToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, temp);
+		  else
+		  {
+			  clientData.put(session, jsonMessage);
+			  String playerBidName=jsonMessage.getString("playerName")+"Bid";
+			  sendBidToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, temp);
+		  }
 		  
 	 }
 	 private void sendBidToAllConnectedSessions(JsonObject clientMessage, String nextPlayer, String playerBidName, String temp) {
