@@ -204,29 +204,29 @@ public class WebSocketSessionHandler
   		System.out.println(jsonMessage.toString());
 		  if(passCount==3)
 		  {
-			  String duplicate=null;
+			  String dummy=null;
 			  String trump;
 			  int tricksToWin;
 			  String winnerBid;
 			  winner=compareBid();
 			  if(winner.equals("North"))
 			  {
-				  duplicate="South";
+				  dummy="South";
 				  nextPlayer="East's";
 			  }
 			  if(winner.equals("South"))
 			  {
-				  duplicate="North";
+				  dummy="North";
 				  nextPlayer="West's";
 			  }
 			  if(winner.equals("East"))
 			  {
-				  duplicate="West";
+				  dummy="West";
 				  nextPlayer="South's";
 			  }
 			  if(winner.equals("West"))
 			  {
-				  duplicate="East";
+				  dummy="East";
 				  nextPlayer="North's";
 			  }
 			  winnerBid=actualbid.get(winner);
@@ -239,6 +239,7 @@ public class WebSocketSessionHandler
 						.add("tricksToWin", tricksToWin)
 						.add("trump", trump)
 						.add("turn", nextPlayer)
+						.add("dummyPlayer",dummy)
 						.build();
 		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
 			  System.out.println(winner);

@@ -23,7 +23,26 @@ function onMessage(event) {
         //alert("South Player");
         southData=player;
         document.getElementById("playerName").value = player.playerName;
-        
+        if(player.hasOwnProperty("SouthBid"))
+        {
+        	document.getElementById("playedValueS").style.display = "";
+            document.getElementById("playedValueS").value =player.SouthBid;
+        }
+        if(player.hasOwnProperty("WestBid"))
+        {
+        	document.getElementById("playedValueW").style.display = "";
+            document.getElementById("playedValueW").value =player.WestBid;
+        }
+        if(player.hasOwnProperty("EastBid"))
+        {
+        	document.getElementById("playedValueE").style.display = "";
+            document.getElementById("playedValueE").value =player.EastBid;
+        }
+        if(player.hasOwnProperty("NorthBid"))
+        {
+        	document.getElementById("playedValueN").style.display = "";
+            document.getElementById("playedValueN").value =player.NorthBid;
+        }
         
         var temp="card";
         var clubs=" ";
@@ -71,28 +90,9 @@ function onMessage(event) {
     		document.getElementById("SSubmitCard").style.display = "none";
     		document.getElementById("SSubmitBid").style.display = "";
     		
-    		sbid=player.bidValue;
+    		
     	}
-        if(sbid!=null)
-        {
-        	document.getElementById("playedValueS").style.display = "";
-            document.getElementById("playedValueS").value =sbid;
-        }
-        if(ebid!=null)
-        {
-        	document.getElementById("playedValueE").style.display = "";
-            document.getElementById("playedValueE").value =ebid;
-        }
-        if(wbid!=null)
-        {
-        	document.getElementById("playedValueW").style.display = "";
-            document.getElementById("playedValueW").value =wbid;
-        }
-        if(nbid!=null)
-        {
-        	document.getElementById("playedValueN").style.display = "";
-            document.getElementById("playedValueN").value =nbid;
-        }
+        
     	if(player.gameType=="Game Phase")
     	{
     		document.getElementById("SSubmitBid").style.display = "none";
@@ -104,6 +104,26 @@ function onMessage(event) {
 	        //alert("West Player");
 			westData=player;
 	        document.getElementById("playerName").value = player.playerName;
+	        if(player.hasOwnProperty("SouthBid"))
+	        {
+	        	document.getElementById("playedValueS").style.display = "";
+	            document.getElementById("playedValueS").value =player.SouthBid;
+	        }
+	        if(player.hasOwnProperty("WestBid"))
+	        {
+	        	document.getElementById("playedValueW").style.display = "";
+	            document.getElementById("playedValueW").value =player.WestBid;
+	        }
+	        if(player.hasOwnProperty("EastBid"))
+	        {
+	        	document.getElementById("playedValueE").style.display = "";
+	            document.getElementById("playedValueE").value =player.EastBid;
+	        }
+	        if(player.hasOwnProperty("NorthBid"))
+	        {
+	        	document.getElementById("playedValueN").style.display = "";
+	            document.getElementById("playedValueN").value =player.NorthBid;
+	        }
 	        var temp="card";
 	        var clubs=" ";
 			var diamonds=" ";
@@ -149,28 +169,9 @@ function onMessage(event) {
 	    	{
 	    		document.getElementById("WSubmitCard").style.display = "none";
 	    		document.getElementById("WSubmitBid").style.display = "";
-	    		wbid=player.bidValue;
+	    		
 	    	}
-	        if(sbid!=null)
-	        {
-	        	document.getElementById("playedValueS").style.display = "";
-	            document.getElementById("playedValueS").value =sbid;
-	        }
-	        if(ebid!=null)
-	        {
-	        	document.getElementById("playedValueE").style.display = "";
-	            document.getElementById("playedValueE").value =ebid;
-	        }
-	        if(wbid!=null)
-	        {
-	        	document.getElementById("playedValueW").style.display = "";
-	            document.getElementById("playedValueW").value =wbid;
-	        }
-	        if(nbid!=null)
-	        {
-	        	document.getElementById("playedValueN").style.display = "";
-	            document.getElementById("playedValueN").value =nbid;
-	        }
+	        
 	    	if(player.gameType=="Game Phase")
 	    	{
 	    		document.getElementById("WSubmitBid").style.display = "none";
@@ -182,6 +183,26 @@ function onMessage(event) {
 	   //alert("North Player");
 		northData=player;
 	    document.getElementById("playerName").value = player.playerName;
+	    if(player.hasOwnProperty("SouthBid"))
+        {
+        	document.getElementById("playedValueS").style.display = "";
+            document.getElementById("playedValueS").value =player.SouthBid;
+        }
+        if(player.hasOwnProperty("WestBid"))
+        {
+        	document.getElementById("playedValueW").style.display = "";
+            document.getElementById("playedValueW").value =player.WestBid;
+        }
+        if(player.hasOwnProperty("EastBid"))
+        {
+        	document.getElementById("playedValueE").style.display = "";
+            document.getElementById("playedValueE").value =player.EastBid;
+        }
+        if(player.hasOwnProperty("NorthBid"))
+        {
+        	document.getElementById("playedValueN").style.display = "";
+            document.getElementById("playedValueN").value =player.NorthBid;
+        }
 	    var temp="card";
         var clubs=" ";
 		var diamonds=" ";
@@ -227,28 +248,9 @@ function onMessage(event) {
     	{
     		document.getElementById("NSubmitCard").style.display = "none";
     		document.getElementById("NSubmitBid").style.display = "";
-    		nbid=player.bidValue;
+    		
     	}
-        if(sbid!=null)
-        {
-        	document.getElementById("playedValueS").style.display = "";
-            document.getElementById("playedValueS").value =sbid;
-        }
-        if(ebid!=null)
-        {
-        	document.getElementById("playedValueE").style.display = "";
-            document.getElementById("playedValueE").value =ebid;
-        }
-        if(wbid!=null)
-        {
-        	document.getElementById("playedValueW").style.display = "";
-            document.getElementById("playedValueW").value =wbid;
-        }
-        if(nbid!=null)
-        {
-        	document.getElementById("playedValueN").style.display = "";
-            document.getElementById("playedValueN").value =nbid;
-        }
+        
     	if(player.gameType=="Game Phase")
     	{
     		document.getElementById("NSubmitBid").style.display = "none";
@@ -260,6 +262,26 @@ function onMessage(event) {
 	    //alert("East Player");
 		eastData=player;
 	    document.getElementById("playerName").value = player.playerName;
+	    if(player.hasOwnProperty("SouthBid"))
+        {
+        	document.getElementById("playedValueS").style.display = "";
+            document.getElementById("playedValueS").value =player.SouthBid;
+        }
+        if(player.hasOwnProperty("WestBid"))
+        {
+        	document.getElementById("playedValueW").style.display = "";
+            document.getElementById("playedValueW").value =player.WestBid;
+        }
+        if(player.hasOwnProperty("EastBid"))
+        {
+        	document.getElementById("playedValueE").style.display = "";
+            document.getElementById("playedValueE").value =player.EastBid;
+        }
+        if(player.hasOwnProperty("NorthBid"))
+        {
+        	document.getElementById("playedValueN").style.display = "";
+            document.getElementById("playedValueN").value =player.NorthBid;
+        }
 	    var temp="card";
         var clubs=" ";
 		var diamonds=" ";
@@ -305,28 +327,9 @@ function onMessage(event) {
     	{
     		document.getElementById("ESubmitCard").style.display = "none";
     		document.getElementById("ESubmitBid").style.display = "";
-    		ebid=player.bidValue;
+    		
     	}
-        if(sbid!=null)
-        {
-        	document.getElementById("playedValueS").style.display = "";
-            document.getElementById("playedValueS").value =sbid;
-        }
-        if(ebid!=null)
-        {
-        	document.getElementById("playedValueE").style.display = "";
-            document.getElementById("playedValueE").value =ebid;
-        }
-        if(wbid!=null)
-        {
-        	document.getElementById("playedValueW").style.display = "";
-            document.getElementById("playedValueW").value =wbid;
-        }
-        if(nbid!=null)
-        {
-        	document.getElementById("playedValueN").style.display = "";
-            document.getElementById("playedValueN").value =nbid;
-        }
+        
     	if(player.gameType=="Game Phase")
     	{
     		document.getElementById("ESubmitBid").style.display = "none";
