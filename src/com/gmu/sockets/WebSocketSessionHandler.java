@@ -233,18 +233,7 @@ public class WebSocketSessionHandler
 			  String[] temp1=winnerBid.split(" ");
 			  tricksToWin=6 + Integer.parseInt(temp1[0]);
 			  trump=temp1[1];
-			  JsonProvider provider1 = JsonProvider.provider();
-		  		JsonObject data1=provider1.createObjectBuilder()
-						.add("winner", winner)
-						.add("tricksToWin", tricksToWin)
-						.add("trump", trump)
-						.add("turn", nextPlayer)
-						.add("dummyPlayer",dummy)
-						.build();
-		  		
-		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
-			  System.out.println(winner);
-			  System.out.println(jsonMessage.toString());
+		  	  sendWinnerDetailsToAllConnectedSessions(jsonMessage, winner, tricksToWin, trump, nextPlayer, dummy);
 			  
 		  }
 		  else
@@ -255,14 +244,17 @@ public class WebSocketSessionHandler
 		  }
 		  
 	 }
-	 private void sendWinnerDetailsToAllConnectedSessions(JsonObject clientMessage, String nextPlayer, String playerBidName, String temp) {
+	 private void sendWinnerDetailsToAllConnectedSessions(JsonObject clientMessage,String winner,int tricksToWin,String trump, String nextPlayer, String dummy) {
 	    	for (Session session : sessions) {
 	    		clientMessage=clientData.get(session);
 	    		
 	    		JsonProvider provider1 = JsonProvider.provider();
 		  		JsonObject data1=provider1.createObjectBuilder()
+						.add("winner", winner)
+						.add("tricksToWin", tricksToWin)
+						.add("trump", trump)
 						.add("turn", nextPlayer)
-						.add(playerBidName,temp)
+						.add("dummyPlayer",dummy)
 						.build();
 		  		clientMessage=Utility.mergeProfileSummary(clientMessage, data1);
 		  		clientData.put(session, clientMessage);
