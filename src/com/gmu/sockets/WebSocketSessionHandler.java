@@ -234,7 +234,6 @@ public class WebSocketSessionHandler
 			  tricksToWin=6 + Integer.parseInt(temp1[0]);
 			  trump=temp1[1];
 		  	  sendWinnerDetailsToAllConnectedSessions(jsonMessage, winner, tricksToWin, trump, nextPlayer, dummy);
-			  
 		  }
 		  else
 		  {
