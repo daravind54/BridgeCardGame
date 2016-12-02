@@ -26,22 +26,22 @@ function onMessage(event) {
         if(player.hasOwnProperty("SouthBidOrCard"))
         {
         	document.getElementById("playedValueS").style.display = "";
-            document.getElementById("playedValueS").value =player.SouthBid;
+            document.getElementById("playedValueS").value =player.SouthBidOrCard;
         }
         if(player.hasOwnProperty("WestBidOrCard"))
         {
         	document.getElementById("playedValueW").style.display = "";
-            document.getElementById("playedValueW").value =player.WestBid;
+            document.getElementById("playedValueW").value =player.WestBidOrCard;
         }
         if(player.hasOwnProperty("EastBidOrCard"))
         {
         	document.getElementById("playedValueE").style.display = "";
-            document.getElementById("playedValueE").value =player.EastBid;
+            document.getElementById("playedValueE").value =player.EastBidOrCard;
         }
         if(player.hasOwnProperty("NorthBidOrCard"))
         {
         	document.getElementById("playedValueN").style.display = "";
-            document.getElementById("playedValueN").value =player.NorthBid;
+            document.getElementById("playedValueN").value =player.NorthBidOrCard;
         }
         
         var temp="card";
@@ -122,22 +122,22 @@ function onMessage(event) {
 	        if(player.hasOwnProperty("SouthBidOrCard"))
 	        {
 	        	document.getElementById("playedValueS").style.display = "";
-	            document.getElementById("playedValueS").value =player.SouthBid;
+	            document.getElementById("playedValueS").value =player.SouthBidOrCard;
 	        }
 	        if(player.hasOwnProperty("WestBidOrCard"))
 	        {
 	        	document.getElementById("playedValueW").style.display = "";
-	            document.getElementById("playedValueW").value =player.WestBid;
+	            document.getElementById("playedValueW").value =player.WestBidOrCard;
 	        }
 	        if(player.hasOwnProperty("EastBidOrCard"))
 	        {
 	        	document.getElementById("playedValueE").style.display = "";
-	            document.getElementById("playedValueE").value =player.EastBid;
+	            document.getElementById("playedValueE").value =player.EastBidOrCard;
 	        }
 	        if(player.hasOwnProperty("NorthBidOrCard"))
 	        {
 	        	document.getElementById("playedValueN").style.display = "";
-	            document.getElementById("playedValueN").value =player.NorthBid;
+	            document.getElementById("playedValueN").value =player.NorthBidOrCard;
 	        }
 	        var temp="card";
 	        var clubs=" ";
@@ -216,22 +216,22 @@ function onMessage(event) {
 	    if(player.hasOwnProperty("SouthBidOrCard"))
         {
         	document.getElementById("playedValueS").style.display = "";
-            document.getElementById("playedValueS").value =player.SouthBid;
+            document.getElementById("playedValueS").value =player.SouthBidOrCard;
         }
         if(player.hasOwnProperty("WestBidOrCard"))
         {
         	document.getElementById("playedValueW").style.display = "";
-            document.getElementById("playedValueW").value =player.WestBid;
+            document.getElementById("playedValueW").value =player.WestBidOrCard;
         }
         if(player.hasOwnProperty("EastBidOrCard"))
         {
         	document.getElementById("playedValueE").style.display = "";
-            document.getElementById("playedValueE").value =player.EastBid;
+            document.getElementById("playedValueE").value =player.EastBidOrCard;
         }
         if(player.hasOwnProperty("NorthBidOrCard"))
         {
         	document.getElementById("playedValueN").style.display = "";
-            document.getElementById("playedValueN").value =player.NorthBid;
+            document.getElementById("playedValueN").value =player.NorthBidOrCard;
         }
 	    var temp="card";
         var clubs=" ";
@@ -311,22 +311,22 @@ function onMessage(event) {
 	    if(player.hasOwnProperty("SouthBidOrCard"))
         {
         	document.getElementById("playedValueS").style.display = "";
-            document.getElementById("playedValueS").value =player.SouthBid;
+            document.getElementById("playedValueS").value =player.SouthBidOrCard;
         }
         if(player.hasOwnProperty("WestBidOrCard"))
         {
         	document.getElementById("playedValueW").style.display = "";
-            document.getElementById("playedValueW").value =player.WestBid;
+            document.getElementById("playedValueW").value =player.WestBidOrCard;
         }
         if(player.hasOwnProperty("EastBidOrCard"))
         {
         	document.getElementById("playedValueE").style.display = "";
-            document.getElementById("playedValueE").value =player.EastBid;
+            document.getElementById("playedValueE").value =player.EastBidOrCard;
         }
         if(player.hasOwnProperty("NorthBidOrCard"))
         {
         	document.getElementById("playedValueN").style.display = "";
-            document.getElementById("playedValueN").value =player.NorthBid;
+            document.getElementById("playedValueN").value =player.NorthBidOrCard;
         }
 	    var temp="card";
         var clubs=" ";

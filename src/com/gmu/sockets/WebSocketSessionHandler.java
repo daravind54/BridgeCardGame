@@ -254,7 +254,7 @@ public class WebSocketSessionHandler
 						.add("trump", trump)
 						.add("turn", nextPlayer)
 						.add("dummyPlayer",dummy)
-						.add("gameType", "Game Phase")
+						.add("gameType", "Bid Complete")
 						.build();
 		  		clientMessage=Utility.mergeProfileSummary(clientMessage, data1);
 		  		clientData.put(session, clientMessage);
