@@ -255,6 +255,20 @@ public class WebSocketSessionHandler
 		  }
 		  
 	 }
+	 private void sendWinnerDetailsToAllConnectedSessions(JsonObject clientMessage, String nextPlayer, String playerBidName, String temp) {
+	    	for (Session session : sessions) {
+	    		clientMessage=clientData.get(session);
+	    		
+	    		JsonProvider provider1 = JsonProvider.provider();
+		  		JsonObject data1=provider1.createObjectBuilder()
+						.add("turn", nextPlayer)
+						.add(playerBidName,temp)
+						.build();
+		  		clientMessage=Utility.mergeProfileSummary(clientMessage, data1);
+		  		clientData.put(session, clientMessage);
+	    		sendToSession(session, clientData.get(session));
+	    	}
+	 }
 	 private void sendBidToAllConnectedSessions(JsonObject clientMessage, String nextPlayer, String playerBidName, String temp) {
 	    	for (Session session : sessions) {
 	    		clientMessage=clientData.get(session);
