@@ -249,7 +249,7 @@ public class WebSocketSessionHandler
 	    		
 	    		JsonProvider provider1 = JsonProvider.provider();
 		  		JsonObject data1=provider1.createObjectBuilder()
-						.add("winner", winner)
+						.add("bidWinner", winner)
 						.add("tricksToWin", tricksToWin)
 						.add("trump", trump)
 						.add("turn", nextPlayer)
