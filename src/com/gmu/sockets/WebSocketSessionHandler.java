@@ -243,6 +243,10 @@ public class WebSocketSessionHandler
 		  }
 		  
 	 }
+	 public void game(JsonObject jsonMessage, Session session)
+	 {
+		 
+	 }
 	 private void sendWinnerDetailsToAllConnectedSessions(JsonObject clientMessage,String winner,int tricksToWin,String trump, String nextPlayer, String dummy) {
 	    	for (Session session : sessions) {
 	    		clientMessage=clientData.get(session);
