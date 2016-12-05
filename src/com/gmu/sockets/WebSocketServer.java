@@ -49,7 +49,7 @@ public class WebSocketServer {
 			 if(jsonMessage.getString("action").equals("bidding"))
 				 sessionHandler.bid(jsonMessage, session);
 			 if(jsonMessage.getString("action").equals("game"))
-				 sessionHandler.bid(jsonMessage, session);
+				 sessionHandler.game(jsonMessage, session);
 		 }
 	 }
 }
