@@ -289,6 +289,7 @@ public class WebSocketSessionHandler
 						.build();
 		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data);
 		  		System.out.println(jsonMessage.toString());
+		  		clientData.put(session, jsonMessage);
 		 }
 		 
 		 
