@@ -297,8 +297,20 @@ public class WebSocketSessionHandler
 		 
 	 }
 	 private void sendCardToAllConnectedSessions(JsonObject jsonMessage,
-			String nextPlayer, String playerBidName, String tempCard) {
-		
+			String nextPlayer, String playerBidName, String tempCard) 
+	{
+		 for (Session session : sessions) {
+	    		clientMessage=clientData.get(session);
+	    		
+	    		JsonProvider provider1 = JsonProvider.provider();
+		  		JsonObject data1=provider1.createObjectBuilder()
+						.add("turn", nextPlayer)
+						.add(playerBidName,temp)
+						.build();
+		  		clientMessage=Utility.mergeProfileSummary(clientMessage, data1);
+		  		clientData.put(session, clientMessage);
+	    		sendToSession(session, clientData.get(session));
+	    	}
 		
 	}
 
