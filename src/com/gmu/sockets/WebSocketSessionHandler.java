@@ -301,6 +301,7 @@ public class WebSocketSessionHandler
 						.add("turn", nextPlayer)
 						.add(playerBidName,tempCard)
 						.add("suitForTrick", suit)
+						.add("gameType", "Game Phase")
 						.build();
 		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
 		  		clientData.put(session, jsonMessage);
