@@ -265,6 +265,7 @@ public class WebSocketSessionHandler
 	 {
 		 String nextPlayer=null;
 		 Integer cardValue=null;
+		 clientData.put(session, jsonMessage);
 		 if(jsonMessage.getString("playerName").equals("South"))
 			 nextPlayer="West's";
 		 if(jsonMessage.getString("playerName").equals("West"))
