@@ -290,6 +290,8 @@ public class WebSocketSessionHandler
 		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data);
 		  		System.out.println(jsonMessage.toString());
 		  		clientData.put(session, jsonMessage);
+		  		String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
+		  		sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard);
 		 }
 		 
 		 
