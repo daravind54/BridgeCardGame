@@ -282,10 +282,8 @@ public class WebSocketSessionHandler
 		 {
 			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
 			 cardRank.put(jsonMessage.getString("playerName"), cardValue);
-			 
-		  		clientData.put(session, jsonMessage);
-		  		String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
-		  		sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
+		  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
+		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
 		 }
 		 
 		 
