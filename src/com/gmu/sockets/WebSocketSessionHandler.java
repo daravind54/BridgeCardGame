@@ -261,6 +261,7 @@ public class WebSocketSessionHandler
 		 actualCard.put(jsonMessage.getString("playerName"), tempCard);
 		 String suit=suitRank[0];
 		 String rank=suitRank[1];
+		 if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")))
 		 
 		 
 	 }
