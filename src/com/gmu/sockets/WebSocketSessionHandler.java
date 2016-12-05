@@ -291,13 +291,13 @@ public class WebSocketSessionHandler
 		  		System.out.println(jsonMessage.toString());
 		  		clientData.put(session, jsonMessage);
 		  		String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
-		  		sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard);
+		  		sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
 		 }
 		 
 		 
 	 }
 	 private void sendCardToAllConnectedSessions(JsonObject jsonMessage,
-			String nextPlayer, String playerBidName, String tempCard) 
+			String nextPlayer, String playerBidName, String tempCard,String suit) 
 	{
 		 for (Session session : sessions) {
 			 jsonMessage=clientData.get(session);
