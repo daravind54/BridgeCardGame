@@ -296,7 +296,13 @@ public class WebSocketSessionHandler
 		 
 		 
 	 }
-	 private void sendWinnerDetailsToAllConnectedSessions(JsonObject clientMessage,String winner,int tricksToWin,String trump, String nextPlayer, String dummy) {
+	 private void sendCardToAllConnectedSessions(JsonObject jsonMessage,
+			String nextPlayer, String playerBidName, String tempCard) {
+		
+		
+	}
+
+	private void sendWinnerDetailsToAllConnectedSessions(JsonObject clientMessage,String winner,int tricksToWin,String trump, String nextPlayer, String dummy) {
 	    	for (Session session : sessions) {
 	    		clientMessage=clientData.get(session);
 	    		
