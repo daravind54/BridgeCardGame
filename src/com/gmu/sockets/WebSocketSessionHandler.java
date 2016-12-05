@@ -296,6 +296,10 @@ public class WebSocketSessionHandler
 			  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 			  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
 			 }
+			 else
+			 {
+				 
+			 }
 		 }
 		 
 		 
