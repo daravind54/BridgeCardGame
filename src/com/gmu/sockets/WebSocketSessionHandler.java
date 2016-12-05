@@ -296,9 +296,9 @@ public class WebSocketSessionHandler
 			  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 			  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
 			 }
-			 else
+			 else if
 			 {
-				 
+				 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
 			 }
 		 }
 		 
