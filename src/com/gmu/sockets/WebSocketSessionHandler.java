@@ -186,6 +186,7 @@ public class WebSocketSessionHandler
 		 //System.out.println(sessions.toString());
 		 String nextPlayer=null;
 		 Integer bidValue=null;
+		 clientData.put(session, jsonMessage);
 		 if(jsonMessage.getString("playerName").equals("South"))
 			 nextPlayer="West's";
 		 if(jsonMessage.getString("playerName").equals("West"))
