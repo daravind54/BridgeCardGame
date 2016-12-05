@@ -274,6 +274,7 @@ public class WebSocketSessionHandler
 						.add("tricksToWin", tricksToWin)
 						.add("trump", trump)
 						.add("turn", nextPlayer)
+						.add("trickStarter",nextPlayer)
 						.add("dummyPlayer",dummy)
 						.add("gameType", "Bid Complete")
 						.add("tricksWonN","0")
