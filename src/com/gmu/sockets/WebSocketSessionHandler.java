@@ -28,6 +28,8 @@ public class WebSocketSessionHandler
 	private final Deck deck=new Deck();
 	private final Map<String, Integer> bidRank=new HashMap<String, Integer>();
 	private final Map<String, String> actualbid=new HashMap<String, String>();
+	private final Map<String, Integer> cardRank=new HashMap<String, Integer>();
+	private final Map<String, String> actualCard=new HashMap<String, String>();
 	private static Map<String, Integer> suitToInt = new HashMap<String, Integer>();
 	private static Map<Session, JsonObject> clientData=new HashMap<Session, JsonObject>();
 	static {
@@ -254,6 +256,9 @@ public class WebSocketSessionHandler
 			 nextPlayer="East's";
 		 if(jsonMessage.getString("playerName").equals("East"))
 			 nextPlayer="South's";
+		 String tempCard=jsonMessage.getString("cardValue");
+		 
+		 
 	 }
 	 private void sendWinnerDetailsToAllConnectedSessions(JsonObject clientMessage,String winner,int tricksToWin,String trump, String nextPlayer, String dummy) {
 	    	for (Session session : sessions) {
