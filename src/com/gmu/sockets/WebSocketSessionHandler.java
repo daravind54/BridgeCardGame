@@ -258,6 +258,10 @@ public class WebSocketSessionHandler
 			 nextPlayer="South's";
 		 String tempCard=jsonMessage.getString("cardValue");
 		 String[] suitRank=tempCard.split("-");
+		 actualCard.put(jsonMessage.getString("playerName"), tempCard);
+		 String suit=suitRank[0];
+		 String rank=suitRank[1];
+		 
 		 
 	 }
 	 private void sendWinnerDetailsToAllConnectedSessions(JsonObject clientMessage,String winner,int tricksToWin,String trump, String nextPlayer, String dummy) {
