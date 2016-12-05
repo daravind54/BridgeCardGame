@@ -278,7 +278,7 @@ public class WebSocketSessionHandler
 		 actualCard.put(jsonMessage.getString("playerName"), tempCard);
 		 String suit=suitRank[0];
 		 String rank=suitRank[1];
-		 if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")))
+		 if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")+"'s"))
 		 {
 			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
 			 cardRank.put(jsonMessage.getString("playerName"), cardValue);
@@ -300,15 +300,15 @@ public class WebSocketSessionHandler
 			String nextPlayer, String playerBidName, String tempCard) 
 	{
 		 for (Session session : sessions) {
-	    		clientMessage=clientData.get(session);
+			 jsonMessage=clientData.get(session);
 	    		
 	    		JsonProvider provider1 = JsonProvider.provider();
 		  		JsonObject data1=provider1.createObjectBuilder()
 						.add("turn", nextPlayer)
-						.add(playerBidName,temp)
+						.add(playerBidName,tempCard)
 						.build();
-		  		clientMessage=Utility.mergeProfileSummary(clientMessage, data1);
-		  		clientData.put(session, clientMessage);
+		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
+		  		clientData.put(session, jsonMessage);
 	    		sendToSession(session, clientData.get(session));
 	    	}
 		
