@@ -282,6 +282,12 @@ public class WebSocketSessionHandler
 		 {
 			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
 			 cardRank.put(jsonMessage.getString("playerName"), cardValue);
+			 JsonProvider provider = JsonProvider.provider();
+		  		JsonObject data=provider.createObjectBuilder()
+						.add("turn", nextPlayer)
+						.build();
+		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data);
+		  		System.out.println(jsonMessage.toString());
 		 }
 		 
 		 
