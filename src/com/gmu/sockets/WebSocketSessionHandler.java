@@ -285,6 +285,7 @@ public class WebSocketSessionHandler
 			 JsonProvider provider = JsonProvider.provider();
 		  		JsonObject data=provider.createObjectBuilder()
 						.add("turn", nextPlayer)
+						.add("suitForTrick", suit)
 						.build();
 		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data);
 		  		System.out.println(jsonMessage.toString());
