@@ -245,7 +245,15 @@ public class WebSocketSessionHandler
 	 }
 	 public void game(JsonObject jsonMessage, Session session)
 	 {
-		 
+		 String nextPlayer=null;
+		 if(jsonMessage.getString("playerName").equals("South"))
+			 nextPlayer="West's";
+		 if(jsonMessage.getString("playerName").equals("West"))
+			 nextPlayer="North's";
+		 if(jsonMessage.getString("playerName").equals("North"))
+			 nextPlayer="East's";
+		 if(jsonMessage.getString("playerName").equals("East"))
+			 nextPlayer="South's";
 	 }
 	 private void sendWinnerDetailsToAllConnectedSessions(JsonObject clientMessage,String winner,int tricksToWin,String trump, String nextPlayer, String dummy) {
 	    	for (Session session : sessions) {
