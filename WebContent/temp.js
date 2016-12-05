@@ -10,12 +10,47 @@ function onMessage(event) {
 	
 	//alert("On message");
 	//window.location.href = "game.jsp";
+	
 	document.getElementById("waiting").style.display = "none";
 	document.getElementById("cards").style.display = "";
 	var player = JSON.parse(event.data);
 	//alert(sbid);
+	if(player.gameType=="Bid Complete")
+	{
+		var trump=null;
+		if(player.trump=="C")
+			trump="Clubs";
+		if(player.trump=="S")
+			trump="Spades";
+		if(player.trump=="H")
+			trump="Hearts";
+		if(player.trump=="D")
+			trump="Diamonds";
+		var display="Bidding Complete,"+"\n"+" Bid won by "+player.bidWinner+"\n"
+		+player.dummyPlayer+" is the dummy player"+"\n"
+		+"The trump suit is "+trump+"\n"
+		+"Tricks to win are "+player.tricksToWin+"\n";
+		alert(display);
+		player.gameType="Game Phase";
+	}
+	if(player.gameType=="Game Phase")
+	{
+		document.getElementById("tricksWonN").style.display = "";
+		document.getElementById("tricksWonN").value=player.tricksWonN;
+		
+	    document.getElementById("tricksWonS").style.display = "";
+		document.getElementById("tricksWonS").value=player.tricksWonS;
+		
+	    document.getElementById("tricksWonE").style.display = "";
+		document.getElementById("tricksWonE").value=player.tricksWonE;
+		
+	    document.getElementById("tricksWonW").style.display = "";
+		document.getElementById("tricksWonW").value=player.tricksWonW;
+	    
+	}
 	document.getElementById("gameType").value = player.gameType;
 	document.getElementById("turn").value = player.turn;
+	
 	
 	
     if (player.playerName == "South") {
@@ -503,4 +538,9 @@ function hideDiv() {
     document.getElementById("playedValueS").style.display = "none";
     document.getElementById("playedValueE").style.display = "none";
     document.getElementById("playedValueW").style.display = "none";
+    
+    document.getElementById("tricksWonN").style.display = "none";
+    document.getElementById("tricksWonS").style.display = "none";
+    document.getElementById("tricksWonE").style.display = "none";
+    document.getElementById("tricksWonW").style.display = "none";
 }

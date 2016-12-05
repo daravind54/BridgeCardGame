@@ -255,6 +255,10 @@ public class WebSocketSessionHandler
 						.add("turn", nextPlayer)
 						.add("dummyPlayer",dummy)
 						.add("gameType", "Bid Complete")
+						.add("tricksWonN","0")
+						.add("tricksWonS","0")
+						.add("tricksWonW","0")
+						.add("tricksWonE","0")
 						.build();
 		  		clientMessage=Utility.mergeProfileSummary(clientMessage, data1);
 		  		clientData.put(session, clientMessage);
