@@ -257,7 +257,7 @@ public class WebSocketSessionHandler
 		 if(jsonMessage.getString("playerName").equals("East"))
 			 nextPlayer="South's";
 		 String tempCard=jsonMessage.getString("cardValue");
-		 
+		 String[] suitRank=tempCard.split("-");
 		 
 	 }
 	 private void sendWinnerDetailsToAllConnectedSessions(JsonObject clientMessage,String winner,int tricksToWin,String trump, String nextPlayer, String dummy) {
