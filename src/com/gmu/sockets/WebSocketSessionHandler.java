@@ -290,6 +290,9 @@ public class WebSocketSessionHandler
 		 else
 		 {
 			 if(suit.equalsIgnoreCase(jsonMessage.getString("suitForTrick")))
+			 {
+				 
+			 }
 		 }
 		 
 		 
