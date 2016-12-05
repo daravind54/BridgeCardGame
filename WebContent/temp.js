@@ -529,6 +529,7 @@ function formSubmitCardW()
     		var cardData=westData[card];
     		if(cardData==cardValue)
     		{
+    			
     			flag=1;
     			break;
     		}
