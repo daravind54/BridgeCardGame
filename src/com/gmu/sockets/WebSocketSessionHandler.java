@@ -159,6 +159,22 @@ public class WebSocketSessionHandler
 		 
 			
 	 }
+	 public int calcCardValue(int suit,int rank)
+	 {
+		 int value=0;
+		 if (suit == 5) 
+		 {
+			 value = 5 + 100 * rank;
+		 }
+		 else
+		 {
+			value = (4 - suit) + 100 * rank;
+		 }
+		 System.out.println(value);
+		 return value;	
+		 
+			
+	 }
 	 public String compareBid()
 	 {
 		 TreeMap<String, Integer> tempTree=new TreeMap<String, Integer>(bidRank);
@@ -248,6 +264,7 @@ public class WebSocketSessionHandler
 	 public void game(JsonObject jsonMessage, Session session)
 	 {
 		 String nextPlayer=null;
+		 Integer cardValue=null;
 		 if(jsonMessage.getString("playerName").equals("South"))
 			 nextPlayer="West's";
 		 if(jsonMessage.getString("playerName").equals("West"))
@@ -262,6 +279,10 @@ public class WebSocketSessionHandler
 		 String suit=suitRank[0];
 		 String rank=suitRank[1];
 		 if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")))
+		 {
+			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
+			 cardRank.put(jsonMessage.getString("playerName"), cardValue);
+		 }
 		 
 		 
 	 }
