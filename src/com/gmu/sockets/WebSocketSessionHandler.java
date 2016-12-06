@@ -373,6 +373,26 @@ public class WebSocketSessionHandler
 		 System.out.println(cardRank.toString());
 		
 	}
+	 private void sendTrickWinnerToAllConnectedSessions(JsonObject jsonMessage,
+				String nextPlayer, String playerBidName, String tempCard,String trickSuit) 
+		{
+			 for (Session session : sessions) {
+				 jsonMessage=clientData.get(session);
+		    		
+		    		JsonProvider provider1 = JsonProvider.provider();
+			  		JsonObject data1=provider1.createObjectBuilder()
+							.add("turn", nextPlayer)
+							.add(playerBidName,tempCard)
+							.add("suitForTrick", trickSuit)
+							.add("gameType", "Game Phase")
+							.build();
+			  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
+			  		clientData.put(session, jsonMessage);
+		    		sendToSession(session, clientData.get(session));
+		    	}
+			 System.out.println(cardRank.toString());
+			
+		}
 
 	private void sendWinnerDetailsToAllConnectedSessions(JsonObject clientMessage,String winner,int tricksToWin,String trump, String nextPlayer, String dummy) {
 	    	for (Session session : sessions) {
