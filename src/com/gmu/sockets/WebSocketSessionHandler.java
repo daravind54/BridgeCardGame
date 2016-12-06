@@ -207,7 +207,7 @@ public class WebSocketSessionHandler
 		 String temp=null;
 		 while(is.hasNext())
 		 {
-			 string key=is.next()
+			 String key=is.next()
 			 if(lastElement==cardRank.get(key))
 			 {
 				 temp=key;
