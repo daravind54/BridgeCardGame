@@ -2,6 +2,7 @@ package com.gmu.sockets;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -16,6 +17,7 @@ import javax.websocket.Session;
 
 import com.gmu.bridge.Card;
 import com.gmu.bridge.Deck;
+import com.sun.xml.rpc.processor.modeler.j2ee.xml.string;
 
 
 
@@ -195,6 +197,23 @@ public class WebSocketSessionHandler
 		 return tempTree.lastKey();*/
 		 Set<Integer> tempset=new TreeSet<Integer>();
 		 tempset.addAll(cardRank.values());
+		 Integer lastElement=null;
+		 Iterator<Integer> it=tempset.iterator();
+		 while(it.hasNext())
+		 {
+			 lastElement=it.next();
+		 }
+		 Iterator<String> is=cardRank.keySet().iterator();
+		 String temp=null;
+		 while(is.hasNext())
+		 {
+			 string key=is.next()
+			 if(lastElement==cardRank.get(key))
+			 {
+				 temp=key;
+			 }
+		 }
+		 return temp;
 	 }
 	 public void bid(JsonObject jsonMessage, Session session)
 	 {
