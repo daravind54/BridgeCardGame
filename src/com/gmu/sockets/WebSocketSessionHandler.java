@@ -303,6 +303,8 @@ public class WebSocketSessionHandler
 			 else
 				 cardValue=calcCardValue(suitToInt.get("P"), rankToInt.get("pass"));
 		 }
+		 else
+			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
 		 cardRank.put(jsonMessage.getString("playerName"), cardValue);
 	  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 	  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
