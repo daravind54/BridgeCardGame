@@ -321,7 +321,7 @@ public class WebSocketSessionHandler
 		 if(trickcount==4)
 		 {
 			 String trickWinner=null;
-			 trickWinner=
+			 trickWinner=compareCardsInTricks();
 		 }
 		 else
 		 {
