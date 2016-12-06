@@ -186,9 +186,28 @@ public class WebSocketSessionHandler
 	 }
 	 public String compareBid()
 	 {
-		 TreeMap<String, Integer> tempTree=new TreeMap<String, Integer>(bidRank);
+		 /*TreeMap<String, Integer> tempTree=new TreeMap<String, Integer>(bidRank);
 		 
-		 return tempTree.lastKey();
+		 return tempTree.lastKey();*/
+		 Set<Integer> tempset=new TreeSet<Integer>();
+		 tempset.addAll(cardRank.values());
+		 Integer lastElement=null;
+		 Iterator<Integer> it=tempset.iterator();
+		 while(it.hasNext())
+		 {
+			 lastElement=it.next();
+		 }
+		 Iterator<String> is=cardRank.keySet().iterator();
+		 String temp=null;
+		 while(is.hasNext())
+		 {
+			 String key=is.next();
+			 if(lastElement==cardRank.get(key))
+			 {
+				 temp=key;
+			 }
+		 }
+		 return temp;
 	 }
 	 public String compareCardsInTricks()
 	 {
