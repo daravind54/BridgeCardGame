@@ -349,7 +349,7 @@ public class WebSocketSessionHandler
 		 {
 			 
 		  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
-		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,trickSuit);
+		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,trickSuit,tricksWonbyNorth,tricksWonbyWest,tricksWonbySouth,tricksWonbyEast);
 		 }
 		 
 		 
@@ -375,7 +375,7 @@ public class WebSocketSessionHandler
 		
 	}
 	 private void sendTrickWinnerToAllConnectedSessions(JsonObject jsonMessage,
-				String nextPlayer, String playerBidName, String tempCard,String trickSuit) 
+				String nextPlayer, String playerBidName, String tempCard,String trickSuit, int tricksWonbyNorth2, int tricksWonbyWest2, int tricksWonbySouth2, int tricksWonbyEast2) 
 		{
 			 for (Session session : sessions) {
 				 jsonMessage=clientData.get(session);
