@@ -540,7 +540,7 @@ function formSubmitCardW()
     		var cardData=westData[card];
     		if(cardData==cardValue)
     		{
-    			if(!leadSuit=="N" )
+    			if(leadSuit!="N" )
     			{
     				if(leadSuit.charAt(0)==cardValue.charAt(0))
 	    			{
@@ -599,7 +599,7 @@ function formSubmitCardE()
     		var cardData=eastData[card];
     		if(cardData==cardValue)
     		{
-    			if(!leadSuit=="N" )
+    			if(leadSuit!="N" )
     			{
     				if(leadSuit.charAt(0)==cardValue.charAt(0))
 	    			{
@@ -658,7 +658,7 @@ function formSubmitCardN()
     		var cardData=northData[card];
     		if(cardData==cardValue)
     		{
-    			if(!leadSuit=="N" )
+    			if(leadSuit!="N" )
     			{
     				if(leadSuit.charAt(0)==cardValue.charAt(0))
 	    			{
@@ -717,7 +717,7 @@ function formSubmitCardS()
     		var cardData=southData[card];
     		if(cardData==cardValue)
     		{
-    			if(!leadSuit=="N" )
+    			if(leadSuit!="N" )
     			{
     				if(leadSuit.charAt(0)==cardValue.charAt(0))
 	    			{
