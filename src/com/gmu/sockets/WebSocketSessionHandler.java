@@ -342,7 +342,7 @@ public class WebSocketSessionHandler
 			 if(trickWinner.equals("West"))
 				 tricksWonbyWest++;
 			 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
-			 sendTrickWinnerToAllConnectedSessions(jsonMessage, nextPlayer, playerBidName, tempCard, trickSuit, tricksWonbyNorth,tricksWonbyWest,tricksWonbySouth,tricksWonbyEast);
+			 sendTrickWinnerToAllConnectedSessions(jsonMessage, nextPlayer, playerBidName, tempCard, suit, tricksWonbyNorth,tricksWonbyWest,tricksWonbySouth,tricksWonbyEast);
 			 
 		 }
 		 else
