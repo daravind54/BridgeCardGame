@@ -28,6 +28,7 @@ public class WebSocketSessionHandler
 	static int tricksWonbySouth=0;
 	static int tricksWonbyEast=0;
 	static int tricksWonbyWest=0;
+	static String trickSuit=null;
 	private final Set<Session> sessions = new HashSet<>();
 	private final Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
 	private final Deck deck=new Deck();
@@ -309,8 +310,10 @@ public class WebSocketSessionHandler
 		 
 		 if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")+"'s"))
 		 {
+			 trickSuit=suit;
 			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
-			 suit
+		 }
+			 
 		 else if(!(jsonMessage.getString("suitForTrick").equals(suit)) )
 		 {
 			 if(suit.equals(jsonMessage.getString("trump")))
@@ -326,6 +329,7 @@ public class WebSocketSessionHandler
 		 
 		 if(trickcount==4)
 		 {
+			 trickSuit=null;
 			 String trickWinner=null;
 			 trickWinner=compareCardsInTricks();
 			 nextPlayer=trickWinner+"'s";
