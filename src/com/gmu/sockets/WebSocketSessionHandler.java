@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -189,9 +190,11 @@ public class WebSocketSessionHandler
 	 }
 	 public String compareCardsInTricks()
 	 {
-		 TreeMap<String, Integer> tempTree=new TreeMap<String, Integer>(cardRank);
+		 /*TreeMap<String, Integer> tempTree=new TreeMap<String, Integer>(cardRank);
 		 
-		 return tempTree.lastKey();
+		 return tempTree.lastKey();*/
+		 Set<Integer> tempset=new TreeSet<Integer>();
+		 tempset.addAll(cardRank.values());
 	 }
 	 public void bid(JsonObject jsonMessage, Session session)
 	 {
