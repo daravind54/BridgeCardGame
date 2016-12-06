@@ -37,7 +37,7 @@
 					<form id="userInput">
 						<input type="text" id="Ninput" name="Ninput">
 						<input type="button"  id="NSubmitBid" value="SubmitBid" onclick=formSubmitBidN()>
-						<input type="button"  id="NSubmitCard" value="SubmitCard" onclick=formSubmit()>
+						<input type="button"  id="NSubmitCard" value="SubmitCard" onclick=formSubmitCardN()>
 					</form><br>
 					
 					<label for="tricksWonN" id="tricksWonNLabel">Tricks Won:</label>
@@ -96,7 +96,7 @@
 				<form id="userInput">
 						<input type="text" id="Einput" name="Einput">
 						<input type="button"  id="ESubmitBid" value="SubmitBid" onclick=formSubmitBidE()>
-						<input type="button"  id="ESubmitCard" value="SubmitCard" onclick=formSubmit()>
+						<input type="button"  id="ESubmitCard" value="SubmitCard" onclick=formSubmitCardE()>
 						
 				</form><br>
 				<input type="text" id="playedValueE" name="playedValueN" readonly><br>
@@ -125,7 +125,7 @@
 				<form id="userInput">
 						<input type="text" id="Sinput" name="Sinput">
 						<input type="button"  id="SSubmitBid" value="SubmitBid" onclick=formSubmitBidS()>
-						<input type="button"  id="SSubmitCard" value="SubmitCard" onclick=formSubmit()>
+						<input type="button"  id="SSubmitCard" value="SubmitCard" onclick=formSubmitCardS()>
 						
 					</form><br>
 					<input type="text" id="playedValueS" name="playedValueN" readonly><br>

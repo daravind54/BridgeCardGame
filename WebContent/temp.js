@@ -521,7 +521,17 @@ function formSubmitCardW()
 	var temp=document.getElementById("Winput").value;
 	var cardValue=temp.replace(" ", "-");
 	var flag=0;
-	var leadSuit=westData[suitForTrick];
+	var leadSuit=westData.suitForTrick;
+	var suitlabel=null;
+	if(leadSuit=="C")
+		suitlabel="Wclubs";
+	if(leadSuit=="D")
+		suitlabel="Wdiamonds";
+	if(leadSuit=="H")
+		suitlabel="Whearts";
+	if(leadSuit=="S")
+		suitlabel="Wspades";
+	
 	for(var i=1;i<=13;i++)
 	{
 		var card="card"+i;
@@ -530,8 +540,24 @@ function formSubmitCardW()
     		var cardData=westData[card];
     		if(cardData==cardValue)
     		{
-    			flag=1;
-    			break;
+    			if(!leadSuit=="N" )
+    			{
+    				if(leadSuit.charAt(0)==cardValue.charAt(0))
+	    			{
+	    				flag=1;
+	    				break;
+	    			}
+    				else if(document.getElementById(suitlabel).value.length<=1)
+    				{
+    					flag=1;
+    					break;
+    				}
+    			}
+    			else
+    			{
+    				flag=1;
+    				break;
+    			}
     		}
     	}
 	}
@@ -546,183 +572,184 @@ function formSubmitCardW()
 		westData.cardValue=cardValue;
 		socket.send(JSON.stringify(westData));
 	}
-	/*if(westData.dummyPlayer=="South")
+	
+}
+function formSubmitCardE()
+{
+	var username="East";
+	var temp=document.getElementById("Einput").value;
+	var cardValue=temp.replace(" ", "-");
+	var flag=0;
+	var leadSuit=eastData.suitForTrick;
+	var suitlabel=null;
+	if(leadSuit=="C")
+		suitlabel="Eclubs";
+	if(leadSuit=="D")
+		suitlabel="Ediamonds";
+	if(leadSuit=="H")
+		suitlabel="Ehearts";
+	if(leadSuit=="S")
+		suitlabel="Espades";
+	
+	for(var i=1;i<=13;i++)
 	{
-		 var temp="card";
-	        var clubs=" ";
-			var diamonds=" ";
-			var hearts=" ";
-			var spades=" ";
-	        for(var i=1;i<=13;i++)
-	        {
-	        	
-	        	var card=temp+i;
-	        	if(southData.hasOwnProperty(card))
-	        	{
-	        		var cardData=southData[card];
-	        		//alert(cardData);
-	        		var cardDataArray=cardData.split("-");
-	        		//alert(cardDataArray[0]);
-	        		if(cardDataArray[0]=="C")
-	        		{
-	        			clubs+=cardDataArray[1]+" ";
-	        		}
-	        		if(cardDataArray[0]=="D")
-	        		{
-	        			diamonds+=cardDataArray[1]+" ";
-	        		}
-	        		if(cardDataArray[0]=="H")
-	        		{
-	        			hearts+=cardDataArray[1]+" ";
-	        		}
-	        		if(cardDataArray[0]=="S")
-	        		{
-	        			spades+=cardDataArray[1]+" ";
-	        		}
-	        	}
-	        	
-	        	
-	        }
-	        
-	        document.getElementById("Sclubs").value=clubs;
-	        document.getElementById("Sdiamonds").value=diamonds;
-	        document.getElementById("Shearts").value=hearts;
-	        document.getElementById("Sspades").value=spades;
+		var card="card"+i;
+    	if(eastData.hasOwnProperty(card))
+    	{
+    		var cardData=eastData[card];
+    		if(cardData==cardValue)
+    		{
+    			if(!leadSuit=="N" )
+    			{
+    				if(leadSuit.charAt(0)==cardValue.charAt(0))
+	    			{
+	    				flag=1;
+	    				break;
+	    			}
+    				else if(document.getElementById(suitlabel).value.length<=1)
+    				{
+    					flag=1;
+    					break;
+    				}
+    			}
+    			else
+    			{
+    				flag=1;
+    				break;
+    			}
+    		}
+    	}
 	}
-	if(westData.dummyPlayer=="West")
+	if(flag==0)
 	{
-		 var temp="card";
-	        var clubs=" ";
-			var diamonds=" ";
-			var hearts=" ";
-			var spades=" ";
-	        for(var i=1;i<=13;i++)
-	        {
-	        	
-	        	var card=temp+i;
-	        	if(westData.hasOwnProperty(card))
-	        	{
-	        		var cardData=westData[card];
-	        		//alert(cardData);
-	        		var cardDataArray=cardData.split("-");
-	        		//alert(cardDataArray[0]);
-	        		if(cardDataArray[0]=="C")
-	        		{
-	        			clubs+=cardDataArray[1]+" ";
-	        		}
-	        		if(cardDataArray[0]=="D")
-	        		{
-	        			diamonds+=cardDataArray[1]+" ";
-	        		}
-	        		if(cardDataArray[0]=="H")
-	        		{
-	        			hearts+=cardDataArray[1]+" ";
-	        		}
-	        		if(cardDataArray[0]=="S")
-	        		{
-	        			spades+=cardDataArray[1]+" ";
-	        		}
-	        	}
-	        	
-	        	
-	        }
-	        
-	        document.getElementById("Wclubs").value=clubs;
-	        document.getElementById("Wdiamonds").value=diamonds;
-	        document.getElementById("Whearts").value=hearts;
-	        document.getElementById("Wspades").value=spades;
+		alert("invalid input");
 	}
-	if(westData.dummyPlayer=="East")
+	else
 	{
-		 var temp="card";
-	        var clubs=" ";
-			var diamonds=" ";
-			var hearts=" ";
-			var spades=" ";
-	        for(var i=1;i<=13;i++)
-	        {
-	        	
-	        	var card=temp+i;
-	        	if(eastData.hasOwnProperty(card))
-	        	{
-	        		var cardData=eastData[card];
-	        		//alert(cardData);
-	        		var cardDataArray=cardData.split("-");
-	        		//alert(cardDataArray[0]);
-	        		if(cardDataArray[0]=="C")
-	        		{
-	        			clubs+=cardDataArray[1]+" ";
-	        		}
-	        		if(cardDataArray[0]=="D")
-	        		{
-	        			diamonds+=cardDataArray[1]+" ";
-	        		}
-	        		if(cardDataArray[0]=="H")
-	        		{
-	        			hearts+=cardDataArray[1]+" ";
-	        		}
-	        		if(cardDataArray[0]=="S")
-	        		{
-	        			spades+=cardDataArray[1]+" ";
-	        		}
-	        	}
-	        	
-	        	
-	        }
-	        
-	        document.getElementById("Eclubs").value=clubs;
-	        document.getElementById("Ediamonds").value=diamonds;
-	        document.getElementById("Ehearts").value=hearts;
-	        document.getElementById("Espades").value=spades;
-	}
-	if(westData.dummyPlayer=="North")
-	{
-		alert(westData);
-		alert(eastData);
-		alert(southData);
-		alert(northData);
-		 var temp="card";
-	        var clubs=" ";
-			var diamonds=" ";
-			var hearts=" ";
-			var spades=" ";
-	        for(var i=1;i<=13;i++)
-	        {
-	        	
-	        	var card=temp+i;
-	        	if(northData.hasOwnProperty(card))
-	        	{
-	        		var cardData=northData[card];
-	        		//alert(cardData);
-	        		var cardDataArray=cardData.split("-");
-	        		//alert(cardDataArray[0]);
-	        		if(cardDataArray[0]=="C")
-	        		{
-	        			clubs+=cardDataArray[1]+" ";
-	        		}
-	        		if(cardDataArray[0]=="D")
-	        		{
-	        			diamonds+=cardDataArray[1]+" ";
-	        		}
-	        		if(cardDataArray[0]=="H")
-	        		{
-	        			hearts+=cardDataArray[1]+" ";
-	        		}
-	        		if(cardDataArray[0]=="S")
-	        		{
-	        			spades+=cardDataArray[1]+" ";
-	        		}
-	        	}
-	        	
-	        	
-	        }
-	        
-	        document.getElementById("Nclubs").value=clubs;
-	        document.getElementById("Ndiamonds").value=diamonds;
-	        document.getElementById("Nhearts").value=hearts;
-	        document.getElementById("Nspades").value=spades;
-	}*/
 		
+		eastData.action="game";
+		eastData.cardValue=cardValue;
+		socket.send(JSON.stringify(eastData));
+	}
+	
+}
+function formSubmitCardN()
+{
+	var username="North";
+	var temp=document.getElementById("Ninput").value;
+	var cardValue=temp.replace(" ", "-");
+	var flag=0;
+	var leadSuit=northData.suitForTrick;
+	var suitlabel=null;
+	if(leadSuit=="C")
+		suitlabel="Nclubs";
+	if(leadSuit=="D")
+		suitlabel="Ndiamonds";
+	if(leadSuit=="H")
+		suitlabel="Nhearts";
+	if(leadSuit=="S")
+		suitlabel="Nspades";
+	
+	for(var i=1;i<=13;i++)
+	{
+		var card="card"+i;
+    	if(northData.hasOwnProperty(card))
+    	{
+    		var cardData=northData[card];
+    		if(cardData==cardValue)
+    		{
+    			if(!leadSuit=="N" )
+    			{
+    				if(leadSuit.charAt(0)==cardValue.charAt(0))
+	    			{
+	    				flag=1;
+	    				break;
+	    			}
+    				else if(document.getElementById(suitlabel).value.length<=1)
+    				{
+    					flag=1;
+    					break;
+    				}
+    			}
+    			else
+    			{
+    				flag=1;
+    				break;
+    			}
+    		}
+    	}
+	}
+	if(flag==0)
+	{
+		alert("invalid input");
+	}
+	else
+	{
+		
+		northData.action="game";
+		northData.cardValue=cardValue;
+		socket.send(JSON.stringify(northData));
+	}
+	
+}
+function formSubmitCardS()
+{
+	var username="South";
+	var temp=document.getElementById("Sinput").value;
+	var cardValue=temp.replace(" ", "-");
+	var flag=0;
+	var leadSuit=southData.suitForTrick;
+	var suitlabel=null;
+	if(leadSuit=="C")
+		suitlabel="Sclubs";
+	if(leadSuit=="D")
+		suitlabel="Sdiamonds";
+	if(leadSuit=="H")
+		suitlabel="Shearts";
+	if(leadSuit=="S")
+		suitlabel="Sspades";
+	
+	for(var i=1;i<=13;i++)
+	{
+		var card="card"+i;
+    	if(southData.hasOwnProperty(card))
+    	{
+    		var cardData=southData[card];
+    		if(cardData==cardValue)
+    		{
+    			if(!leadSuit=="N" )
+    			{
+    				if(leadSuit.charAt(0)==cardValue.charAt(0))
+	    			{
+	    				flag=1;
+	    				break;
+	    			}
+    				else if(document.getElementById(suitlabel).value.length<=1)
+    				{
+    					flag=1;
+    					break;
+    				}
+    			}
+    			else
+    			{
+    				flag=1;
+    				break;
+    			}
+    		}
+    	}
+	}
+	if(flag==0)
+	{
+		alert("invalid input");
+	}
+	else
+	{
+		
+		southData.action="game";
+		southData.cardValue=cardValue;
+		socket.send(JSON.stringify(southData));
+	}
+	
 }
 function hideForm() {
     document.getElementById("form1").style.display = "none";

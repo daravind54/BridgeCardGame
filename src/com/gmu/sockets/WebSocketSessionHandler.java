@@ -289,17 +289,10 @@ public class WebSocketSessionHandler
 		 }
 		 else
 		 {
-			 if(suit.equalsIgnoreCase(jsonMessage.getString("suitForTrick")))
-			 {
-				 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
-				 cardRank.put(jsonMessage.getString("playerName"), cardValue);
-			  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
-			  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
-			 }
-			 else 
-			 {
-				 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
-			 }
+			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
+			 cardRank.put(jsonMessage.getString("playerName"), cardValue);
+		  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
+		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
 		 }
 		 
 		 
