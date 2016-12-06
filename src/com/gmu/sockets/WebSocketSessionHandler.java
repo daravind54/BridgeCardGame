@@ -197,12 +197,12 @@ public class WebSocketSessionHandler
 		 {
 			 lastElement=it.next();
 		 }
-		 Iterator<String> is=cardRank.keySet().iterator();
+		 Iterator<String> is=bidRank.keySet().iterator();
 		 String temp=null;
 		 while(is.hasNext())
 		 {
 			 String key=is.next();
-			 if(lastElement==cardRank.get(key))
+			 if(lastElement==bidRank.get(key))
 			 {
 				 temp=key;
 			 }
