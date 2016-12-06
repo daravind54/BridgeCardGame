@@ -308,7 +308,9 @@ public class WebSocketSessionHandler
 		 trickcount++;
 		 
 		 if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")+"'s"))
+		 {
 			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
+			 suit
 		 else if(!(jsonMessage.getString("suitForTrick").equals(suit)) )
 		 {
 			 if(suit.equals(jsonMessage.getString("trump")))
@@ -335,6 +337,8 @@ public class WebSocketSessionHandler
 				 tricksWonbyEast++;
 			 if(trickWinner.equals("West"))
 				 tricksWonbyWest++;
+			 
+			 
 		 }
 		 else
 		 {
