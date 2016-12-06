@@ -313,9 +313,12 @@ public class WebSocketSessionHandler
 		 {
 			 
 		 }
-		 cardRank.put(jsonMessage.getString("playerName"), cardValue);
-	  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
-	  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
+		 else
+		 {
+			 cardRank.put(jsonMessage.getString("playerName"), cardValue);
+		  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
+		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
+		 }
 		 
 		 
 	 }
