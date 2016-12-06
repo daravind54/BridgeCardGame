@@ -290,7 +290,7 @@ public class WebSocketSessionHandler
 		 String tempCard=jsonMessage.getString("cardValue");
 		 String[] suitRank=tempCard.split("-");
 		 actualCard.put(jsonMessage.getString("playerName"), tempCard);
-		 String suit=suitRank[0];
+		 String trickSuit=suitRank[0];
 		 String rank=suitRank[1];
 		 /*if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")+"'s"))
 		 {
@@ -310,19 +310,19 @@ public class WebSocketSessionHandler
 		 
 		 if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")+"'s"))
 		 {
-			 trickSuit=suit;
-			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
+			 trickSuit=trickSuit;
+			 cardValue=calcCardValue(suitToInt.get(trickSuit), rankToInt.get(rank));
 		 }
 			 
-		 else if(!(jsonMessage.getString("suitForTrick").equals(suit)) )
+		 else if(!(jsonMessage.getString("suitForTrick").equals(trickSuit)) )
 		 {
-			 if(suit.equals(jsonMessage.getString("trump")))
+			 if(trickSuit.equals(jsonMessage.getString("trump")))
 				 cardValue=calcCardValue(suitToInt.get("N"), rankToInt.get(rank));
 			 else
 				 cardValue=calcCardValue(suitToInt.get("P"), rankToInt.get("pass"));
 		 }
 		 else
-			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
+			 cardValue=calcCardValue(suitToInt.get(trickSuit), rankToInt.get(rank));
 		 
 		 cardRank.put(jsonMessage.getString("playerName"), cardValue);
 		 
@@ -348,13 +348,13 @@ public class WebSocketSessionHandler
 		 {
 			 
 		  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
-		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
+		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,trickSuit);
 		 }
 		 
 		 
 	 }
 	 private void sendCardToAllConnectedSessions(JsonObject jsonMessage,
-			String nextPlayer, String playerBidName, String tempCard,String suit) 
+			String nextPlayer, String playerBidName, String tempCard,String trickSuit) 
 	{
 		 for (Session session : sessions) {
 			 jsonMessage=clientData.get(session);
@@ -363,7 +363,7 @@ public class WebSocketSessionHandler
 		  		JsonObject data1=provider1.createObjectBuilder()
 						.add("turn", nextPlayer)
 						.add(playerBidName,tempCard)
-						.add("suitForTrick", suit)
+						.add("suitForTrick", trickSuit)
 						.add("gameType", "Game Phase")
 						.build();
 		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
