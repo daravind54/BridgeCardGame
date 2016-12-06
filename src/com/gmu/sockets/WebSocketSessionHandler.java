@@ -322,6 +322,7 @@ public class WebSocketSessionHandler
 		 {
 			 String trickWinner=null;
 			 trickWinner=compareCardsInTricks();
+			 nextPlayer=jsonMessage.getString("playerName");
 		 }
 		 else
 		 {
