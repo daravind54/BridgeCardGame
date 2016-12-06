@@ -380,7 +380,7 @@ public class WebSocketSessionHandler
 		
 	}
 	 private void sendTrickWinnerToAllConnectedSessions(JsonObject jsonMessage,
-				String nextPlayer, String playerBidName, String tempCard,String trickSuit, 
+				String nextPlayer, String playerBidName, String tempCard,String suit, 
 				int tricksWonbyNorth2, int tricksWonbyWest2, int tricksWonbySouth2, int tricksWonbyEast2) 
 		{
 			 for (Session session : sessions) {
@@ -390,7 +390,7 @@ public class WebSocketSessionHandler
 			  		JsonObject data1=provider1.createObjectBuilder()
 							.add("turn", nextPlayer)
 							.add(playerBidName,tempCard)
-							.add("suitForTrick", trickSuit)
+							.add("suitForTrick", suit)
 							.add("gameType", "Game Phase")
 							.add("tricksWonW",tricksWonbyWest2)
 							.add("tricksWonE",tricksWonbyEast2)
