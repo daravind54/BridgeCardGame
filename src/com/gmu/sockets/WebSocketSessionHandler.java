@@ -342,7 +342,7 @@ public class WebSocketSessionHandler
 			 if(trickWinner.equals("West"))
 				 tricksWonbyWest++;
 			 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
-			 sendTrickWinnerToAllConnectedSessions(jsonMessage, nextPlayer, playerBidName, tempCard, trickSuit,tricksWonbyNorth,tricksWonbyWest,tricksWonbySouth,tricksWonbyEast);
+			 sendTrickWinnerToAllConnectedSessions(jsonMessage, nextPlayer, playerBidName, tempCard, trickSuit, trickWinner, tricksWonbyNorth,tricksWonbyWest,tricksWonbySouth,tricksWonbyEast);
 			 
 		 }
 		 else
@@ -355,7 +355,7 @@ public class WebSocketSessionHandler
 		 
 	 }
 	 private void sendCardToAllConnectedSessions(JsonObject jsonMessage,
-			String nextPlayer, String playerBidName, String tempCard,String trickSuit) 
+			String nextPlayer, String playerBidName, String tempCard,String trickSuit, int tricksWonbyNorth2, int tricksWonbyWest2, int tricksWonbySouth2, int tricksWonbyEast2) 
 	{
 		 for (Session session : sessions) {
 			 jsonMessage=clientData.get(session);
@@ -375,7 +375,7 @@ public class WebSocketSessionHandler
 		
 	}
 	 private void sendTrickWinnerToAllConnectedSessions(JsonObject jsonMessage,
-				String nextPlayer, String playerBidName, String tempCard,String trickSuit, int tricksWonbyNorth2, int tricksWonbyWest2, int tricksWonbySouth2, int tricksWonbyEast2) 
+				String nextPlayer, String playerBidName, String tempCard,String trickSuit, String trickWinner, int tricksWonbyNorth2, int tricksWonbyWest2, int tricksWonbySouth2, int tricksWonbyEast2) 
 		{
 			 for (Session session : sessions) {
 				 jsonMessage=clientData.get(session);
