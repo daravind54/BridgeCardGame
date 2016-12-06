@@ -23,6 +23,7 @@ public class WebSocketSessionHandler
 {
 	static int count=0;
 	static int passCount=0;
+	static int trickcount=0;
 	private final Set<Session> sessions = new HashSet<>();
 	private final Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
 	private final Deck deck=new Deck();
