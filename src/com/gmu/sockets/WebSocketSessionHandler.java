@@ -295,7 +295,11 @@ public class WebSocketSessionHandler
 		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
 		 }*/
 		 if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")+"'s"))
-		 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
+			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
+		 else if(!jsonMessage.getString("suitForTrick").equals(suit))
+		 {
+			 
+		 }
 		 cardRank.put(jsonMessage.getString("playerName"), cardValue);
 	  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 	  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
