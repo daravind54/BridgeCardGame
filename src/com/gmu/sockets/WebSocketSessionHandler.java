@@ -290,7 +290,7 @@ public class WebSocketSessionHandler
 		 String tempCard=jsonMessage.getString("cardValue");
 		 String[] suitRank=tempCard.split("-");
 		 actualCard.put(jsonMessage.getString("playerName"), tempCard);
-		 String trickSuit=suitRank[0];
+		 String suit=suitRank[0];
 		 String rank=suitRank[1];
 		 /*if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")+"'s"))
 		 {
@@ -310,19 +310,19 @@ public class WebSocketSessionHandler
 		 
 		 if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")+"'s"))
 		 {
-			 trickSuit=trickSuit;
-			 cardValue=calcCardValue(suitToInt.get(trickSuit), rankToInt.get(rank));
+			 trickSuit=suit;
+			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
 		 }
 			 
-		 else if(!(jsonMessage.getString("suitForTrick").equals(trickSuit)) )
+		 else if(!(jsonMessage.getString("suitForTrick").equals(suit)) )
 		 {
-			 if(trickSuit.equals(jsonMessage.getString("trump")))
+			 if(suit.equals(jsonMessage.getString("trump")))
 				 cardValue=calcCardValue(suitToInt.get("N"), rankToInt.get(rank));
 			 else
 				 cardValue=calcCardValue(suitToInt.get("P"), rankToInt.get("pass"));
 		 }
 		 else
-			 cardValue=calcCardValue(suitToInt.get(trickSuit), rankToInt.get(rank));
+			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
 		 
 		 cardRank.put(jsonMessage.getString("playerName"), cardValue);
 		 
@@ -341,7 +341,8 @@ public class WebSocketSessionHandler
 				 tricksWonbyEast++;
 			 if(trickWinner.equals("West"))
 				 tricksWonbyWest++;
-			 
+			 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
+			 sendTrickWinnerToAllConnectedSessions(jsonMessage, nextPlayer, playerBidName, tempCard, trickSuit,tricksWonbyNorth,tricksWonbyWest,tricksWonbySouth,tricksWonbyEast);
 			 
 		 }
 		 else
