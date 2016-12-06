@@ -190,7 +190,7 @@ public class WebSocketSessionHandler
 		 
 		 return tempTree.lastKey();*/
 		 Set<Integer> tempset=new TreeSet<Integer>();
-		 tempset.addAll(cardRank.values());
+		 tempset.addAll(bidRank.values());
 		 Integer lastElement=null;
 		 Iterator<Integer> it=tempset.iterator();
 		 while(it.hasNext())
