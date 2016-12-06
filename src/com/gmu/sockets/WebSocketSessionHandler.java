@@ -280,20 +280,24 @@ public class WebSocketSessionHandler
 		 actualCard.put(jsonMessage.getString("playerName"), tempCard);
 		 String suit=suitRank[0];
 		 String rank=suitRank[1];
-		 if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")+"'s"))
+		 /*if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")+"'s"))
 		 {
 			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
 			 cardRank.put(jsonMessage.getString("playerName"), cardValue);
 		  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
 		 }
-		 /*else
+		 else
 		 {
 			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
 			 cardRank.put(jsonMessage.getString("playerName"), cardValue);
 		  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
 		 }*/
+		 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
+		 cardRank.put(jsonMessage.getString("playerName"), cardValue);
+	  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
+	  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
 		 
 		 
 	 }
