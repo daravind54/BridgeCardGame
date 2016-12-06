@@ -308,7 +308,10 @@ public class WebSocketSessionHandler
 		 }
 		 else
 			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
+		 
 		 cardRank.put(jsonMessage.getString("playerName"), cardValue);
+		 
+		 
 		 if(trickcount==4)
 		 {
 			 
