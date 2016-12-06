@@ -295,6 +295,7 @@ public class WebSocketSessionHandler
 		  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
 		 }*/
+		 trickcount++;
 		 if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")+"'s"))
 			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
 		 else if(!(jsonMessage.getString("suitForTrick").equals(suit)) )
