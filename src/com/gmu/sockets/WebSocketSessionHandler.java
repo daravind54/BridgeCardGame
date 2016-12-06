@@ -182,6 +182,12 @@ public class WebSocketSessionHandler
 		 
 		 return tempTree.lastKey();
 	 }
+	 public String compareCardsInTricks()
+	 {
+		 TreeMap<String, Integer> tempTree=new TreeMap<String, Integer>(cardRank);
+		 
+		 return tempTree.lastKey();
+	 }
 	 public void bid(JsonObject jsonMessage, Session session)
 	 {
 		 //System.out.println(sessions.toString());
@@ -314,7 +320,8 @@ public class WebSocketSessionHandler
 		 
 		 if(trickcount==4)
 		 {
-			 
+			 String trickWinner=null;
+			 trickWinner=
 		 }
 		 else
 		 {
