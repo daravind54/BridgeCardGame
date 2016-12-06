@@ -521,6 +521,7 @@ function formSubmitCardW()
 	var temp=document.getElementById("Winput").value;
 	var cardValue=temp.replace(" ", "-");
 	var flag=0;
+	var leadSuit=westData[suitForTrick];
 	for(var i=1;i<=13;i++)
 	{
 		var card="card"+i;
@@ -529,7 +530,6 @@ function formSubmitCardW()
     		var cardData=westData[card];
     		if(cardData==cardValue)
     		{
-    			
     			flag=1;
     			break;
     		}

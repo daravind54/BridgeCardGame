@@ -296,7 +296,7 @@ public class WebSocketSessionHandler
 			  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 			  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,suit);
 			 }
-			 else if
+			 else 
 			 {
 				 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
 			 }
@@ -341,6 +341,7 @@ public class WebSocketSessionHandler
 						.add("tricksWonS","0")
 						.add("tricksWonW","0")
 						.add("tricksWonE","0")
+						.add("suitForTrick","N")
 						.build();
 		  		clientMessage=Utility.mergeProfileSummary(clientMessage, data1);
 		  		clientData.put(session, clientMessage);
