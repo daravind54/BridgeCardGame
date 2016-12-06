@@ -296,7 +296,7 @@ public class WebSocketSessionHandler
 		 }*/
 		 if(jsonMessage.getString("trickStarter").equals(jsonMessage.getString("playerName")+"'s"))
 			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
-		 else if(!jsonMessage.getString("suitForTrick").equals(suit) )
+		 else if(!(jsonMessage.getString("suitForTrick").equals(suit)) )
 		 {
 			 if(suit.equals(jsonMessage.getString("trump")))
 				 cardValue=calcCardValue(suitToInt.get("N"), rankToInt.get(rank));
