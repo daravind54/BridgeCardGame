@@ -376,7 +376,7 @@ public class WebSocketSessionHandler
 			 System.out.println(trickWinner);
 			 nextPlayer=trickWinner+"'s";
 			 String trickStarter=null;
-			 System.out.println("South won"+tricksWonbySouth);
+			 System.out.println("South won "+tricksWonbySouth);
 			 if(trickWinner.equals("North"))
 			 {
 				 tricksWonbyNorth++;
