@@ -409,7 +409,7 @@ public class WebSocketSessionHandler
 		{
 			String temp=it.next();
 			System.out.println(temp);
-			System.out.println(jsonMessage.getString(temp.toString());
+			System.out.println(jsonMessage.getString(temp.toString()));
 			String temp1=jsonMessage.getString(temp.toString());
 			System.out.println(temp1);
 			if(!(temp.equals("card1")))
