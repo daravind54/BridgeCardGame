@@ -657,6 +657,7 @@ public class WebSocketSessionHandler
 	    		//clientMessage.putAll(addMessage);
 	    		for (int i=0;i <= 12; i++) {
 	    			Card card=deck.get(i+k);
+	    			System.out.println(card.getRank()+" "+card.getSuit());
 	    			cardString=suitToString.get(card.getSuit())+"-"+rankToString.get(card.getRank());
 	    			cardname="card"+(i+1);
 	    			
