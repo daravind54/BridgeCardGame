@@ -398,7 +398,12 @@ public class WebSocketSessionHandler
 		 
 		 
 	 }
-	 private void sendCardToAllConnectedSessions(JsonObject jsonMessage,
+	 private JsonObject removeCard(JsonObject jsonMessage) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private void sendCardToAllConnectedSessions(JsonObject jsonMessage,
 			String nextPlayer, String playerBidName, String tempCard,String trickSuit, 
 			int tricksWonbyNorth2, int tricksWonbyWest2, int tricksWonbySouth2, int tricksWonbyEast2) 
 	{
