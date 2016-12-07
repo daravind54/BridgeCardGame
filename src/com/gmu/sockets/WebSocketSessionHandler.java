@@ -399,7 +399,15 @@ public class WebSocketSessionHandler
 		 
 	 }
 	 private JsonObject removeCard(JsonObject jsonMessage) {
-		// TODO Auto-generated method stub
+		Iterator<String> it=jsonMessage.keySet().iterator();
+		JsonProvider provider1 = JsonProvider.provider();
+  		JsonObject data1=provider1.createObjectBuilder();
+				
+		while(it.hasNext())
+		{
+			if(it.next()=="card1")
+				
+		}
 		return null;
 	}
 
