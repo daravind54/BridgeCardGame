@@ -409,11 +409,11 @@ public class WebSocketSessionHandler
 		{
 			String temp=it.next();
 			System.out.println(temp);
-			String temp1=jsonMessage.getString(temp)
+			String temp1=jsonMessage.getString(temp);
 			if(!(temp.equals("card1")))
 			{
 				data1=provider1.createObjectBuilder()
-						.add(temp, )
+						.add(temp,temp1 )
 						.build();
 				data2=Utility.mergeProfileSummary(data2, data1);
 			}
