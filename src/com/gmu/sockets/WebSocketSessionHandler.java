@@ -380,6 +380,10 @@ public class WebSocketSessionHandler
 			 System.out.println("South won:"+tricksWonbySouth);
 			 if(trickWinner.equals("North"))
 			 {
+				 if(jsonMessage.getString("bidWinner").equals("North") || jsonMessage.getString("dummyPlayer").equals("North"))
+				 {
+					 
+				 }
 				 tricksWonbyNorth++;
 				 trickStarter="North's";
 			 }
