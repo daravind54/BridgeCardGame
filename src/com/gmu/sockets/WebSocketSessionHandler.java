@@ -360,7 +360,7 @@ public class WebSocketSessionHandler
 			 if(suit.equals(jsonMessage.getString("trump")))
 				 cardValue=calcCardValue(suitToInt.get("N"), rankToInt.get(rank));
 			 else
-				 cardValue=calcCardValue(suitToInt.get("P"), rankToInt.get("pass"));
+				 cardValue=calcCardValue(suitToInt.get("P"), rankToInt.get("Pass"));
 		 }
 		 else
 			 cardValue=calcCardValue(suitToInt.get(suit), rankToInt.get(rank));
