@@ -382,7 +382,9 @@ public class WebSocketSessionHandler
 				 trickStarter="North's";
 			 }
 			 if(trickWinner.equals("South"))
+			 {
 				 tricksWonbySouth++;
+				 trickStarter="South's";
 			 if(trickWinner.equals("East"))
 				 tricksWonbyEast++;
 			 if(trickWinner.equals("West"))
