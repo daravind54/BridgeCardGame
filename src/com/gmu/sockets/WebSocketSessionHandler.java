@@ -405,7 +405,7 @@ public class WebSocketSessionHandler
 				
 		while(it.hasNext())
 		{
-			String temp=it.next()
+			String temp=it.next();
 			if(temp.equals("card1"))
 			{
 				
