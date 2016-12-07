@@ -387,14 +387,18 @@ public class WebSocketSessionHandler
 					 if((tricksWonbyNorth+tricksWonbySouth)>=Integer.parseInt(jsonMessage.getString("tricksToWin")))
 					 {
 						 String gameStatus="Game Won";
-						 sendGameWinnerToAllConnectedSessions(jsonMessage, nextPlayer, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter,gameStatus);
+						 String gameWinner="South-North";
+						 sendGameWinnerToAllConnectedSessions(jsonMessage, nextPlayer, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter,gameStatus,gameWinner);
 					 }
 				 }
 				 else
 				 {
-					 if((tricksWonbyNorth+tricksWonbySouth)>=Integer.parseInt(jsonMessage.getString("tricksToWin")))
+					 if((tricksWonbyNorth+tricksWonbySouth)>=(14-Integer.parseInt(jsonMessage.getString("tricksToWin"))))
 					 {
-						 
+						 String gameStatus="Game Won";
+						 String gameWinner="South-North";
+						 sendGameWinnerToAllConnectedSessions(jsonMessage, nextPlayer, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter,gameStatus,gameWinner);
+					 
 					 }
 				 }
 				 
@@ -403,16 +407,73 @@ public class WebSocketSessionHandler
 			 {
 				 tricksWonbySouth++;
 				 trickStarter="South's";
+				 if(jsonMessage.getString("bidWinner").equals("North") || jsonMessage.getString("dummyPlayer").equals("South"))
+				 {
+					 if((tricksWonbyNorth+tricksWonbySouth)>=Integer.parseInt(jsonMessage.getString("tricksToWin")))
+					 {
+						 String gameStatus="Game Won";
+						 String gameWinner="South-North";
+						 sendGameWinnerToAllConnectedSessions(jsonMessage, nextPlayer, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter,gameStatus,gameWinner);
+					 }
+				 }
+				 else
+				 {
+					 if((tricksWonbyNorth+tricksWonbySouth)>=(14-Integer.parseInt(jsonMessage.getString("tricksToWin"))))
+					 {
+						 String gameStatus="Game Won";
+						 String gameWinner="South-North";
+						 sendGameWinnerToAllConnectedSessions(jsonMessage, nextPlayer, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter,gameStatus,gameWinner);
+					 
+					 }
+				 }
 			 }
 			 if(trickWinner.equals("East"))
 			 {
 				 tricksWonbyEast++;
 				 trickStarter="East's";
+				 if(jsonMessage.getString("bidWinner").equals("East") || jsonMessage.getString("dummyPlayer").equals("East"))
+				 {
+					 if((tricksWonbyEast+tricksWonbyWest)>=Integer.parseInt(jsonMessage.getString("tricksToWin")))
+					 {
+						 String gameStatus="Game Won";
+						 String gameWinner="East-West";
+						 sendGameWinnerToAllConnectedSessions(jsonMessage, nextPlayer, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter,gameStatus,gameWinner);
+					 }
+				 }
+				 else
+				 {
+					 if((tricksWonbyEast+tricksWonbyWest)>=(14-Integer.parseInt(jsonMessage.getString("tricksToWin"))))
+					 {
+						 String gameStatus="Game Won";
+						 String gameWinner="East-West";
+						 sendGameWinnerToAllConnectedSessions(jsonMessage, nextPlayer, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter,gameStatus,gameWinner);
+					 
+					 }
+				 }
 			 }
 			 if(trickWinner.equals("West"))
 			 {
 				 tricksWonbyWest++;
 				 trickStarter="West's";
+				 if(jsonMessage.getString("bidWinner").equals("West") || jsonMessage.getString("dummyPlayer").equals("West"))
+				 {
+					 if((tricksWonbyEast+tricksWonbyWest)>=Integer.parseInt(jsonMessage.getString("tricksToWin")))
+					 {
+						 String gameStatus="Game Won";
+						 String gameWinner="East-West";
+						 sendGameWinnerToAllConnectedSessions(jsonMessage, nextPlayer, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter,gameStatus,gameWinner);
+					 }
+				 }
+				 else
+				 {
+					 if((tricksWonbyEast+tricksWonbyWest)>=(14-Integer.parseInt(jsonMessage.getString("tricksToWin"))))
+					 {
+						 String gameStatus="Game Won";
+						 String gameWinner="East-West";
+						 sendGameWinnerToAllConnectedSessions(jsonMessage, nextPlayer, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter,gameStatus,gameWinner);
+					 
+					 }
+				 }
 			 }
 			 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 			 jsonMessage=removeCard(jsonMessage,tempCard);
@@ -434,8 +495,27 @@ public class WebSocketSessionHandler
 	 private void sendGameWinnerToAllConnectedSessions(JsonObject jsonMessage,
 			String nextPlayer, String tempCard, String suit, String string,
 			String string2, String string3, String string4,
-			String trickStarter, String gameStatus) {
-		// TODO Auto-generated method stub
+			String trickStarter, String gameStatus, String gameWinner) {
+		 for (Session session : sessions) {
+			 jsonMessage=clientData.get(session);
+	    		
+	    		JsonProvider provider1 = JsonProvider.provider();
+		  		JsonObject data1=provider1.createObjectBuilder()
+						.add("turn", nextPlayer)
+						.add("suitForTrick", suit)
+						.add("gameType", "Game Phase")
+						.add("tricksWonW",string2)
+						.add("tricksWonE",string4)
+						.add("tricksWonN",string)
+						.add("tricksWonS",string3)
+						.add("trickStarter",trickStarter)
+						.add("gameType", gameStatus)
+						.build();
+		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
+		  		clientData.put(session, jsonMessage);
+	    		sendToSession(session, clientData.get(session));
+	    	}
+		 System.out.println(cardRank.toString());
 		
 	}
 
