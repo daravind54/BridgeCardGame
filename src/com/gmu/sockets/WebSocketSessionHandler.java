@@ -432,7 +432,7 @@ public class WebSocketSessionHandler
 
 	private void sendCardToAllConnectedSessions(JsonObject jsonMessage,
 			String nextPlayer, String playerBidName, String tempCard,String trickSuit, 
-			int tricksWonbyNorth2, int tricksWonbyWest2, int tricksWonbySouth2, int tricksWonbyEast2) 
+			String string, String string2, String string3, String string4) 
 	{
 		 for (Session session : sessions) {
 			 jsonMessage=clientData.get(session);
@@ -443,10 +443,10 @@ public class WebSocketSessionHandler
 						.add(playerBidName,tempCard)
 						.add("suitForTrick", trickSuit)
 						.add("gameType", "Game Phase")
-						.add("tricksWonW",tricksWonbyWest2)
-						.add("tricksWonE",tricksWonbyEast2)
-						.add("tricksWonN",tricksWonbyNorth2)
-						.add("tricksWonS",tricksWonbySouth2)
+						.add("tricksWonW",string2)
+						.add("tricksWonE",string4)
+						.add("tricksWonN",string)
+						.add("tricksWonS",string3)
 						.build();
 		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
 		  		clientData.put(session, jsonMessage);
@@ -457,7 +457,7 @@ public class WebSocketSessionHandler
 	}
 	 private void sendTrickWinnerToAllConnectedSessions(JsonObject jsonMessage,
 				String nextPlayer, String playerBidName, String tempCard,String suit, 
-				int tricksWonbyNorth2, int tricksWonbyWest2, int tricksWonbySouth2, int tricksWonbyEast2) 
+				String string, String string2, String string3, String string4) 
 		{
 			 for (Session session : sessions) {
 				 jsonMessage=clientData.get(session);
@@ -468,10 +468,10 @@ public class WebSocketSessionHandler
 							.add(playerBidName,tempCard)
 							.add("suitForTrick", suit)
 							.add("gameType", "Game Phase")
-							.add("tricksWonW",tricksWonbyWest2)
-							.add("tricksWonE",tricksWonbyEast2)
-							.add("tricksWonN",tricksWonbyNorth2)
-							.add("tricksWonS",tricksWonbySouth2)
+							.add("tricksWonW",string2)
+							.add("tricksWonE",string4)
+							.add("tricksWonN",string)
+							.add("tricksWonS",string3)
 							.build();
 			  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
 			  		clientData.put(session, jsonMessage);
