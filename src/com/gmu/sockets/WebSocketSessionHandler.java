@@ -419,7 +419,7 @@ public class WebSocketSessionHandler
 			
 				
 		}
-		return null;
+		return data2;
 	}
 
 	private void sendCardToAllConnectedSessions(JsonObject jsonMessage,
