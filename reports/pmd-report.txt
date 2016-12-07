@@ -1,0 +1,732 @@
+src/com/gmu/bridge/Card.java:2:	Avoid short class names like Card
+src/com/gmu/bridge/Card.java:2:	headerCommentRequirement Required
+src/com/gmu/bridge/Card.java:4:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/gmu/bridge/Card.java:4:	Private field 'rank' could be made final; it is only initialized in the declaration or constructor.
+src/com/gmu/bridge/Card.java:4:	fieldCommentRequirement Required
+src/com/gmu/bridge/Card.java:5:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/gmu/bridge/Card.java:5:	Private field 'suit' could be made final; it is only initialized in the declaration or constructor.
+src/com/gmu/bridge/Card.java:5:	fieldCommentRequirement Required
+src/com/gmu/bridge/Card.java:8:	Comment is too large: Line too long
+src/com/gmu/bridge/Card.java:10:	Avoid reassigning parameters such as 'rank'
+src/com/gmu/bridge/Card.java:10:	Parameter 'suit' is not assigned and could be declared final
+src/com/gmu/bridge/Card.java:10:	publicMethodCommentRequirement Required
+src/com/gmu/bridge/Card.java:11:	Avoid using Literals in Conditional Statements
+src/com/gmu/bridge/Card.java:23:	publicMethodCommentRequirement Required
+src/com/gmu/bridge/Card.java:27:	publicMethodCommentRequirement Required
+src/com/gmu/bridge/Card.java:32:	Parameter 'other' is not assigned and could be declared final
+src/com/gmu/bridge/Card.java:32:	publicMethodCommentRequirement Required
+src/com/gmu/bridge/Card.java:33:	Local variable 'thisValue' could be declared final
+src/com/gmu/bridge/Card.java:34:	Local variable 'otherValue' could be declared final
+src/com/gmu/bridge/Card.java:37:	A method should have only one exit point, and that should be the last statement in the method
+src/com/gmu/bridge/Card.java:40:	A method should have only one exit point, and that should be the last statement in the method
+src/com/gmu/bridge/Deck.java:5:	Avoid short class names like Deck
+src/com/gmu/bridge/Deck.java:5:	headerCommentRequirement Required
+src/com/gmu/bridge/Deck.java:7:	Avoid using implementation types like 'ArrayList'; use the interface instead
+src/com/gmu/bridge/Deck.java:7:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/gmu/bridge/Deck.java:7:	It is somewhat confusing to have a field name matching the declaring class name
+src/com/gmu/bridge/Deck.java:7:	Private field 'deck' could be made final; it is only initialized in the declaration or constructor.
+src/com/gmu/bridge/Deck.java:7:	fieldCommentRequirement Required
+src/com/gmu/bridge/Deck.java:9:	publicMethodCommentRequirement Required
+src/com/gmu/bridge/Deck.java:11:	Avoid unused local variables such as 'index'.
+src/com/gmu/bridge/Deck.java:11:	Local variable 'index' could be declared final
+src/com/gmu/bridge/Deck.java:14:	Avoid instantiating new objects inside loops
+src/com/gmu/bridge/Deck.java:17:	Overridable method 'shuffle' called during object construction
+src/com/gmu/bridge/Deck.java:20:	publicMethodCommentRequirement Required
+src/com/gmu/bridge/Deck.java:26:	Parameter 'index' is not assigned and could be declared final
+src/com/gmu/bridge/Deck.java:26:	publicMethodCommentRequirement Required
+src/com/gmu/bridge/Deck.java:30:	Found 'UR'-anomaly for variable 'x' (lines '30'-'32').
+src/com/gmu/bridge/Deck.java:30:	publicMethodCommentRequirement Required
+src/com/gmu/bridge/Deck.java:31:	Local variable 'x' could be declared final
+src/com/gmu/bridge/Deck.java:32:	System.out.println is used
+src/com/gmu/bridge/Deck.java:33:	System.out.println is used
+src/com/gmu/bridge/Deck.java:34:	Avoid using a branching statement as the last in a loop.
+src/com/gmu/bridge/Game.java:2:	Avoid unused imports such as 'java.util.ArrayList'
+src/com/gmu/bridge/Game.java:4:	Avoid short class names like Game
+src/com/gmu/bridge/Game.java:4:	Each class should declare at least one constructor
+src/com/gmu/bridge/Game.java:4:	headerCommentRequirement Required
+src/com/gmu/bridge/Game.java:6:	Comment is too large: Too many lines
+src/com/gmu/bridge/Game.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/gmu/bridge/Game.java:18:	fieldCommentRequirement Required
+src/com/gmu/bridge/Game.java:22:	Comment is too large: Too many lines
+src/com/gmu/bridge/Game.java:35:	Comment is too large: Too many lines
+src/com/gmu/bridge/Game.java:48:	Comment is too large: Too many lines
+src/com/gmu/bridge/Game.java:59:	publicMethodCommentRequirement Required
+src/com/gmu/bridge/Game.java:64:	Comment is too large: Too many lines
+src/com/gmu/bridge/Game.java:83:	Comment is too large: Too many lines
+src/com/gmu/edu/Login.java:3:	Each class should declare at least one constructor
+src/com/gmu/edu/Login.java:3:	headerCommentRequirement Required
+src/com/gmu/edu/Login.java:4:	fieldCommentRequirement Required
+src/com/gmu/edu/Login.java:5:	fieldCommentRequirement Required
+src/com/gmu/edu/Login.java:6:	publicMethodCommentRequirement Required
+src/com/gmu/edu/Login.java:9:	Parameter 'email' is not assigned and could be declared final
+src/com/gmu/edu/Login.java:9:	publicMethodCommentRequirement Required
+src/com/gmu/edu/Login.java:12:	publicMethodCommentRequirement Required
+src/com/gmu/edu/Login.java:15:	Parameter 'password' is not assigned and could be declared final
+src/com/gmu/edu/Login.java:15:	publicMethodCommentRequirement Required
+src/com/gmu/edu/LoginDao.java:8:	Avoid unused imports such as 'java.sql.Statement'
+src/com/gmu/edu/LoginDao.java:10:	Each class should declare at least one constructor
+src/com/gmu/edu/LoginDao.java:10:	headerCommentRequirement Required
+src/com/gmu/edu/LoginDao.java:12:	Parameter 'login' is not assigned and could be declared final
+src/com/gmu/edu/LoginDao.java:12:	publicMethodCommentRequirement Required
+src/com/gmu/edu/LoginDao.java:15:	Ensure that resources like this Connection object are closed after use
+src/com/gmu/edu/LoginDao.java:15:	Local variable 'con' could be declared final
+src/com/gmu/edu/LoginDao.java:16:	Local variable 'sql' could be declared final
+src/com/gmu/edu/LoginDao.java:17:	Local variable 'preparedStatement' could be declared final
+src/com/gmu/edu/LoginDao.java:17:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/LoginDao.java:18:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/LoginDao.java:19:	Ensure that resources like this ResultSet object are closed after use
+src/com/gmu/edu/LoginDao.java:19:	Local variable 'resultSet' could be declared final
+src/com/gmu/edu/LoginDao.java:19:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/LoginDao.java:21:	Found 'DD'-anomaly for variable 'password' (lines '21'-'25').
+src/com/gmu/edu/LoginDao.java:22:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/LoginDao.java:25:	Found 'DD'-anomaly for variable 'password' (lines '25'-'25').
+src/com/gmu/edu/LoginDao.java:25:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/LoginDao.java:29:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/LoginDao.java:30:	A method should have only one exit point, and that should be the last statement in the method
+src/com/gmu/edu/LoginDao.java:30:	Avoid using if...else statements without curly braces
+src/com/gmu/edu/LoginDao.java:32:	Avoid using if...else statements without curly braces
+src/com/gmu/edu/LoginServlet.java:19:	fieldCommentRequirement Required
+src/com/gmu/edu/LoginServlet.java:24:	Avoid unnecessary constructors - the compiler will generate these for you
+src/com/gmu/edu/LoginServlet.java:30:	Comment is too large: Line too long
+src/com/gmu/edu/LoginServlet.java:32:	Parameter 'request' is not assigned and could be declared final
+src/com/gmu/edu/LoginServlet.java:32:	Parameter 'response' is not assigned and could be declared final
+src/com/gmu/edu/LoginServlet.java:38:	Avoid printStackTrace(); use a logger call instead.
+src/com/gmu/edu/LoginServlet.java:43:	Comment is too large: Line too long
+src/com/gmu/edu/LoginServlet.java:45:	Parameter 'request' is not assigned and could be declared final
+src/com/gmu/edu/LoginServlet.java:45:	Parameter 'response' is not assigned and could be declared final
+src/com/gmu/edu/LoginServlet.java:50:	Avoid printStackTrace(); use a logger call instead.
+src/com/gmu/edu/LoginServlet.java:54:	Parameter 'request' is not assigned and could be declared final
+src/com/gmu/edu/LoginServlet.java:54:	Parameter 'response' is not assigned and could be declared final
+src/com/gmu/edu/LoginServlet.java:54:	protectedMethodCommentRequirement Required
+src/com/gmu/edu/LoginServlet.java:55:	Local variable 'login' could be declared final
+src/com/gmu/edu/LoginServlet.java:59:	Local variable 'loginDao' could be declared final
+src/com/gmu/edu/LoginServlet.java:60:	Local variable 'status' could be declared final
+src/com/gmu/edu/LoginServlet.java:61:	Position literals first in String comparisons
+src/com/gmu/edu/LoginServlet.java:61:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/LoginServlet.java:63:	Local variable 'session' could be declared final
+src/com/gmu/edu/LoginServlet.java:64:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/LoginServlet.java:65:	Local variable 'requestDispatcher' could be declared final
+src/com/gmu/edu/LoginServlet.java:66:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/LoginServlet.java:68:	Position literals first in String comparisons
+src/com/gmu/edu/LoginServlet.java:68:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/LoginServlet.java:70:	Local variable 'requestDispatcher' could be declared final
+src/com/gmu/edu/LoginServlet.java:71:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/Registration.java:3:	Each class should declare at least one constructor
+src/com/gmu/edu/Registration.java:3:	headerCommentRequirement Required
+src/com/gmu/edu/Registration.java:5:	fieldCommentRequirement Required
+src/com/gmu/edu/Registration.java:6:	fieldCommentRequirement Required
+src/com/gmu/edu/Registration.java:7:	fieldCommentRequirement Required
+src/com/gmu/edu/Registration.java:8:	fieldCommentRequirement Required
+src/com/gmu/edu/Registration.java:10:	publicMethodCommentRequirement Required
+src/com/gmu/edu/Registration.java:13:	Parameter 'name' is not assigned and could be declared final
+src/com/gmu/edu/Registration.java:13:	publicMethodCommentRequirement Required
+src/com/gmu/edu/Registration.java:16:	publicMethodCommentRequirement Required
+src/com/gmu/edu/Registration.java:19:	Parameter 'city' is not assigned and could be declared final
+src/com/gmu/edu/Registration.java:19:	publicMethodCommentRequirement Required
+src/com/gmu/edu/Registration.java:22:	publicMethodCommentRequirement Required
+src/com/gmu/edu/Registration.java:25:	Parameter 'email' is not assigned and could be declared final
+src/com/gmu/edu/Registration.java:25:	publicMethodCommentRequirement Required
+src/com/gmu/edu/Registration.java:28:	publicMethodCommentRequirement Required
+src/com/gmu/edu/Registration.java:31:	Parameter 'password' is not assigned and could be declared final
+src/com/gmu/edu/Registration.java:31:	publicMethodCommentRequirement Required
+src/com/gmu/edu/RegistrationDao.java:8:	Each class should declare at least one constructor
+src/com/gmu/edu/RegistrationDao.java:8:	headerCommentRequirement Required
+src/com/gmu/edu/RegistrationDao.java:10:	Parameter 'registration' is not assigned and could be declared final
+src/com/gmu/edu/RegistrationDao.java:10:	publicMethodCommentRequirement Required
+src/com/gmu/edu/RegistrationDao.java:13:	Ensure that resources like this Connection object are closed after use
+src/com/gmu/edu/RegistrationDao.java:13:	Local variable 'con' could be declared final
+src/com/gmu/edu/RegistrationDao.java:14:	Local variable 'sql' could be declared final
+src/com/gmu/edu/RegistrationDao.java:15:	Local variable 'preparedStatement' could be declared final
+src/com/gmu/edu/RegistrationDao.java:15:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/RegistrationDao.java:16:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/RegistrationDao.java:17:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/RegistrationDao.java:18:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/RegistrationDao.java:19:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/RegistrationDao.java:20:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/edu/RegistrationDao.java:21:	System.out.println is used
+src/com/gmu/edu/RegistrationServlet.java:18:	fieldCommentRequirement Required
+src/com/gmu/edu/RegistrationServlet.java:23:	Avoid unnecessary constructors - the compiler will generate these for you
+src/com/gmu/edu/RegistrationServlet.java:29:	Comment is too large: Line too long
+src/com/gmu/edu/RegistrationServlet.java:31:	Parameter 'request' is not assigned and could be declared final
+src/com/gmu/edu/RegistrationServlet.java:31:	Parameter 'response' is not assigned and could be declared final
+src/com/gmu/edu/RegistrationServlet.java:36:	Avoid printStackTrace(); use a logger call instead.
+src/com/gmu/edu/RegistrationServlet.java:41:	Comment is too large: Line too long
+src/com/gmu/edu/RegistrationServlet.java:43:	Parameter 'request' is not assigned and could be declared final
+src/com/gmu/edu/RegistrationServlet.java:43:	Parameter 'response' is not assigned and could be declared final
+src/com/gmu/edu/RegistrationServlet.java:48:	Avoid printStackTrace(); use a logger call instead.
+src/com/gmu/edu/RegistrationServlet.java:52:	Parameter 'request' is not assigned and could be declared final
+src/com/gmu/edu/RegistrationServlet.java:52:	Parameter 'response' is not assigned and could be declared final
+src/com/gmu/edu/RegistrationServlet.java:52:	protectedMethodCommentRequirement Required
+src/com/gmu/edu/RegistrationServlet.java:53:	Local variable 'registration' could be declared final
+src/com/gmu/edu/RegistrationServlet.java:58:	Local variable 'registrationDao' could be declared final
+src/com/gmu/edu/RegistrationServlet.java:61:	Local variable 'requestDispatcher' could be declared final
+src/com/gmu/edu/RegistrationServlet.java:62:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/Utility.java:7:	headerCommentRequirement Required
+src/com/gmu/sockets/Utility.java:8:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/com/gmu/sockets/Utility.java:9:	Found 'UR'-anomaly for variable 'key' (lines '9'-'13').
+src/com/gmu/sockets/Utility.java:9:	Parameter 'newJsonObject' is not assigned and could be declared final
+src/com/gmu/sockets/Utility.java:9:	Parameter 'oldJsonObject' is not assigned and could be declared final
+src/com/gmu/sockets/Utility.java:9:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/Utility.java:10:	Local variable 'jsonObjectBuilder' could be declared final
+src/com/gmu/sockets/Utility.java:12:	Local variable 'key' could be declared final
+src/com/gmu/sockets/Utility.java:13:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/Utility.java:15:	Local variable 'key' could be declared final
+src/com/gmu/sockets/Utility.java:16:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/Utility.java:19:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketServer.java:21:	Each class should declare at least one constructor
+src/com/gmu/sockets/WebSocketServer.java:21:	headerCommentRequirement Required
+src/com/gmu/sockets/WebSocketServer.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/gmu/sockets/WebSocketServer.java:24:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketServer.java:27:	Parameter 'session' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketServer.java:27:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketServer.java:30:	System.out.println is used
+src/com/gmu/sockets/WebSocketServer.java:34:	Parameter 'session' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketServer.java:34:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketServer.java:39:	Parameter 'error' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketServer.java:39:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketServer.java:40:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketServer.java:40:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketServer.java:40:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketServer.java:43:	Parameter 'message' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketServer.java:43:	Parameter 'session' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketServer.java:43:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketServer.java:45:	Local variable 'jsonMessage' could be declared final
+src/com/gmu/sockets/WebSocketServer.java:46:	System.out.println is used
+src/com/gmu/sockets/WebSocketServer.java:47:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketServer.java:47:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketServer.java:47:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketServer.java:49:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketServer.java:49:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketServer.java:49:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketServer.java:51:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketServer.java:51:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketServer.java:51:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:1:	Possible God class (WMC=79, ATFD=52, TCC=0.11764705882352941)
+src/com/gmu/sockets/WebSocketSessionHandler.java:8:	Avoid unused imports such as 'java.util.TreeMap'
+src/com/gmu/sockets/WebSocketSessionHandler.java:25:	Each class should declare at least one constructor
+src/com/gmu/sockets/WebSocketSessionHandler.java:25:	The class 'WebSocketSessionHandler' has a Cyclomatic Complexity of 5 (Highest = 29).
+src/com/gmu/sockets/WebSocketSessionHandler.java:25:	The class 'WebSocketSessionHandler' has a Modified Cyclomatic Complexity of 4 (Highest = 25).
+src/com/gmu/sockets/WebSocketSessionHandler.java:25:	The class 'WebSocketSessionHandler' has a Standard Cyclomatic Complexity of 4 (Highest = 25).
+src/com/gmu/sockets/WebSocketSessionHandler.java:25:	Too many fields
+src/com/gmu/sockets/WebSocketSessionHandler.java:25:	headerCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:26:	This class has too many methods, consider refactoring it.
+src/com/gmu/sockets/WebSocketSessionHandler.java:27:	Avoid using redundant field initializer for 'count'
+src/com/gmu/sockets/WebSocketSessionHandler.java:27:	Use explicit scoping instead of the default package private level
+src/com/gmu/sockets/WebSocketSessionHandler.java:27:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:28:	Avoid using redundant field initializer for 'passCount'
+src/com/gmu/sockets/WebSocketSessionHandler.java:28:	Use explicit scoping instead of the default package private level
+src/com/gmu/sockets/WebSocketSessionHandler.java:28:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:29:	Avoid using redundant field initializer for 'trickcount'
+src/com/gmu/sockets/WebSocketSessionHandler.java:29:	Use explicit scoping instead of the default package private level
+src/com/gmu/sockets/WebSocketSessionHandler.java:29:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:30:	Avoid using redundant field initializer for 'tricksWonbyNorth'
+src/com/gmu/sockets/WebSocketSessionHandler.java:30:	Use explicit scoping instead of the default package private level
+src/com/gmu/sockets/WebSocketSessionHandler.java:30:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:31:	Avoid using redundant field initializer for 'tricksWonbySouth'
+src/com/gmu/sockets/WebSocketSessionHandler.java:31:	Use explicit scoping instead of the default package private level
+src/com/gmu/sockets/WebSocketSessionHandler.java:31:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:32:	Avoid using redundant field initializer for 'tricksWonbyEast'
+src/com/gmu/sockets/WebSocketSessionHandler.java:32:	Use explicit scoping instead of the default package private level
+src/com/gmu/sockets/WebSocketSessionHandler.java:32:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:33:	Avoid using redundant field initializer for 'tricksWonbyWest'
+src/com/gmu/sockets/WebSocketSessionHandler.java:33:	Use explicit scoping instead of the default package private level
+src/com/gmu/sockets/WebSocketSessionHandler.java:33:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:34:	Avoid using redundant field initializer for 'trickSuit'
+src/com/gmu/sockets/WebSocketSessionHandler.java:34:	Use explicit scoping instead of the default package private level
+src/com/gmu/sockets/WebSocketSessionHandler.java:34:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/gmu/sockets/WebSocketSessionHandler.java:35:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:36:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/gmu/sockets/WebSocketSessionHandler.java:36:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/com/gmu/sockets/WebSocketSessionHandler.java:36:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:37:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/gmu/sockets/WebSocketSessionHandler.java:37:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:38:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/gmu/sockets/WebSocketSessionHandler.java:38:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/com/gmu/sockets/WebSocketSessionHandler.java:38:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:39:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/gmu/sockets/WebSocketSessionHandler.java:39:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/com/gmu/sockets/WebSocketSessionHandler.java:39:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:40:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/gmu/sockets/WebSocketSessionHandler.java:40:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/com/gmu/sockets/WebSocketSessionHandler.java:40:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:41:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/com/gmu/sockets/WebSocketSessionHandler.java:41:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/com/gmu/sockets/WebSocketSessionHandler.java:41:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:42:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/com/gmu/sockets/WebSocketSessionHandler.java:42:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:43:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/com/gmu/sockets/WebSocketSessionHandler.java:43:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:52:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/com/gmu/sockets/WebSocketSessionHandler.java:52:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:62:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/com/gmu/sockets/WebSocketSessionHandler.java:62:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:80:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/com/gmu/sockets/WebSocketSessionHandler.java:80:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:98:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/com/gmu/sockets/WebSocketSessionHandler.java:98:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:109:	If you run in Java5 or newer and have concurrent access, you should use the ConcurrentHashMap implementation
+src/com/gmu/sockets/WebSocketSessionHandler.java:109:	fieldCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:120:	Parameter 'session' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:120:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:126:	Parameter 'session' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:126:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:130:	Parameter 'jsonMessage' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:130:	Parameter 'session' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:130:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:133:	Found 'DD'-anomaly for variable 'playerName' (lines '133'-'135').
+src/com/gmu/sockets/WebSocketSessionHandler.java:133:	Found 'DD'-anomaly for variable 'playerName' (lines '133'-'137').
+src/com/gmu/sockets/WebSocketSessionHandler.java:133:	Found 'DD'-anomaly for variable 'playerName' (lines '133'-'139').
+src/com/gmu/sockets/WebSocketSessionHandler.java:133:	Found 'DD'-anomaly for variable 'playerName' (lines '133'-'141').
+src/com/gmu/sockets/WebSocketSessionHandler.java:134:	Avoid using Literals in Conditional Statements
+src/com/gmu/sockets/WebSocketSessionHandler.java:134:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:135:	Found 'DD'-anomaly for variable 'playerName' (lines '135'-'137').
+src/com/gmu/sockets/WebSocketSessionHandler.java:135:	Found 'DD'-anomaly for variable 'playerName' (lines '135'-'139').
+src/com/gmu/sockets/WebSocketSessionHandler.java:135:	Found 'DD'-anomaly for variable 'playerName' (lines '135'-'141').
+src/com/gmu/sockets/WebSocketSessionHandler.java:135:	The String literal "South" appears 7 times in this file; the first occurrence is on line 135
+src/com/gmu/sockets/WebSocketSessionHandler.java:136:	Avoid using Literals in Conditional Statements
+src/com/gmu/sockets/WebSocketSessionHandler.java:136:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:137:	Found 'DD'-anomaly for variable 'playerName' (lines '137'-'139').
+src/com/gmu/sockets/WebSocketSessionHandler.java:137:	Found 'DD'-anomaly for variable 'playerName' (lines '137'-'141').
+src/com/gmu/sockets/WebSocketSessionHandler.java:137:	The String literal "West" appears 8 times in this file; the first occurrence is on line 137
+src/com/gmu/sockets/WebSocketSessionHandler.java:138:	Avoid using Literals in Conditional Statements
+src/com/gmu/sockets/WebSocketSessionHandler.java:138:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:139:	Found 'DD'-anomaly for variable 'playerName' (lines '139'-'141').
+src/com/gmu/sockets/WebSocketSessionHandler.java:139:	The String literal "North" appears 9 times in this file; the first occurrence is on line 139
+src/com/gmu/sockets/WebSocketSessionHandler.java:140:	Avoid using Literals in Conditional Statements
+src/com/gmu/sockets/WebSocketSessionHandler.java:140:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:141:	The String literal "East" appears 8 times in this file; the first occurrence is on line 141
+src/com/gmu/sockets/WebSocketSessionHandler.java:142:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:143:	Local variable 'provider' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:144:	Local variable 'playerSessionName' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:144:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:144:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:144:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:144:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:144:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:144:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:146:	The String literal "playerName" appears 17 times in this file; the first occurrence is on line 146
+src/com/gmu/sockets/WebSocketSessionHandler.java:147:	The String literal "gameType" appears 6 times in this file; the first occurrence is on line 147
+src/com/gmu/sockets/WebSocketSessionHandler.java:148:	The String literal "South's" appears 5 times in this file; the first occurrence is on line 148
+src/com/gmu/sockets/WebSocketSessionHandler.java:148:	The String literal "turn" appears 7 times in this file; the first occurrence is on line 148
+src/com/gmu/sockets/WebSocketSessionHandler.java:152:	Avoid using Literals in Conditional Statements
+src/com/gmu/sockets/WebSocketSessionHandler.java:152:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:155:	Parameter 'rank' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:155:	Parameter 'suit' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:155:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:157:	Found 'DD'-anomaly for variable 'value' (lines '157'-'160').
+src/com/gmu/sockets/WebSocketSessionHandler.java:157:	Found 'DD'-anomaly for variable 'value' (lines '157'-'164').
+src/com/gmu/sockets/WebSocketSessionHandler.java:158:	Avoid using Literals in Conditional Statements
+src/com/gmu/sockets/WebSocketSessionHandler.java:164:	Useless parentheses.
+src/com/gmu/sockets/WebSocketSessionHandler.java:164:	Useless parentheses.
+src/com/gmu/sockets/WebSocketSessionHandler.java:166:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:171:	Parameter 'rank' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:171:	Parameter 'suit' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:171:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:173:	Found 'DD'-anomaly for variable 'value' (lines '173'-'176').
+src/com/gmu/sockets/WebSocketSessionHandler.java:173:	Found 'DD'-anomaly for variable 'value' (lines '173'-'180').
+src/com/gmu/sockets/WebSocketSessionHandler.java:174:	Avoid using Literals in Conditional Statements
+src/com/gmu/sockets/WebSocketSessionHandler.java:180:	Useless parentheses.
+src/com/gmu/sockets/WebSocketSessionHandler.java:180:	Useless parentheses.
+src/com/gmu/sockets/WebSocketSessionHandler.java:182:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:187:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:192:	Local variable 'tempset' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:193:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:194:	Found 'DD'-anomaly for variable 'lastElement' (lines '194'-'198').
+src/com/gmu/sockets/WebSocketSessionHandler.java:194:	Found 'DU'-anomaly for variable 'lastElement' (lines '194'-'211').
+src/com/gmu/sockets/WebSocketSessionHandler.java:195:	Avoid variables with short names like it
+src/com/gmu/sockets/WebSocketSessionHandler.java:195:	Local variable 'it' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:195:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:198:	Found 'DD'-anomaly for variable 'lastElement' (lines '198'-'198').
+src/com/gmu/sockets/WebSocketSessionHandler.java:198:	Found 'DU'-anomaly for variable 'lastElement' (lines '198'-'211').
+src/com/gmu/sockets/WebSocketSessionHandler.java:200:	Avoid variables with short names like is
+src/com/gmu/sockets/WebSocketSessionHandler.java:200:	Local variable 'is' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:200:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:201:	Found 'DD'-anomaly for variable 'temp' (lines '201'-'207').
+src/com/gmu/sockets/WebSocketSessionHandler.java:204:	Local variable 'key' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:207:	Found 'DD'-anomaly for variable 'temp' (lines '207'-'207').
+src/com/gmu/sockets/WebSocketSessionHandler.java:212:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:217:	Local variable 'tempset' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:218:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:219:	Found 'DD'-anomaly for variable 'lastElement' (lines '219'-'223').
+src/com/gmu/sockets/WebSocketSessionHandler.java:219:	Found 'DU'-anomaly for variable 'lastElement' (lines '219'-'236').
+src/com/gmu/sockets/WebSocketSessionHandler.java:220:	Avoid variables with short names like it
+src/com/gmu/sockets/WebSocketSessionHandler.java:220:	Local variable 'it' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:220:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:223:	Found 'DD'-anomaly for variable 'lastElement' (lines '223'-'223').
+src/com/gmu/sockets/WebSocketSessionHandler.java:223:	Found 'DU'-anomaly for variable 'lastElement' (lines '223'-'236').
+src/com/gmu/sockets/WebSocketSessionHandler.java:225:	Avoid variables with short names like is
+src/com/gmu/sockets/WebSocketSessionHandler.java:225:	Local variable 'is' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:225:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:226:	Found 'DD'-anomaly for variable 'temp' (lines '226'-'232').
+src/com/gmu/sockets/WebSocketSessionHandler.java:229:	Local variable 'key' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:232:	Found 'DD'-anomaly for variable 'temp' (lines '232'-'232').
+src/com/gmu/sockets/WebSocketSessionHandler.java:237:	Avoid reassigning parameters such as 'jsonMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:237:	Parameter 'session' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:237:	The method 'bid' has a Cyclomatic Complexity of 12.
+src/com/gmu/sockets/WebSocketSessionHandler.java:237:	The method 'bid' has a Modified Cyclomatic Complexity of 11.
+src/com/gmu/sockets/WebSocketSessionHandler.java:237:	The method 'bid' has a Standard Cyclomatic Complexity of 11.
+src/com/gmu/sockets/WebSocketSessionHandler.java:237:	The method bid() has an NPath complexity of 816
+src/com/gmu/sockets/WebSocketSessionHandler.java:237:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:240:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '240'-'244').
+src/com/gmu/sockets/WebSocketSessionHandler.java:240:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '240'-'246').
+src/com/gmu/sockets/WebSocketSessionHandler.java:240:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '240'-'248').
+src/com/gmu/sockets/WebSocketSessionHandler.java:240:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '240'-'250').
+src/com/gmu/sockets/WebSocketSessionHandler.java:241:	Found 'DD'-anomaly for variable 'bidValue' (lines '241'-'267').
+src/com/gmu/sockets/WebSocketSessionHandler.java:241:	Found 'DU'-anomaly for variable 'bidValue' (lines '241'-'317').
+src/com/gmu/sockets/WebSocketSessionHandler.java:243:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:243:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:244:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '244'-'246').
+src/com/gmu/sockets/WebSocketSessionHandler.java:244:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '244'-'248').
+src/com/gmu/sockets/WebSocketSessionHandler.java:244:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '244'-'250').
+src/com/gmu/sockets/WebSocketSessionHandler.java:244:	The String literal "West's" appears 4 times in this file; the first occurrence is on line 244
+src/com/gmu/sockets/WebSocketSessionHandler.java:245:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:245:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:246:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '246'-'248').
+src/com/gmu/sockets/WebSocketSessionHandler.java:246:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '246'-'250').
+src/com/gmu/sockets/WebSocketSessionHandler.java:246:	The String literal "North's" appears 4 times in this file; the first occurrence is on line 246
+src/com/gmu/sockets/WebSocketSessionHandler.java:247:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:247:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:248:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '248'-'250').
+src/com/gmu/sockets/WebSocketSessionHandler.java:248:	The String literal "East's" appears 4 times in this file; the first occurrence is on line 248
+src/com/gmu/sockets/WebSocketSessionHandler.java:249:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:249:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:251:	Found 'DD'-anomaly for variable 'winner' (lines '251'-'283').
+src/com/gmu/sockets/WebSocketSessionHandler.java:251:	Found 'DU'-anomaly for variable 'winner' (lines '251'-'317').
+src/com/gmu/sockets/WebSocketSessionHandler.java:252:	Local variable 'temp' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:254:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:255:	Position literals first in String comparisons
+src/com/gmu/sockets/WebSocketSessionHandler.java:255:	Position literals first in String comparisons
+src/com/gmu/sockets/WebSocketSessionHandler.java:255:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:255:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:262:	Local variable 'suitRank' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:262:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:263:	Local variable 'rank' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:264:	Local variable 'suit' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:265:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:266:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:271:	Local variable 'provider' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:272:	Local variable 'data' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:272:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:272:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:272:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:276:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:277:	Avoid using Literals in Conditional Statements
+src/com/gmu/sockets/WebSocketSessionHandler.java:279:	Found 'DD'-anomaly for variable 'dummy' (lines '279'-'286').
+src/com/gmu/sockets/WebSocketSessionHandler.java:279:	Found 'DD'-anomaly for variable 'dummy' (lines '279'-'291').
+src/com/gmu/sockets/WebSocketSessionHandler.java:279:	Found 'DD'-anomaly for variable 'dummy' (lines '279'-'296').
+src/com/gmu/sockets/WebSocketSessionHandler.java:279:	Found 'DD'-anomaly for variable 'dummy' (lines '279'-'301').
+src/com/gmu/sockets/WebSocketSessionHandler.java:284:	Position literals first in String comparisons
+src/com/gmu/sockets/WebSocketSessionHandler.java:284:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:286:	Found 'DD'-anomaly for variable 'dummy' (lines '286'-'291').
+src/com/gmu/sockets/WebSocketSessionHandler.java:286:	Found 'DD'-anomaly for variable 'dummy' (lines '286'-'296').
+src/com/gmu/sockets/WebSocketSessionHandler.java:286:	Found 'DD'-anomaly for variable 'dummy' (lines '286'-'301').
+src/com/gmu/sockets/WebSocketSessionHandler.java:287:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '287'-'292').
+src/com/gmu/sockets/WebSocketSessionHandler.java:287:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '287'-'297').
+src/com/gmu/sockets/WebSocketSessionHandler.java:287:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '287'-'302').
+src/com/gmu/sockets/WebSocketSessionHandler.java:289:	Position literals first in String comparisons
+src/com/gmu/sockets/WebSocketSessionHandler.java:289:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:291:	Found 'DD'-anomaly for variable 'dummy' (lines '291'-'296').
+src/com/gmu/sockets/WebSocketSessionHandler.java:291:	Found 'DD'-anomaly for variable 'dummy' (lines '291'-'301').
+src/com/gmu/sockets/WebSocketSessionHandler.java:292:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '292'-'297').
+src/com/gmu/sockets/WebSocketSessionHandler.java:292:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '292'-'302').
+src/com/gmu/sockets/WebSocketSessionHandler.java:294:	Position literals first in String comparisons
+src/com/gmu/sockets/WebSocketSessionHandler.java:294:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:296:	Found 'DD'-anomaly for variable 'dummy' (lines '296'-'301').
+src/com/gmu/sockets/WebSocketSessionHandler.java:297:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '297'-'302').
+src/com/gmu/sockets/WebSocketSessionHandler.java:299:	Position literals first in String comparisons
+src/com/gmu/sockets/WebSocketSessionHandler.java:299:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:305:	Local variable 'temp1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:305:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:306:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:313:	Local variable 'playerBidName' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:318:	Avoid really long methods.
+src/com/gmu/sockets/WebSocketSessionHandler.java:318:	Avoid reassigning parameters such as 'jsonMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:318:	Avoid reassigning parameters such as 'jsonMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:318:	Parameter 'session' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:318:	The method 'game' has a Cyclomatic Complexity of 29.
+src/com/gmu/sockets/WebSocketSessionHandler.java:318:	The method 'game' has a Modified Cyclomatic Complexity of 25.
+src/com/gmu/sockets/WebSocketSessionHandler.java:318:	The method 'game' has a Standard Cyclomatic Complexity of 25.
+src/com/gmu/sockets/WebSocketSessionHandler.java:318:	The method game() has an NCSS line count of 100
+src/com/gmu/sockets/WebSocketSessionHandler.java:318:	The method game() has an NPath complexity of 83008
+src/com/gmu/sockets/WebSocketSessionHandler.java:318:	publicMethodCommentRequirement Required
+src/com/gmu/sockets/WebSocketSessionHandler.java:320:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '320'-'324').
+src/com/gmu/sockets/WebSocketSessionHandler.java:321:	Found 'DD'-anomaly for variable 'cardValue' (lines '321'-'355').
+src/com/gmu/sockets/WebSocketSessionHandler.java:321:	Found 'DD'-anomaly for variable 'cardValue' (lines '321'-'361').
+src/com/gmu/sockets/WebSocketSessionHandler.java:323:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:323:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:324:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '324'-'326').
+src/com/gmu/sockets/WebSocketSessionHandler.java:325:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:325:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:326:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '326'-'328').
+src/com/gmu/sockets/WebSocketSessionHandler.java:327:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:327:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:328:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '328'-'330').
+src/com/gmu/sockets/WebSocketSessionHandler.java:329:	Avoid using if statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:329:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:330:	Found 'DD'-anomaly for variable 'nextPlayer' (lines '330'-'378').
+src/com/gmu/sockets/WebSocketSessionHandler.java:331:	Local variable 'tempCard' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:332:	Local variable 'suitRank' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:332:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:334:	Local variable 'suit' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:335:	Local variable 'rank' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:336:	Comment is too large: Line too long
+src/com/gmu/sockets/WebSocketSessionHandler.java:336:	Comment is too large: Too many lines
+src/com/gmu/sockets/WebSocketSessionHandler.java:341:	Comment is too large: Line too long
+src/com/gmu/sockets/WebSocketSessionHandler.java:348:	Comment is too large: Line too long
+src/com/gmu/sockets/WebSocketSessionHandler.java:352:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:352:	The String literal "trickStarter" appears 4 times in this file; the first occurrence is on line 352
+src/com/gmu/sockets/WebSocketSessionHandler.java:358:	Avoid if (x != y) ..; else ..;
+src/com/gmu/sockets/WebSocketSessionHandler.java:358:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:358:	The String literal "suitForTrick" appears 5 times in this file; the first occurrence is on line 358
+src/com/gmu/sockets/WebSocketSessionHandler.java:360:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:361:	Avoid using if...else statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:363:	Avoid using if...else statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:366:	Avoid using if...else statements without curly braces
+src/com/gmu/sockets/WebSocketSessionHandler.java:371:	Avoid using Literals in Conditional Statements
+src/com/gmu/sockets/WebSocketSessionHandler.java:373:	Assigning an Object to null is a code smell.  Consider refactoring.
+src/com/gmu/sockets/WebSocketSessionHandler.java:375:	Found 'DD'-anomaly for variable 'trickWinner' (lines '375'-'376').
+src/com/gmu/sockets/WebSocketSessionHandler.java:377:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:379:	Found 'DD'-anomaly for variable 'trickStarter' (lines '379'-'384').
+src/com/gmu/sockets/WebSocketSessionHandler.java:379:	Found 'DD'-anomaly for variable 'trickStarter' (lines '379'-'409').
+src/com/gmu/sockets/WebSocketSessionHandler.java:379:	Found 'DD'-anomaly for variable 'trickStarter' (lines '379'-'433').
+src/com/gmu/sockets/WebSocketSessionHandler.java:379:	Found 'DD'-anomaly for variable 'trickStarter' (lines '379'-'457').
+src/com/gmu/sockets/WebSocketSessionHandler.java:380:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:381:	Position literals first in String comparisons
+src/com/gmu/sockets/WebSocketSessionHandler.java:381:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:384:	Found 'DD'-anomaly for variable 'trickStarter' (lines '384'-'409').
+src/com/gmu/sockets/WebSocketSessionHandler.java:384:	Found 'DD'-anomaly for variable 'trickStarter' (lines '384'-'433').
+src/com/gmu/sockets/WebSocketSessionHandler.java:384:	Found 'DD'-anomaly for variable 'trickStarter' (lines '384'-'457').
+src/com/gmu/sockets/WebSocketSessionHandler.java:385:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:385:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:385:	The String literal "bidWinner" appears 5 times in this file; the first occurrence is on line 385
+src/com/gmu/sockets/WebSocketSessionHandler.java:385:	The String literal "dummyPlayer" appears 5 times in this file; the first occurrence is on line 385
+src/com/gmu/sockets/WebSocketSessionHandler.java:387:	The String literal "tricksToWin" appears 9 times in this file; the first occurrence is on line 387
+src/com/gmu/sockets/WebSocketSessionHandler.java:389:	Local variable 'gameStatus' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:389:	The String literal "Game Won" appears 8 times in this file; the first occurrence is on line 389
+src/com/gmu/sockets/WebSocketSessionHandler.java:390:	Local variable 'gameWinner' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:390:	The String literal "South-North" appears 4 times in this file; the first occurrence is on line 390
+src/com/gmu/sockets/WebSocketSessionHandler.java:398:	Local variable 'gameStatus' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:399:	Local variable 'gameWinner' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:406:	Position literals first in String comparisons
+src/com/gmu/sockets/WebSocketSessionHandler.java:406:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:409:	Found 'DD'-anomaly for variable 'trickStarter' (lines '409'-'433').
+src/com/gmu/sockets/WebSocketSessionHandler.java:409:	Found 'DD'-anomaly for variable 'trickStarter' (lines '409'-'457').
+src/com/gmu/sockets/WebSocketSessionHandler.java:410:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:410:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:414:	Local variable 'gameStatus' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:415:	Local variable 'gameWinner' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:423:	Local variable 'gameStatus' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:424:	Local variable 'gameWinner' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:430:	Position literals first in String comparisons
+src/com/gmu/sockets/WebSocketSessionHandler.java:430:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:433:	Found 'DD'-anomaly for variable 'trickStarter' (lines '433'-'457').
+src/com/gmu/sockets/WebSocketSessionHandler.java:434:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:434:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:438:	Local variable 'gameStatus' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:439:	Local variable 'gameWinner' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:439:	The String literal "East-West" appears 4 times in this file; the first occurrence is on line 439
+src/com/gmu/sockets/WebSocketSessionHandler.java:447:	Local variable 'gameStatus' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:448:	Local variable 'gameWinner' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:454:	Position literals first in String comparisons
+src/com/gmu/sockets/WebSocketSessionHandler.java:454:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:458:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:458:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:462:	Local variable 'gameStatus' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:463:	Local variable 'gameWinner' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:471:	Local variable 'gameStatus' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:472:	Local variable 'gameWinner' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:478:	Local variable 'playerBidName' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:487:	Local variable 'playerBidName' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:495:	Avoid long parameter lists.
+src/com/gmu/sockets/WebSocketSessionHandler.java:495:	Avoid reassigning parameters such as 'jsonMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:495:	Avoid reassigning parameters such as 'jsonMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:495:	Found 'UR'-anomaly for variable 'session' (lines '495'-'500').
+src/com/gmu/sockets/WebSocketSessionHandler.java:495:	Rather than using a lot of String arguments, consider using a container object for those values.
+src/com/gmu/sockets/WebSocketSessionHandler.java:496:	Avoid unused method parameters such as 'tempCard'.
+src/com/gmu/sockets/WebSocketSessionHandler.java:496:	Parameter 'nextPlayer' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:496:	Parameter 'string' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:496:	Parameter 'suit' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:496:	Parameter 'tempCard' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:497:	Parameter 'string2' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:497:	Parameter 'string3' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:497:	Parameter 'string4' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:498:	Parameter 'gameStatus' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:498:	Parameter 'gameWinner' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:498:	Parameter 'trickStarter' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:499:	Local variable 'session' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:502:	Local variable 'provider1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Local variable 'data1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:503:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:507:	The String literal "tricksWonW" appears 4 times in this file; the first occurrence is on line 507
+src/com/gmu/sockets/WebSocketSessionHandler.java:508:	The String literal "tricksWonE" appears 4 times in this file; the first occurrence is on line 508
+src/com/gmu/sockets/WebSocketSessionHandler.java:509:	The String literal "tricksWonN" appears 4 times in this file; the first occurrence is on line 509
+src/com/gmu/sockets/WebSocketSessionHandler.java:510:	The String literal "tricksWonS" appears 4 times in this file; the first occurrence is on line 510
+src/com/gmu/sockets/WebSocketSessionHandler.java:519:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:523:	Parameter 'jsonMessage' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:523:	Parameter 'tempCard' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:524:	Avoid variables with short names like it
+src/com/gmu/sockets/WebSocketSessionHandler.java:524:	Local variable 'it' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:524:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:525:	Local variable 'provider1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:526:	Found 'DD'-anomaly for variable 'data1' (lines '526'-'539').
+src/com/gmu/sockets/WebSocketSessionHandler.java:526:	Found 'DD'-anomaly for variable 'data2' (lines '526'-'542').
+src/com/gmu/sockets/WebSocketSessionHandler.java:526:	Found 'DU'-anomaly for variable 'data1' (lines '526'-'551').
+src/com/gmu/sockets/WebSocketSessionHandler.java:526:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:526:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:526:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:526:	Use one line for each declaration, it enhances code readability.
+src/com/gmu/sockets/WebSocketSessionHandler.java:532:	Local variable 'temp' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:533:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:534:	Avoid calling toString() on String objects; this is unnecessary.
+src/com/gmu/sockets/WebSocketSessionHandler.java:534:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:534:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:535:	Avoid calling toString() on String objects; this is unnecessary.
+src/com/gmu/sockets/WebSocketSessionHandler.java:535:	Local variable 'temp1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:535:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:536:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:537:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:537:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:539:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:539:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:539:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:553:	Avoid reassigning parameters such as 'jsonMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:553:	Avoid reassigning parameters such as 'jsonMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:553:	Found 'UR'-anomaly for variable 'session' (lines '553'-'558').
+src/com/gmu/sockets/WebSocketSessionHandler.java:553:	Rather than using a lot of String arguments, consider using a container object for those values.
+src/com/gmu/sockets/WebSocketSessionHandler.java:554:	Parameter 'nextPlayer' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:554:	Parameter 'playerBidName' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:554:	Parameter 'tempCard' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:554:	Parameter 'trickSuit' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:555:	Parameter 'string' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:555:	Parameter 'string2' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:555:	Parameter 'string3' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:555:	Parameter 'string4' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:557:	Local variable 'session' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:560:	Local variable 'provider1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:561:	Local variable 'data1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:561:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:561:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:561:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:561:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:561:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:561:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:561:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:561:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:561:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:561:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:575:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:578:	Avoid long parameter lists.
+src/com/gmu/sockets/WebSocketSessionHandler.java:578:	Avoid reassigning parameters such as 'jsonMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:578:	Avoid reassigning parameters such as 'jsonMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:578:	Found 'UR'-anomaly for variable 'session' (lines '578'-'583').
+src/com/gmu/sockets/WebSocketSessionHandler.java:578:	Rather than using a lot of String arguments, consider using a container object for those values.
+src/com/gmu/sockets/WebSocketSessionHandler.java:579:	Avoid unused method parameters such as 'suit'.
+src/com/gmu/sockets/WebSocketSessionHandler.java:579:	Parameter 'nextPlayer' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:579:	Parameter 'playerBidName' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:579:	Parameter 'suit' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:579:	Parameter 'tempCard' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:580:	Parameter 'string' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:580:	Parameter 'string2' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:580:	Parameter 'string3' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:580:	Parameter 'string4' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:580:	Parameter 'trickStarter' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:582:	Local variable 'session' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:585:	Local variable 'provider1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:586:	Local variable 'data1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:586:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:586:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:586:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:586:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:586:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:586:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:586:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:586:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:586:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:586:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:586:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:601:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:605:	Avoid reassigning parameters such as 'clientMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:605:	Avoid reassigning parameters such as 'clientMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:605:	Found 'UR'-anomaly for variable 'session' (lines '605'-'607').
+src/com/gmu/sockets/WebSocketSessionHandler.java:605:	Parameter 'dummy' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:605:	Parameter 'nextPlayer' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:605:	Parameter 'tricksToWin' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:605:	Parameter 'trump' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:605:	Parameter 'winner' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:605:	Rather than using a lot of String arguments, consider using a container object for those values.
+src/com/gmu/sockets/WebSocketSessionHandler.java:606:	Local variable 'session' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:609:	Local variable 'provider1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Local variable 'data1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:610:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:629:	Avoid reassigning parameters such as 'clientMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:629:	Avoid reassigning parameters such as 'clientMessage'
+src/com/gmu/sockets/WebSocketSessionHandler.java:629:	Found 'UR'-anomaly for variable 'session' (lines '629'-'631').
+src/com/gmu/sockets/WebSocketSessionHandler.java:629:	Parameter 'nextPlayer' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:629:	Parameter 'playerBidName' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:629:	Parameter 'temp' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:630:	Local variable 'session' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:633:	Local variable 'provider1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:634:	Local variable 'data1' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:634:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:634:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:634:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:634:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:643:	Found 'UR'-anomaly for variable 'session' (lines '643'-'652').
+src/com/gmu/sockets/WebSocketSessionHandler.java:643:	Parameter 'sessionDetails' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:644:	Avoid variables with short names like k
+src/com/gmu/sockets/WebSocketSessionHandler.java:644:	Found 'DD'-anomaly for variable 'k' (lines '644'-'668').
+src/com/gmu/sockets/WebSocketSessionHandler.java:644:	Found 'DU'-anomaly for variable 'k' (lines '644'-'674').
+src/com/gmu/sockets/WebSocketSessionHandler.java:645:	Local variable 'session' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:650:	Found 'DD'-anomaly for variable 'cardString' (lines '650'-'650').
+src/com/gmu/sockets/WebSocketSessionHandler.java:650:	Found 'DD'-anomaly for variable 'cardString' (lines '650'-'660').
+src/com/gmu/sockets/WebSocketSessionHandler.java:650:	Found 'DU'-anomaly for variable 'cardString' (lines '650'-'674').
+src/com/gmu/sockets/WebSocketSessionHandler.java:651:	Found 'DD'-anomaly for variable 'cardname' (lines '651'-'651').
+src/com/gmu/sockets/WebSocketSessionHandler.java:651:	Found 'DD'-anomaly for variable 'cardname' (lines '651'-'661').
+src/com/gmu/sockets/WebSocketSessionHandler.java:651:	Found 'DU'-anomaly for variable 'cardname' (lines '651'-'674').
+src/com/gmu/sockets/WebSocketSessionHandler.java:652:	Local variable 'addMessage' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:652:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:653:	Found 'DD'-anomaly for variable 'provider' (lines '653'-'653').
+src/com/gmu/sockets/WebSocketSessionHandler.java:653:	Found 'DU'-anomaly for variable 'provider' (lines '653'-'674').
+src/com/gmu/sockets/WebSocketSessionHandler.java:653:	Local variable 'provider' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:654:	Found 'DD'-anomaly for variable 'cardDetails' (lines '654'-'654').
+src/com/gmu/sockets/WebSocketSessionHandler.java:654:	Found 'DD'-anomaly for variable 'cardDetails' (lines '654'-'663').
+src/com/gmu/sockets/WebSocketSessionHandler.java:654:	Found 'DU'-anomaly for variable 'cardDetails' (lines '654'-'674').
+src/com/gmu/sockets/WebSocketSessionHandler.java:655:	Found 'DD'-anomaly for variable 'clientMessage' (lines '655'-'666').
+src/com/gmu/sockets/WebSocketSessionHandler.java:659:	Local variable 'card' could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:660:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:660:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:663:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:663:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:663:	Potential violation of Law of Demeter (object not created locally)
+src/com/gmu/sockets/WebSocketSessionHandler.java:676:	Parameter 'clientMessage' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:676:	Parameter 'session' is not assigned and could be declared final
+src/com/gmu/sockets/WebSocketSessionHandler.java:678:	System.out.println is used
+src/com/gmu/sockets/WebSocketSessionHandler.java:680:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:684:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:684:	Potential violation of Law of Demeter (method chain calls)
+src/com/gmu/sockets/WebSocketSessionHandler.java:684:	Potential violation of Law of Demeter (method chain calls)
