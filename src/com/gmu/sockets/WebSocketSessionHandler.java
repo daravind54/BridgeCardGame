@@ -150,7 +150,10 @@ public class WebSocketSessionHandler
 	       
 	        sessionDetails.put(session.getId(), playerSessionName);
 	        if(count==4)
-	        sendCardsToAllConnectedSessions(sessionDetails);
+	        {
+	        	count=0;
+	        	sendCardsToAllConnectedSessions(sessionDetails);
+	        }
 	 }
 	 public int calcBidValue(int suit,int rank)
 	 {
