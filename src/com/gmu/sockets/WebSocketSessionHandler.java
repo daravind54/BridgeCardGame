@@ -385,6 +385,9 @@ public class WebSocketSessionHandler
 				 if(jsonMessage.getString("bidWinner").equals("North") || jsonMessage.getString("dummyPlayer").equals("North"))
 				 {
 					 if((tricksWonbyNorth+tricksWonbySouth)>=Integer.parseInt(jsonMessage.getString("tricksToWin")))
+					 {
+						 sendTrickWinnerToAllConnectedSessions(jsonMessage, nextPlayer, playerBidName, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter,"Game Won");
+					 }
 				 }
 				 
 			 }
