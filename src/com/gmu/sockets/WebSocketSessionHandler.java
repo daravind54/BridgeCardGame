@@ -406,17 +406,16 @@ public class WebSocketSessionHandler
 		while(it.hasNext())
 		{
 			String temp=it.next();
-			if(temp.equals("card1"))
+			if(!(temp.equals("card1")))
 			{
-				
-			}
-			else
-			{
-				
-		  		data1=provider1.createObjectBuilder()
+				data1=provider1.createObjectBuilder()
 						.add(temp, jsonMessage.getString(temp))
 						.build();
 			}
+			
+				
+		  		
+			
 			data2=Utility.mergeProfileSummary(data2, data1);	
 		}
 		return null;
