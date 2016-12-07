@@ -401,12 +401,23 @@ public class WebSocketSessionHandler
 	 private JsonObject removeCard(JsonObject jsonMessage) {
 		Iterator<String> it=jsonMessage.keySet().iterator();
 		JsonProvider provider1 = JsonProvider.provider();
-  		JsonObject data1=provider1.createObjectBuilder();
+  		JsonObject data1,data2;
 				
 		while(it.hasNext())
 		{
-			if(it.next()=="card1")
+			String temp=it.next()
+			if(temp.equals("card1"))
+			{
 				
+			}
+			else
+			{
+				
+		  		data1=provider1.createObjectBuilder()
+						.add(temp, jsonMessage.getString(temp))
+						.build();
+			}
+			data2=Utility.mergeProfileSummary(data2, data1);	
 		}
 		return null;
 	}
