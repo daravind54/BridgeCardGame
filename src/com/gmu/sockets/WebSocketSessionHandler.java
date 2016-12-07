@@ -53,7 +53,7 @@ public class WebSocketSessionHandler
 	static {
 		suitToString.put(0,"S");
 		suitToString.put(1,"H");
-		suitToString.put(2,"H");
+		suitToString.put(2,"D");
 		suitToString.put(3,"C");
 		suitToString.put(4,"P");
 		suitToString.put(5,"N");
