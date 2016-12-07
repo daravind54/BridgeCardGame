@@ -375,8 +375,12 @@ public class WebSocketSessionHandler
 			 trickWinner=compareCardsInTricks();
 			 System.out.println(trickWinner);
 			 nextPlayer=trickWinner+"'s";
+			 String trickStarter=null;
 			 if(trickWinner.equals("North"))
+			 {
 				 tricksWonbyNorth++;
+				 trickStarter="North's";
+			 }
 			 if(trickWinner.equals("South"))
 				 tricksWonbySouth++;
 			 if(trickWinner.equals("East"))
