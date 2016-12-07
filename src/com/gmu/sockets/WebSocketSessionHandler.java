@@ -395,7 +395,7 @@ public class WebSocketSessionHandler
 		  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 		  	 jsonMessage=removeCard(jsonMessage,tempCard);
 		  	 clientData.put(session, jsonMessage);
-		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,trickSuit,tricksWonbyNorth,tricksWonbyWest,tricksWonbySouth,tricksWonbyEast);
+		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,trickSuit,Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast));
 		 }
 		 
 		 
