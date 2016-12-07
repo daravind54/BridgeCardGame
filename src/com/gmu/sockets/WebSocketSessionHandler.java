@@ -411,12 +411,13 @@ public class WebSocketSessionHandler
 				data1=provider1.createObjectBuilder()
 						.add(temp, jsonMessage.getString(temp))
 						.build();
+				data2=Utility.mergeProfileSummary(data2, data1);
 			}
 			
 				
 		  		
 			
-			data2=Utility.mergeProfileSummary(data2, data1);	
+				
 		}
 		return null;
 	}
