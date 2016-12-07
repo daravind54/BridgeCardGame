@@ -510,6 +510,7 @@ public class WebSocketSessionHandler
 						.add("tricksWonS",string3)
 						.add("trickStarter",trickStarter)
 						.add("gameType", gameStatus)
+						.add("gameWinner",gameWinner)
 						.build();
 		  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
 		  		clientData.put(session, jsonMessage);
