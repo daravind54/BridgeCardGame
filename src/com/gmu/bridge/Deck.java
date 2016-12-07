@@ -16,6 +16,7 @@ public class Deck {
 		}
 		System.out.println(deck.toString());
 		shuffle();
+		System.out.println(deck.toString());
 	}
 
 	public void shuffle() {
