@@ -586,7 +586,7 @@ public class WebSocketSessionHandler
 			  		JsonObject data1=provider1.createObjectBuilder()
 							.add("turn", nextPlayer)
 							.add(playerBidName,tempCard)
-							.add("suitForTrick", suit)
+							.add("suitForTrick", "N")
 							.add("gameType", "Game Phase")
 							.add("tricksWonW",string2)
 							.add("tricksWonE",string4)

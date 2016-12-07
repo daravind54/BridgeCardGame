@@ -96,6 +96,11 @@ function onMessage(event) {
         document.getElementById(heartdata).value=hearts;
         document.getElementById(spadedata).value=spades;
 	}*/
+	if(player.gameType=="Game Won")
+	{
+		var display="Game Complete."+"\n"+"Game Won by "+player.gameWinner+" Team"+"\n";
+		alert(display);
+	}
 	if(player.gameType=="Bid Complete")
 	{
 		var trump=null;
