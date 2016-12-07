@@ -408,6 +408,7 @@ public class WebSocketSessionHandler
 		while(it.hasNext())
 		{
 			String temp=it.next();
+			System.out.println(temp);
 			if(!(temp.equals("card1")))
 			{
 				data1=provider1.createObjectBuilder()
