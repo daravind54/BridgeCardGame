@@ -79,7 +79,7 @@ public class WebSocketSessionHandler
 	}
 	private static Map<Integer,String> rankToString = new HashMap<Integer,String>();
 	static {
-		rankToString.put(14,"1");
+		
 		rankToString.put(2,"2");
 		rankToString.put(3,"3");
 		rankToString.put(4,"4");
