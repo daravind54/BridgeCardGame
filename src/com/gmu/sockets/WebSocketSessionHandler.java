@@ -395,10 +395,11 @@ public class WebSocketSessionHandler
 			 {
 				 tricksWonbyWest++;
 				 trickStarter="West's";
+			 }
 			 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 			 jsonMessage=removeCard(jsonMessage,tempCard);
 			 clientData.put(session, jsonMessage);
-			 sendTrickWinnerToAllConnectedSessions(jsonMessage, nextPlayer, playerBidName, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast));
+			 sendTrickWinnerToAllConnectedSessions(jsonMessage, nextPlayer, playerBidName, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter);
 			 
 		 }
 		 else
@@ -469,7 +470,7 @@ public class WebSocketSessionHandler
 	}
 	 private void sendTrickWinnerToAllConnectedSessions(JsonObject jsonMessage,
 				String nextPlayer, String playerBidName, String tempCard,String suit, 
-				String string, String string2, String string3, String string4) 
+				String string, String string2, String string3, String string4, String trickStarter) 
 		{
 			 for (Session session : sessions) {
 				 jsonMessage=clientData.get(session);
@@ -484,6 +485,7 @@ public class WebSocketSessionHandler
 							.add("tricksWonE",string4)
 							.add("tricksWonN",string)
 							.add("tricksWonS",string3)
+							.add("trickStarter",trickStarter)
 							.build();
 			  		jsonMessage=Utility.mergeProfileSummary(jsonMessage, data1);
 			  		clientData.put(session, jsonMessage);
