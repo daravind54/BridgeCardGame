@@ -384,7 +384,7 @@ public class WebSocketSessionHandler
 			 if(trickWinner.equals("West"))
 				 tricksWonbyWest++;
 			 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
-			 jsonMessage=removeCard(jsonMessage);
+			 jsonMessage=removeCard(jsonMessage,tempCard);
 			 clientData.put(session, jsonMessage);
 			 sendTrickWinnerToAllConnectedSessions(jsonMessage, nextPlayer, playerBidName, tempCard, suit, tricksWonbyNorth,tricksWonbyWest,tricksWonbySouth,tricksWonbyEast);
 			 
@@ -393,14 +393,14 @@ public class WebSocketSessionHandler
 		 {
 			 
 		  	 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
-		  	 jsonMessage=removeCard(jsonMessage);
+		  	 jsonMessage=removeCard(jsonMessage,tempCard);
 		  	 clientData.put(session, jsonMessage);
 		  	 sendCardToAllConnectedSessions(jsonMessage, nextPlayer,playerBidName, tempCard,trickSuit,tricksWonbyNorth,tricksWonbyWest,tricksWonbySouth,tricksWonbyEast);
 		 }
 		 
 		 
 	 }
-	 private JsonObject removeCard(JsonObject jsonMessage) {
+	 private JsonObject removeCard(JsonObject jsonMessage, String tempCard) {
 		Iterator<String> it=jsonMessage.keySet().iterator();
 		JsonProvider provider1 = JsonProvider.provider();
   		JsonObject data1 = null,data2 = provider1.createObjectBuilder()
