@@ -385,6 +385,7 @@ public class WebSocketSessionHandler
 				 tricksWonbyWest++;
 			 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 			 jsonMessage=removeCard(jsonMessage);
+			 clientData.put(session, jsonMessage);
 			 sendTrickWinnerToAllConnectedSessions(jsonMessage, nextPlayer, playerBidName, tempCard, suit, tricksWonbyNorth,tricksWonbyWest,tricksWonbySouth,tricksWonbyEast);
 			 
 		 }
