@@ -385,10 +385,16 @@ public class WebSocketSessionHandler
 			 {
 				 tricksWonbySouth++;
 				 trickStarter="South's";
+			 }
 			 if(trickWinner.equals("East"))
+			 {
 				 tricksWonbyEast++;
+				 trickStarter="East's";
+			 }
 			 if(trickWinner.equals("West"))
+			 {
 				 tricksWonbyWest++;
+				 trickStarter="West's";
 			 String playerBidName=jsonMessage.getString("playerName")+"BidOrCard";
 			 jsonMessage=removeCard(jsonMessage,tempCard);
 			 clientData.put(session, jsonMessage);
