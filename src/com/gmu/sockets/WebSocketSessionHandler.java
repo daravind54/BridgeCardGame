@@ -401,7 +401,7 @@ public class WebSocketSessionHandler
 	 private JsonObject removeCard(JsonObject jsonMessage) {
 		Iterator<String> it=jsonMessage.keySet().iterator();
 		JsonProvider provider1 = JsonProvider.provider();
-  		JsonObject data1,data2;
+  		JsonObject data1 = jsonMessage.getString("sessionId"),data2 = jsonMessage.getString("sessionId");
 				
 		while(it.hasNext())
 		{
