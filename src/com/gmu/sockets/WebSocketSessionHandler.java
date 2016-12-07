@@ -386,7 +386,15 @@ public class WebSocketSessionHandler
 				 {
 					 if((tricksWonbyNorth+tricksWonbySouth)>=Integer.parseInt(jsonMessage.getString("tricksToWin")))
 					 {
-						 sendTrickWinnerToAllConnectedSessions(jsonMessage, nextPlayer, playerBidName, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter,"Game Won");
+						 String gameStatus="Game Won";
+						 sendGameWinnerToAllConnectedSessions(jsonMessage, nextPlayer, tempCard, suit, Integer.toString(tricksWonbyNorth),Integer.toString(tricksWonbyWest),Integer.toString(tricksWonbySouth),Integer.toString(tricksWonbyEast),trickStarter,gameStatus);
+					 }
+				 }
+				 else
+				 {
+					 if((tricksWonbyNorth+tricksWonbySouth)>=Integer.parseInt(jsonMessage.getString("tricksToWin")))
+					 {
+						 
 					 }
 				 }
 				 
@@ -423,7 +431,15 @@ public class WebSocketSessionHandler
 		 
 		 
 	 }
-	 private JsonObject removeCard(JsonObject jsonMessage, String tempCard) {
+	 private void sendGameWinnerToAllConnectedSessions(JsonObject jsonMessage,
+			String nextPlayer, String tempCard, String suit, String string,
+			String string2, String string3, String string4,
+			String trickStarter, String gameStatus) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private JsonObject removeCard(JsonObject jsonMessage, String tempCard) {
 		Iterator<String> it=jsonMessage.keySet().iterator();
 		JsonProvider provider1 = JsonProvider.provider();
   		JsonObject data1 = null,data2 = provider1.createObjectBuilder()
