@@ -27,10 +27,10 @@ public class WebSocketSessionHandler
 	static int count=0;
 	static int passCount=0;
 	static int trickcount=0;
-	private final int tricksWonbyNorth=0;
-	private final int tricksWonbySouth=0;
-	private final int tricksWonbyEast=0;
-	private final int tricksWonbyWest=0;
+	static int tricksWonbyNorth=0;
+	static int tricksWonbySouth=0;
+	static int tricksWonbyEast=0;
+	static int tricksWonbyWest=0;
 	static String trickSuit=null;
 	private final Set<Session> sessions = new HashSet<>();
 	private final Map<String, JsonObject> sessionDetails=new HashMap<String, JsonObject>();
@@ -376,6 +376,7 @@ public class WebSocketSessionHandler
 			 System.out.println(trickWinner);
 			 nextPlayer=trickWinner+"'s";
 			 String trickStarter=null;
+			 System.out.println("South won"+tricksWonbySouth);
 			 if(trickWinner.equals("North"))
 			 {
 				 tricksWonbyNorth++;
