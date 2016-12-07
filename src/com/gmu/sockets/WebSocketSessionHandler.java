@@ -414,7 +414,7 @@ public class WebSocketSessionHandler
 			System.out.println(jsonMessage.getString(temp.toString()));
 			String temp1=jsonMessage.getString(temp.toString());
 			System.out.println(temp1);
-			if(!(temp.equals("card1")))
+			if(!(temp1.equals(tempCard)))
 			{
 				data1=provider1.createObjectBuilder()
 						.add(temp,temp1 )
