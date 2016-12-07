@@ -15,6 +15,87 @@ function onMessage(event) {
 	document.getElementById("cards").style.display = "";
 	var player = JSON.parse(event.data);
 	//alert(sbid);
+	/*if(player.gameType=="Game Phase")
+	{
+		var data=null;
+		var clubdata=null;
+		var diamonddata=null;
+		var heartdata=null;
+		var spadedata=null;
+		if(player.dummyPlayer=="North" && player.playerName=="North")
+		{
+			data=JSON.parse(northData.data);
+			clubdata=Nclubs;
+			diamonddata=Ndiamonds;
+			heartdata=Nhearts;
+			spadedata=Nspades;
+		}
+		if(player.dummyPlayer=="South" && player.playerName=="South")
+		{
+			data=JSON.parse(southData.data);
+			clubdata=Sclubs;
+			diamonddata=Sdiamonds;
+			heartdata=Shearts;
+			spadedata=Sspades;
+		}
+		if(player.dummyPlayer=="East" && player.playerName=="East")
+		{
+			data=JSON.parse(eastData.data);
+			clubdata=Eclubs;
+			diamonddata=Ediamonds;
+			heartdata=Ehearts;
+			spadedata=Espades;
+		}
+		if(player.dummyPlayer=="West" && player.playerName=="West")
+		{
+			data=JSON.parse(westData.data);
+			clubdata=Wclubs;
+			diamonddata=Wdiamonds;
+			heartdata=Whearts;
+			spadedata=Wspades;
+		}
+		
+		var temp="card";
+        var clubs=" ";
+		var diamonds=" ";
+		var hearts=" ";
+		var spades=" ";
+        for(var i=1;i<=13;i++)
+        {
+        	
+        	var card=temp+i;
+        	if(data.hasOwnProperty(card))
+        	{
+        		var cardData=data[card];
+        		//alert(cardData);
+        		var cardDataArray=cardData.split("-");
+        		//alert(cardDataArray[0]);
+        		if(cardDataArray[0]=="C")
+        		{
+        			clubs+=cardDataArray[1]+" ";
+        		}
+        		if(cardDataArray[0]=="D")
+        		{
+        			diamonds+=cardDataArray[1]+" ";
+        		}
+        		if(cardDataArray[0]=="H")
+        		{
+        			hearts+=cardDataArray[1]+" ";
+        		}
+        		if(cardDataArray[0]=="S")
+        		{
+        			spades+=cardDataArray[1]+" ";
+        		}
+        	}
+        	
+        	
+        }
+        
+        document.getElementById(clubdata).value=clubs;
+        document.getElementById(diamonddata).value=diamonds;
+        document.getElementById(heartdata).value=hearts;
+        document.getElementById(spadedata).value=spades;
+	}*/
 	if(player.gameType=="Bid Complete")
 	{
 		var trump=null;
