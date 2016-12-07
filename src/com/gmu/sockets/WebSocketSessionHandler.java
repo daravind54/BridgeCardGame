@@ -409,7 +409,7 @@ public class WebSocketSessionHandler
 		{
 			String temp=it.next();
 			System.out.println(temp);
-			String temp1=jsonMessage.getString(temp);
+			String temp1=jsonMessage.getString(temp.toString());
 			if(!(temp.equals("card1")))
 			{
 				data1=provider1.createObjectBuilder()
