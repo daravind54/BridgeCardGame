@@ -403,7 +403,7 @@ public class WebSocketSessionHandler
 		JsonProvider provider1 = JsonProvider.provider();
   		JsonObject data1 = null,data2 = provider1.createObjectBuilder()
 				.add("sessionId", jsonMessage.getString("sessionId"))
-				.build();;
+				.build();
 				
 		while(it.hasNext())
 		{
