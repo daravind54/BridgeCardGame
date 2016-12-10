@@ -61,7 +61,19 @@ public class LoginServlet extends HttpServlet {
 		if(status.equals("SUCCESS"))
 		{
 			HttpSession session=request.getSession();
+			if (session.isNew()) {
+				System.out.println(">>LoginServlet session is new");
+				System.out.println("LoginServlet session "+session.getAttribute("username"));
+				if(session.getAttribute("username")==null || session.getAttribute("username").equals(null) || !session.getAttribute("username").equals(login.getEmail())) {
+					RequestDispatcher requestDispatcher=request.getRequestDispatcher("/ERROR.jsp");
+					requestDispatcher.forward(request, response);
+				}
+			} else {
+				System.out.println(">>LoginServlet session is old");
+				System.out.println(">>LoginServlet "+session.getAttribute("username"));
+			}
 			session.setAttribute("username", login.getEmail());
+			session.setMaxInactiveInterval(20);
 			RequestDispatcher requestDispatcher=request.getRequestDispatcher("/user.jsp");
 			requestDispatcher.forward(request, response);
 		}
@@ -70,8 +82,6 @@ public class LoginServlet extends HttpServlet {
 			RequestDispatcher requestDispatcher=request.getRequestDispatcher("/ERROR.jsp");
 			requestDispatcher.forward(request, response);
 		}
-		
-		
 	}
 
 }
